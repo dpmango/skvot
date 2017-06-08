@@ -1,0 +1,93 @@
+.collection {
+  position: relative;
+  height: 370px;
+  width: 33.333%;
+  // float: left;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include backgroundCover;
+  transition: background-size $t-fast linear;
+  margin-top: -370px;
+  &--vertical {
+    height: 740px;
+    margin-top: -0px;
+  }
+  &--horizontal {
+    width: 66.666%;
+    margin-top: 0;
+  }
+  &:hover {
+    &:before {
+      background: $c-black-op-2;
+    }
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: $c-black-op;
+    transition: $t-normal;
+  }
+  &__label {
+    position: relative;
+    display: inline-block;
+    padding: 4px 5px;
+    background: $c-black-2;
+    font-weight: $fw-semibold;
+    border-radius: 2px;
+    color: $c-white;
+    font-size: $fs-12;
+    &--sale {
+      background: $c-yellow;
+    }
+  }
+  &__content {
+    position: relative;
+    color: $c-white;
+    max-width: 60%;
+  }
+  &__brand {
+    font-weight: $fw-bold;
+    font-size: $fs-12;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    @include liminText(2, $lh-1-3);
+  }
+  &__title {
+    font-family: $f-osward;
+    font-size: $fs-25;
+    @include liminText(3, $lh-1-5);
+  }
+  &__button {
+    position: relative;
+    // opacity: 0;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .collection {
+    margin-top: 0;
+    width: 50%;
+    &--vertical {
+      height: 370px;
+    }
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media #{$phone} {
+    .collection {
+      width: 100%;
+    }
+}

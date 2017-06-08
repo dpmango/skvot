@@ -1,0 +1,90 @@
+.text-collapse {
+  position: relative;
+  padding: 30px 15px;
+  padding-bottom: 0;
+  height: 150px;
+  overflow: hidden;
+  &:after {
+    @include overlayBg();
+    box-shadow: $bs-text-collapse;
+    opacity: 1;
+    transition: $t-normal;
+  }
+  box-shadow: $bs-text-collapse;
+  &__content {
+    font-size: $fs-13;
+    line-height: $lh-1-75;
+    color: $c-grey-2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__next {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: $c-grey-4;
+    z-index: 5;
+    &-text {
+      &:before {
+        content: attr(data-text-closed)
+      }
+    }
+    &-icon {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      font-size: $fs-14;
+      fill: $c-grey-4;
+      transition: $t-normal;
+    }
+    &:hover {
+      .text-collapse__next-icon {
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  // Modifiers
+  &--opened {
+    padding-bottom: 40px;
+    &:after {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .text-collapse__next {
+      &-text {
+        &:before {
+          content: attr(data-text-opened)
+        }
+      }
+      &-icon {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        .text-collapse__next-icon {
+          transform: rotate(180deg);
+          padding-top: 3px;
+        }
+      }
+    }
+
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$phone} {
+  .text-collapse {
+    display: none;
+  }
+}

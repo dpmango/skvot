@@ -1,0 +1,12 @@
+.product-discription {
+  margin-top: 20px;
+  &__title {
+    font-weight: $fw-semibold;
+    font-size: $fs-18;
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-size: $fs-14;
+    line-height: $lh-1-5;
+  }
+}

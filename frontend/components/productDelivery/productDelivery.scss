@@ -1,0 +1,33 @@
+.product-delivery {
+  margin-top: 20px;
+  &__title {
+    font-size: $fs-18;
+    font-weight: $fw-semibold;
+    margin-bottom: 15px;
+  }
+  &__type {
+    display: flex;
+    align-items: center;
+  }
+  &__type:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__type-icon {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    margin-right: 10px;
+  }
+  &__type-text {
+    font-size: $fs-14;
+    a {
+      color: $c-blue;
+      border-bottom: 1px solid $c-blue-op;
+      transition: $t-normal;
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+  }
+}

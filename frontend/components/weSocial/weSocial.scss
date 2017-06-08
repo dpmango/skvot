@@ -1,0 +1,62 @@
+.we-social {
+  color: $c-white;
+  text-align: center;
+  padding: 50px 15px 30px 15px;
+  transition: $t-normal;
+  &--facebook {
+    background: $c-facebook;
+    &:hover {
+      background: $c-facebook-light;
+    }
+  }
+  &--vk {
+    background: $c-vk;
+    &:hover {
+      background: $c-vk-darken;
+    }
+  }
+  &--vimeo {
+    background: $c-vimeo;
+    &:hover {
+      background: $c-vimeo-darken;
+    }
+  }
+  &--instagram {
+    background: $c-instagram;
+    &:hover {
+      background: $c-instagram-darken;
+    }
+  }
+  &__name {
+    font-size: $fs-14;
+    text-transform: uppercase;
+  }
+  &__icon {
+    fill: $c-white;
+    width: 23px;
+    height: 23px;
+  }
+  &__subscribers {
+    font-size: $fs-12;
+    text-transform: uppercase;
+  }
+  &__number {
+    font-size: $fs-48;
+    font-family: $f-osward;
+    line-height: $lh-1-3;
+    margin-top: 15px;
+  }
+  &__hash {
+    margin-top: 35px;
+    font-weight: $fw-bold;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$phone} {
+  .we-social {
+    padding: 15px;
+  }
+}

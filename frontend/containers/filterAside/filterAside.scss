@@ -1,0 +1,50 @@
+.filter-aside {
+  position: relative;
+  border-right: $c-grey-2;
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    cursor: pointer;
+    @include cleanButton();
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+      width: 12px;
+      height: 12px;
+      fill: $c-light-grey;
+      box-sizing: content-box;
+      transition: $t-normal;
+    }
+    &:hover {
+      .filter-aside__close-icon {
+        fill: $c-blue;
+      }
+    }
+  }
+  &__section {
+    position: relative;
+    padding: 15px 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $c-light-grey-2;
+    &--grey {
+      background: $c-white-3;
+    }
+  }
+  &__title {
+    font-size: $fs-20;
+    font-weight: $fw-semibold;
+    margin-bottom: 15px;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .filter-aside {
+    display: none;
+  }
+}

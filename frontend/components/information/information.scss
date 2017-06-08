@@ -1,0 +1,46 @@
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.information__icon {
+  display: flex;
+  align-items: center;
+  fill: $c-white;
+}
+.information__content {
+  margin-left: 10px;
+}
+.information__title {
+  color: $c-white;
+  font-size: $fs-14;
+  font-weight: $fw-semibold;
+}
+
+.information__describe {
+  color: $c-white;
+  font-size: $fs-12;
+  color: $c-grey;
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$screen} {
+  .information:not(.information--location) {
+    .information__content {
+      display: none;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .information__content {
+    display: none;
+  }
+}
+
+@media #{$phone} {
+
+}

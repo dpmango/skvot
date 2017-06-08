@@ -1,0 +1,5 @@
+.reviews {
+  &__title {
+    @include title;
+  }
+}

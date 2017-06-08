@@ -1,0 +1,14 @@
+.filter-buttons {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .filter-buttons {
+    flex-direction: column;
+  }
+}

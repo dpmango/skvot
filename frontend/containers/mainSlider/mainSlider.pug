@@ -1,0 +1,34 @@
+.main-slider
+  //- Slider slides
+  .main-slider__slides.js-main-slider
+    .main-slider__slide(style="background-image: url('img/main-slider-image-1.jpg')")
+    .main-slider__slide(style="background-image: url('img/main-slider-image-2.jpg')")
+  //- Slider contents
+  .main-slider__contents.container.js-main-slider-content
+    //- Slider content
+    .main-slider__item
+      .main-slider__content
+        .main-slider__head
+          .main-slider__head-top Новые коллекции
+          .main-slider__head-bottom Весна 2017
+        .main-slider__main-content
+          h2.main-slider__title Adidas originals
+          .main-slider__subtitle Уже во всех сквотах
+        div
+    //- Slider content
+    .main-slider__item
+      .main-slider__content
+        .main-slider__head
+          .main-slider__head-top Новые коллекции
+          .main-slider__head-bottom Весна 2017
+        .main-slider__main-content
+          h2.main-slider__title Nike originals
+          .main-slider__subtitle Уже во всех сквотах
+        div
+  //- Slider navigation
+  .main-slider__navigation.container
+    .main-slider__navigation__controls
+      .main-slider__navigation-left.js-slick-prev
+        include ../../components/UI/sliderArrows/sliderArrowLeft
+      .main-slider__navigation-right.js-slick-next
+        include ../../components/UI/sliderArrows/sliderArrowRight

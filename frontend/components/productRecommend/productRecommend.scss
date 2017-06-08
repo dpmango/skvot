@@ -1,0 +1,12 @@
+.product-recommend {
+  &__title {
+    border-bottom: 1px solid $c-light-grey-2;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

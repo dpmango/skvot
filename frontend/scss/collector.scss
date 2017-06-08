@@ -1,0 +1,100 @@
+@import 'settings/variables';
+
+//------------------------------
+// Includes
+//------------------------------
+@import 'includes/normalize';
+@import 'includes/bootstrap-grid';
+@import 'includes/slick';
+@import 'includes/slick-theme';
+@import 'includes/noUiSlider';
+@import 'includes/magnificPopup';
+
+//------------------------------
+// Settings
+//------------------------------
+@import 'settings/fonts';
+@import 'settings/mixins';
+@import 'settings/layout';
+
+//------------------------------
+// Commons
+//------------------------------
+@import '../commons/header/header';
+@import '../commons/subscription/subscription';
+@import '../commons/footer/footer';
+
+//------------------------------
+// Components
+//------------------------------
+// UI
+@import '../components/UI/modal/modal';
+@import '../components/UI/sliderArrows/sliderArrow';
+@import '../components/UI/button/button';
+@import '../components/UI/up/up';
+@import '../components/UI/tabs/tabs';
+@import '../components/UI/input/input';
+@import '../components/UI/label/label';
+
+@import '../components/UI/select/select';
+@import '../components/UI/checkbox/checkbox';
+@import '../components/UI/color/color';
+@import '../components/UI/title/title';
+
+// Components
+@import '../components/menu/menu';
+@import '../components/auth/auth';
+@import '../components/catalogBtn/catalogBtn';
+@import '../components/information/information';
+@import '../components/logo/logo';
+@import '../components/cartBtn/cartBtn';
+@import '../components/searchBtn/searchBtn';
+@import '../components/catalog/catalog';
+@import '../components/subscriptionForm/subscriptionForm';
+@import '../components/lkPopup/lkPopup';
+@import '../components/cartPopupItem/cartPopupItem';
+@import '../components/weSocial/weSocial';
+@import '../components/service/service';
+@import '../components/blogItem/blogItem';
+@import '../components/topItem/topItem';
+@import '../components/collection/collection';
+@import '../components/review/review';
+@import '../components/showMore/showMore';
+
+@import '../components/breadcrumbs/breadcrumbs';
+@import '../components/textCollapse/textCollapse';
+@import '../components/filterBar/filterBar';
+@import '../components/filterCategories/filterCategories';
+@import '../components/filterPrice/filterPrice';
+@import '../components/filterCheckbox/filterCheckbox';
+@import '../components/filterColors/filterColors';
+@import '../components/filterButtons/filterButtons';
+@import '../components/pagination/pagination';
+
+@import '../components/productPreview/productPreview';
+@import '../components/productDiscription/productDiscription';
+@import '../components/productPrice/productPrice';
+@import '../components/productSize/productSize';
+@import '../components/productButtons/productButtons';
+@import '../components/productInfo/productInfo';
+@import '../components/productDelivery/productDelivery';
+@import '../components/productRecommend/productRecommend';
+@import '../components/productFeedback/productFeedback';
+
+//------------------------------
+// Containers
+//------------------------------
+@import '../containers/mainSlider/mainSlider';
+@import '../containers/cartPopup/cartPopup';
+@import '../containers/weSocials/weSocials';
+@import '../containers/services/services';
+@import '../containers/blogNews/blogNews';
+@import '../containers/top/top';
+@import '../containers/collections/collections';
+@import '../containers/reviews/reviews';
+
+@import '../containers/pageHead/pageHead';
+@import '../containers/catalog/catalog';
+@import '../containers/filterAside/filterAside';
+
+@import '../containers/product/product';

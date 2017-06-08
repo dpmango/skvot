@@ -1,0 +1,12 @@
+.product {
+  // padding-bottom: 100px;
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .product {
+    margin-top: 15px;
+  }
+}

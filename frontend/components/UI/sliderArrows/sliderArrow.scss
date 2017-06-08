@@ -1,0 +1,25 @@
+.slider-arrow {
+  cursor: pointer;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid $c-white-op;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $t-normal;
+  &:hover {
+    background-color: $c-white-op;
+  }
+}
+.slider-arrow__icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8px;
+  height: 15px;
+  fill: $c-white;
+}

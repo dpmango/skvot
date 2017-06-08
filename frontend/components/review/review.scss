@@ -1,0 +1,164 @@
+.review {
+  position: relative;
+  border-top: 1px solid $c-light-grey-2;
+  border-bottom: 1px solid $c-light-grey-2;
+  transition: $t-normal;
+  &:not(:first-child) {
+    border-top: none;
+  }
+
+  &__image-wrap {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 300px;
+    border-right: 1px solid $c-light-grey-2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $c-blue-op-2;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+  &__image {
+    position: relative;
+    @include backgroundContain;
+    height: 270px;
+    outline: none;
+  }
+  //------------------------------
+  // Content
+  //------------------------------
+
+  &__content {
+    position: relative;
+
+    padding: 15px;
+    height: 300px;
+    overflow: hidden;
+  }
+  &__slides {
+    transition: $t-normal;
+    height: 270px;
+    position: relative;
+  }
+  &__item {
+    height: 270px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: none;
+
+  }
+  &__text {
+    margin-top: 40px;
+    font-size: $fs-18;
+    @include liminText(7, $lh-1-3);
+  }
+
+  &__bottom {
+    font-size: $fs-13;
+    font-weight: $fw-semibold;
+    padding-bottom: 5px;
+  }
+  &__thing {
+    a {
+      color: $c-light-grey;
+      border-bottom: 1px solid $c-light-grey;
+      transition: $t-normal;
+      &:hover {
+        color: $c-grey;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+
+  //------------------------------
+  // Controls
+  //------------------------------
+
+  &__controls {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  &__control {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    border: 1px solid $c-light-grey-2;
+    transition: $t-normal;
+    &:hover {
+      background: $c-light-grey-2;
+      .review__icon {
+        fill: $c-white;
+      }
+    }
+    &:not(:last-child) {
+      border-right: none;
+    }
+    &:first-child {
+      border-radius: 20px 0 0 20px;
+    }
+    &:last-child {
+      border-radius: 0 20px 20px 0;
+    }
+  }
+  &__icon {
+    fill: $c-light-grey-2;
+    width: 13px;
+    height: 13px;
+    pointer-events: none;
+  }
+}
+
+
+//------------------------------
+// Styles
+//------------------------------
+.review--style-2 {
+  .review__image-wrap {
+    &:after {
+      background-color: $c-black-op-3;
+    }
+  }
+}
+
+.review--style-3 {
+  .review__image-wrap {
+    &:after {
+      background-color: $c-yellow-op;
+    }
+  }
+}
+
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .review {
+    &__item,
+    &__controls,
+    &__slides,
+    &__content {
+      height: auto;
+    }
+    &__bottom {
+      margin-top: 30px;
+    }
+  }
+
+}

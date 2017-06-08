@@ -1,0 +1,8 @@
+.filter-colors {
+  display: flex;
+  flex-wrap: wrap;
+  &__color {
+    margin-right: 7px;
+    margin-bottom: 7px;
+  }
+}

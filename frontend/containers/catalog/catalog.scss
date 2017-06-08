@@ -1,0 +1,33 @@
+.catalog-section {
+  position: relative;
+}
+.catalog-section-bottom {
+  border-top: 1px solid $c-light-grey-2;
+}
+.catalog-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog-items {
+  border-left: 1px solid $c-light-grey-2;
+}
+.catalog-show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-left: 1px solid $c-light-grey-2;
+}
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .catalog-show-more {
+    display: none;
+  }
+}
+@media #{$phone} {
+ .catalog-section {
+   margin-top: 0;
+ }
+}

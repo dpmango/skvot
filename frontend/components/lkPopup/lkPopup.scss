@@ -1,0 +1,43 @@
+.lk {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  right: 0;
+  padding: 10px 20px;
+  background: $c-white;
+  z-index: 10;
+  transition: $t-normal;
+  &--opened {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 50px;
+    width: 0;
+    height: 0;
+    top: -10px;
+    border: 5px solid $c-white;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+}
+
+.lk__item {
+  font-size: $fs-13;
+  color: $c-dark;
+  padding: 3px 0;
+  margin: 2px 0;
+  border-bottom: 1px solid transparent;
+  transition: $t-normal;
+  &:hover {
+    border-bottom: 1px solid $c-light-grey;
+    color: $c-black;
+  }
+}

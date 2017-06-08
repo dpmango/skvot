@@ -1,0 +1,14 @@
+.filter-price {
+  &__inputs {
+    display: flex;
+    justify-content: center;
+  }
+  &__input {
+    width: 40%;
+    margin: 0 5px;
+  }
+  &__range {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

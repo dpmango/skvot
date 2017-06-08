@@ -1,0 +1,23 @@
+.filter-categories {
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__item a {
+    font-size: $fs-16;
+    padding: 2px 0;
+    color: $c-black-2;
+    border-bottom: 1px solid transparent;
+    transition: $t-normal;
+    &:hover {
+      color: $c-light-grey-4;
+      border-bottom: 1px solid $c-light-grey-3;
+    }
+  }
+  &__item {
+    &--active a {
+      color: $c-light-grey-4;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

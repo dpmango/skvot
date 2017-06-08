@@ -1,0 +1,38 @@
+.checkbox {
+  &__input {
+    display: none;
+    &:checked + .checkbox__label {
+      .checkbox__icon {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  &__label {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__box {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $c-light-grey-3;
+  }
+  &__icon {
+    width: 10px;
+    height: 10px;
+    fill: $c-blue;
+    opacity: 0;
+    transition: $t-normal;
+    transform: scale(0.9);
+  }
+  &__name {
+    padding: 0 5px;
+    word-break: break-word;
+  }
+}

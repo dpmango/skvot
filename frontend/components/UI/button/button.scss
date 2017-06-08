@@ -1,0 +1,110 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+  background: $c-blue;
+  padding: 12px 30px;
+  justify-content: center;
+  color: $c-white;
+  outline: none;
+  transition: $t-normal;
+  font-weight: $fw-semibold;
+  font-size: $fs-14;
+  border: 2px solid transparent;
+  cursor: pointer;
+  &__icon {
+    margin-right: 5px;
+    fill: $c-white;
+  }
+  &__add {
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    right: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    &-text {
+      font-size: $fs-12;
+      color: $c-light-grey-6;
+      max-width: 120px;
+      margin-bottom: 5px;
+      font-weight: $fw-normal;
+    }
+    &-icon {
+      fill: $c-light-grey-6;
+      margin-bottom: 5px;
+    }
+  }
+  &:hover {
+    background: $c-blue-2;
+  }
+  &--white {
+    background: $c-white;
+    color: $c-black-2;
+    font-weight: $fw-semibold;
+    font-size: $fs-16;
+    &:hover {
+      background: $c-white;
+    }
+  }
+  &--bs {
+    box-shadow: $bs-button;
+    background: $c-white;
+    color: $c-black-2;
+    &:hover {
+      box-shadow: none;
+      background: $c-white;
+      color: $c-blue;
+    }
+  }
+  &--modal {
+    padding: 10px 15px;
+    min-width: 75px;
+    text-align: center;
+  }
+}
+.button--link {
+  background: transparent;
+  border-bottom: 1px solid $c-light-grey-2;
+  color: $c-light-grey-2;
+  transition: $t-normal;
+  border-radius: 0;
+  padding: 5px 0;
+  margin: 0 5px;
+  &:hover {
+    background: transparent;
+    color: $c-black-2;
+    border-bottom: 1px solid $c-black-2;
+  }
+}
+.button--transparent {
+  background: transparent;
+  color: $c-black-2;
+  border-color: $c-black-2;
+  &:hover {
+    background: $c-white;
+    border-color: $c-black-op;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .button {
+    &__add {
+      display: none;
+    }
+  }
+}
+@media #{$phone} {
+  .button {
+    padding: 10px 15px;
+  }
+}

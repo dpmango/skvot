@@ -1,0 +1,30 @@
+.top
+  .top__tabs.tabs
+    .row.row--2
+      .col-sm-4.tabs__tab(data-tab="tab-1").tabs__tab--active Топ этой недели
+      .col-sm-4.tabs__tab(data-tab="tab-2")
+        div Сквот.дисконт
+        .tabs__tab-label -70%
+      .col-sm-4.tabs__tab(data-tab="tab-3") Покупают прямо сейчас
+  .top__contents.tabs-contents
+    .tabs-contents__content.tabs-contents__content--active#tab-1
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+    .tabs-contents__content#tab-2
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItemBig
+    .tabs-contents__content#tab-3
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItemBig
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+      include ../../components/topItem/topItem
+  .top__more
+    include ../../components/showMore/showMore

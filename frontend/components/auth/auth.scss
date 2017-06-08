@@ -1,0 +1,43 @@
+.auth {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100%;
+  align-items: center;
+}
+
+.auth__element {
+  display: flex;
+  align-items: center;
+  @include white-link;
+}
+
+.auth__nav {
+  @include white-link;
+  &--active {
+    border-bottom: 1px solid $c-white-op-2;
+    .auth__icon {
+      transform: rotate(0);
+    }
+  }
+}
+.auth__element:not(.auth__element--divider):not(.auth__element--lk):hover,
+.auth__nav:hover {
+  border-bottom: 1px solid $c-white-op-2;
+}
+
+.auth__element--lk {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.auth__icon {
+  width: 10px;
+  height: 10px;
+  fill: $c-white;
+  margin-left: 5px;
+  transform: rotate(180deg);
+  transition: $t-normal;
+}

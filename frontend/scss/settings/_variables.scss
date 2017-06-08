@@ -1,0 +1,120 @@
+//------------------------------
+// Colors
+//------------------------------
+$c-dark: #222222;
+$c-dark-2: #333333;
+$c-black: #000000;
+$c-black-2: #111111;
+$c-black-op: rgba($c-black, .5);
+$c-black-op-2: rgba($c-black, .75);
+$c-black-op-3: rgba($c-black, .05);
+$c-white: #FFFFFF;
+$c-white-2: #f7f7f7;
+$c-white-3: #f6f6f6;
+$c-blue: #3a54d6;
+$c-blue-2: #445dd8;
+$c-blue-op: rgba(#3a54d6, .4);
+$c-blue-op-2: rgba(#3a54d6, .05);
+$c-yellow: #feb312;
+$c-yellow-op: rgba($c-yellow, .05);
+$c-light-grey: #bbbbbb;
+$c-light-grey-2: #e6e6e6;
+$c-light-grey-3: #d8d8d8;
+$c-light-grey-4: #a6a6a6;
+$c-light-grey-5: #cdcdcd;
+$c-light-grey-6: #adadad;
+$c-grey: #999999;
+$c-grey-2: #888888;
+$c-grey-3: #555555;
+$c-grey-4: #6a6a6a;
+$c-grey-5: #e2e2e2;
+$c-grey-6: #444444;
+$c-light-blue: #27a6ff;
+$c-light-blue-2: #afb9ec;
+$c-sky: #bdc7fc;
+$c-white-op: rgba(#ffffff, .1);
+$c-white-op-2: rgba(#ffffff, .4);
+$c-mask: rgba(#1d1f28, .2);
+
+// Socials
+$c-facebook: #2941b9;
+$c-facebook-light: #3e55c8;
+$c-instagram: #f6c96c;
+$c-instagram-darken: #e5b450;
+$c-vk: #4c75a3;
+$c-vk-darken: #3b6391;
+$c-vimeo: #1ab7ea;
+$c-vimeo-darken: #0e98c5;
+
+//------------------------------
+// transitions & Easing
+//------------------------------
+$t-fast: .15s;
+$t-normal: .35s;
+$t-long: .35s cubic-bezier(.8,0,.2,1);
+//------------------------------
+// Media Breakpoints
+//------------------------------
+// Mobile first
+$screenMin: "screen and (min-width : 1200px)";
+// Desktop first method
+$screen: "screen and (max-width : 1200px)";
+$desktop: "screen and (max-width : 992px)";
+$tablet: "screen and (max-width : 768px)";
+$phone: "screen and (max-width : 480px)";
+$iPhone: "screen and (max-width : 320px)";
+
+//------------------------------
+// Font sizes
+//------------------------------
+$fs-10: 10px;
+$fs-11: 11px;
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-25: 25px;
+$fs-28: 28px;
+$fs-30: 30px;
+$fs-48: 48px;
+$fs-72: 72px;
+
+//------------------------------
+// Font size icons
+//------------------------------
+$fs-icon-26: 26px;
+$fs-icon-20: 20px;
+//------------------------------
+// Font weight
+//------------------------------
+$fw-light: 300;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-normal: 400;
+$fw-extrabold: 800;
+//------------------------------
+// Line height
+//------------------------------
+$lh-1-15: 1.15em;
+$lh-1-3: 1.3em;
+$lh-1-5: 1.5em;
+$lh-1-75: 1.75em;
+//------------------------------
+// Fonts
+//------------------------------
+$f-osward: 'Oswald', sans-serif;
+$f-releway: 'Raleway', sans-serif;
+//------------------------------
+// Shadow
+//------------------------------
+$bs-main: 0px 0px 60px 0px rgba(0, 0, 0, 0.25);
+$bs-button: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+$bs-subscription: 0px 5px 40px rgba(0, 0, 0, 0.1);
+$bs-label: 0px 5px 20px 0px rgba(58, 84, 214, 0.4);
+$bs-top: 0px 5px 40px rgba(0, 0, 0, 0.35);
+$bs-text-collapse: 0px -55px 90px 0px rgba($c-white, 1) inset;
+$bs-range-handler: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+$bs-pagination: 0px 5px 20px rgba($c-blue, 0.55);

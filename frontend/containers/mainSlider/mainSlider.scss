@@ -1,0 +1,146 @@
+.main-slider {
+  position: relative;
+}
+
+//------------------------------
+// Content
+//------------------------------
+
+.main-slider__contents {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+}
+.main-slider__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 100px;
+}
+
+.main-slider__item {
+  outline: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.main-slider__main-content {
+
+}
+.main-slider__head {
+  // margin-bottom: auto;
+}
+.main-slider__head-top {
+  font-size: $fs-12;
+  color: $c-white;
+  text-transform: uppercase;
+}
+.main-slider__head-bottom {
+  font-size: $fs-24;
+  color: $c-white;
+  font-family: $f-releway;
+}
+.main-slider__title {
+  font-size: $fs-48;
+  color: $c-white;
+  font-weight: $fw-light;
+}
+.main-slider__subtitle {
+  font-size: $fs-72;
+  color: $c-white;
+  font-weight: $fw-extrabold;
+}
+//------------------------------
+// Slide
+//------------------------------
+
+.main-slider__slide {
+  outline: none;
+  height: 100%;
+  height: calc(100vh - 109px);
+  min-height: 600px;
+  background-size: cover;
+  background-position: center center;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $c-mask;
+  }
+}
+
+//------------------------------
+// Navigation
+//------------------------------
+
+.main-slider__navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  padding-bottom: 125px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.main-slider__navigation__controls {
+  display: flex;
+  align-items: center;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  justify-content: space-between;
+  height: 100%;
+
+}
+.main-slider__navigation-left,
+.main-slider__navigation-right {
+  pointer-events: auto;
+}
+//------------------------------
+// Slick
+//------------------------------
+.main-slider .slick-dots {
+  bottom: -25px;
+  pointer-events: painted;
+}
+
+.main-slider .slick-dotted.slick-slider {
+  margin-bottom: 125px;
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .main-slider__content {
+    padding: 20px;
+  }
+  .main-slider__title {
+    font-size: $fs-24;
+  }
+  .main-slider__subtitle {
+    font-size: $fs-48;
+  }
+
+  .main-slider__navigation {
+    top: calc(100% - 300px);
+    bottom: 0;
+  }
+  .main-slider__content {
+    display: block;
+  }
+  .main-slider__head {
+    margin-bottom: 20%;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,70 @@
+.pagination {
+  display: flex;
+  border-left: 1px solid $c-light-grey-2;
+  &__item {
+    width: 9.0909%;
+    font-weight: $fw-bold;
+    color: $c-black-2;
+    font-size: $fs-14;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $c-light-grey-2;
+    transition: $t-normal;
+    &:last-child {
+      border-right: none;
+    }
+    &:not(.pagination__item--dots):hover,
+    &--active {
+      background: $c-blue;
+      color: $c-white;
+      box-shadow: $bs-pagination;
+    }
+    &--dots,
+    &--active {
+      pointer-events: none;
+      cursor: default;
+    }
+    &-icon {
+      width: 10px;
+      height: 10px;
+      fill: $c-light-grey;
+    }
+  }
+  // Showing
+  &__item--before-dots:not(:nth-child(-n+8)) {
+    display: none;
+  }
+  &__item--after-dots:not(:nth-last-child(2)) {
+    display: none;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .pagination {
+    &__item {
+      width: 12.5%;
+    }
+    &__item--before-dots:not(:nth-child(-n+4)) {
+      display: none;
+    }
+    &__item--after-dots:nth-last-child(3) {
+      display: flex;
+    }
+  }
+}
+
+@media #{$phone} {
+  .pagination {
+    &__item {
+      width: 14.28571%;
+    }
+    &__item--after-dots:not(:nth-last-child(2)) {
+      display: none;
+    }
+  }
+}

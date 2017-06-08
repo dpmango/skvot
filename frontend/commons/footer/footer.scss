@@ -1,0 +1,154 @@
+.footer {
+  background: $c-dark;
+  padding: 40px 0;
+}
+
+.footer p {
+  font-size: $fs-12;
+  color: $c-grey-3;
+}
+
+.footer__about-menu {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__about-menu-item {
+  color: $c-grey-2;
+  margin-right: 20px;
+  font-size: $fs-12;
+  transition: $t-normal;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__about-menu-item:hover {
+  color: $c-white;
+}
+//------------------------------
+// Footer menu
+//------------------------------
+.footer__menus {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__menu {
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.footer__menu-title {
+  font-family: $f-osward;
+  color: $c-white;
+  font-size: $fs-18;
+  margin-bottom: 25px;
+}
+.footer__menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__menu-item {
+  font-size: $fs-14;
+  color: $c-grey-2;
+  margin-bottom: 16px;
+  transition: $t-normal;
+}
+
+.footer__menu-item:hover {
+  color: $c-white;
+}
+
+
+//------------------------------
+// Footer info
+//------------------------------
+
+.footer__info {
+  text-align: right;
+}
+.footer__info-phone {
+  font-size: $fs-25;
+  color: $c-white;
+}
+
+.footer__info-text {
+  color: $c-grey-3;
+  margin: 10px 0;
+  p {
+    margin: 0;
+  }
+}
+
+.footer__payment {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    margin-left: 10px;
+    max-height: 30px;
+    width: auto;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .footer__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-align: left;
+  }
+  .footer__info-payment {
+    text-align: right;
+  }
+}
+
+@media #{$tablet} {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer--about {
+    order: 3;
+    margin-top: 30px;
+  }
+
+  .footer--menus {
+    order: 1;
+  }
+
+  .footer--info {
+    order: 2;
+  }
+  @media #{$phone} {
+    .footer__about {
+      text-align: center;
+    }
+    .footer__info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer__info-payment {
+      text-align: center;
+    }
+    .footer__payment {
+      justify-content: center;
+    }
+    .footer__info-payment {
+      margin-top: 30px;
+    }
+  }
+}

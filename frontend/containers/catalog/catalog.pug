@@ -1,0 +1,15 @@
+.section.catalog-section.row.row--2
+    .col-12
+        include ../../components/filterBar/filterBar
+    .col-md-3.col-sm-4.no-padding
+        include ../filterAside/filterAside
+    .col-md-9.col-sm-8.no-padding
+        .catalog-items
+            -for(var i=1; i<19; i++)
+                include ../../components/topItem/topItemCatalog
+    .col-md-9.col-sm-12.col-md-offset-3.no-padding.catalog-section-bottom
+        .row.row--2
+            .col-sm-3.catalog-show-more
+                include ../../components/showMore/showMore
+            .col-sm-9.no-padding
+                include ../../components/pagination/paginationCatalog

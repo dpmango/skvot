@@ -1,0 +1,35 @@
+.breadcrumbs {
+  &__link {
+    position: relative;
+    @include white-link;
+    margin-right: 10px;
+    &:not(:last-child):after {
+      content: '';
+      width: 5px;
+      height: 100%;
+      background-image: url('../img/right-arrow-2.svg');
+      @include backgroundContain;
+      position: absolute;
+      top: 0;
+      right: -7px;
+    }
+    &:last-child {
+      margin-right: 0;
+      cursor: default;
+      color: $c-light-grey;
+      pointer-events: none;
+    }
+    &:not(:last-child):hover {
+      border-bottom: 1px solid $c-white-op-2;
+    }
+  }
+  &--lighter {
+    .breadcrumbs__link {
+      color: $c-light-blue-2;
+      font-size: $fs-12;
+      &:hover {
+        color: $c-white;
+      }
+    }
+  }
+}
