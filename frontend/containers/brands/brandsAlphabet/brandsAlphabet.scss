@@ -1,0 +1,16 @@
+.brands-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  border-top: 1px solid $c-light-grey-2;
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .brands-alphabet {
+    border-top: none;
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,45 @@
+.brands-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  border-top: 1px solid $c-light-grey-2;
+  &__image {
+    position: relative;
+    padding: 20px;
+    width: 11.11111%;
+    height: 130px;
+    border-right: 1px solid $c-light-grey-2;
+    border-bottom: 1px solid $c-light-grey-2;
+    &:hover > * {
+      transform: scale(0.9);
+    }
+    &:nth-child(9n) {
+      border-right: none;
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .brands-images {
+    &__image {
+      width: 16.666666%;
+    }
+    &__image {
+      &:nth-child(9n) {
+        border-right: 1px solid $c-light-grey-2;
+      }
+      &:nth-child(6n) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media #{$tablet} {
+  .brands-images {
+    display: none;
+  }
+}

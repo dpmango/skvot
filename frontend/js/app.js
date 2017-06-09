@@ -21,6 +21,7 @@ import {color} from './modules/filter/color'
 import {views} from './modules/filter/views'
 import {reset} from './modules/filter/reset'
 import {select} from './modules/customSelect'
+import {brands} from './modules/brands'
 
 import {productPreview} from './modules/productPreview'
 import {product} from './modules/product'
@@ -50,6 +51,7 @@ $(document).ready(function() {
   asideSection.init();
   checkbox.init();
   color.init();
+  brands.init();
   svg4everybody();
 
   productPreview.init();

@@ -1,745 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Skvot Project</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="styles/index.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Skvot</title>
+    <style>
+    *{padding: 0;  margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+    body{
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 16px;
+      color: white;
+      min-height: 100vh;
+      height: auto;
+      background-color: #181B1E;
+      overflow-x: hidden;
+    }
+    .container{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      min-height: 400px;
+      height: 100vh;
+    }
+    a{color: inherit; text-decoration: none;}
+    h1{
+      margin: 5vh 3vw 0 3vw;
+      padding-bottom: 1vh;
+      color: white;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .ico{
+      display: inline-block;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: ' ';
+      font-style: normal;
+    }
+    .ico-status{
+      border-radius: 0;
+      transform: rotate(45deg);
+      width: 6px;
+      height: 6px;
+      margin-right: 5px;
+      vertical-align: 2px;
+    }
+    .ico-status--ready{
+      background: forestgreen;
+    }
+    .ico-status--no{
+      background: tomato;
+    }
+    .ico-status--done{
+      background: black;
+    }
+    .ico-logo{
+      margin: 5vh 3vw 0 3vw;
+      background-image: url(img/logo@2x.png);
+      width: 207px;
+      height: 65px;
+    }
+    .links{
+       background-color: white;
+       border-radius: 10px;
+       margin: 5vh 2.5vw;
+       padding: 5vh 3vw;
+       width: 45vw;
+       flex: 1 1 40%
+       float: left;
+       color: rgba(0,0,0,.7);
+      }
+    .flex{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .flexCenter{
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    .content{
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+    }
+    .flexEnd{
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;;
+    }
+    ul{list-style: decimal-leading-zero;;}
+    ul li{
+      margin-left: 3vw;
+      color: #838B90;
+    }
+    ul li a{
+      display: block;
+      padding: 1.3vh 0vw 1.3vh 1vw;
+      width: 100%;
+      color: #181B1E;
+      border-left: 4px solid transparent;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+    ul li a span{
+      opacity: .5;
+      margin-left: .5em;
+      float: right;
+    }
+    ul li a:hover{
+      border-left: 4px solid #D2A36E;
+      /*background: rgba(0,0,0,.1);*/
+      color: #D2A36E;
+      border-bottom: 1px solid rgba(0,0,0,.4);
+    }
+    h2{
+      margin-bottom: 3vh;
+    }
+    .footer{
+      margin: 5vh 3vw 3vh 3vw;
+      border-top: 1px dotted rgba(255,255,255,.25);
+      padding-top: 2vh;
+      font-size: 0.825em;
+      color: #838B90;
+    }
+    .footer a{
+      color: white;
+    }
+    .flexWrap{
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+    }
+    @media(max-width: 700px){
+      h1{
+        font-size: 1.75em;
+      }
+      .container{
+        display: block;
+      }
+      .links{
+        width: 94vw;
+      }
+      ul li {
+        margin-left: 10vw;
+      }
+    }
+    </style>
   </head>
-  <body data-page="home">
-    <header class="header">
-      <div class="header__top">
-        <div class="container header__container header__container--top">
-          <div class="header__top-content">
-            <div class="header__menu">
-              <nav class="menu"><a class="menu__item" href="#">Главная</a><a class="menu__item" href="#">Доставка и оплата</a><a class="menu__item" href="#">Наши магазины</a><a class="menu__item" href="#">Блог</a><a class="menu__item" href="#">Команда</a><a class="menu__item" href="#">О сквоте</a><a class="menu__item" href="#">Бренды</a></nav>
-            </div>
-            <div class="header__auth">
-              <div class="auth">
-                <div class="auth__element auth__element--lk"><a class="auth__nav js-lk-trigger" href="#"><span>Иван Петров</span>
-                    <svg class="icon auth__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-                    </svg></a>
-                  <nav class="lk js-lk"><a class="lk__item" href="#">Мои заказы</a><a class="lk__item" href="#">Промо-коды</a><a class="lk__item" href="#">Настройки</a></nav>
-                </div>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element" href="#">Выход</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container header__container">
-          <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
-            <div class="catalog-btn">
-              <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
-              <div class="catalog-btn__text">Весь каталог</div>
-            </div>
-          </div>
-          <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
-            <div class="information information--location">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">Москва</div>
-                <div class="information__describe">З магазина в городе</div>
-              </div>
-            </div>
-          </div>
-          <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
-            <div class="information">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">8 800 100-41-69</div>
-                <div class="information__describe">Бесплатно по России</div>
-              </div>
-            </div></a>
-          <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
-            <div class="cart-btn">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
-              </svg>
-              <div class="cart-btn__count">54</div>
-            </div>
-            <div class="cart-popup js-cart-popup">
-              <div class="cart-popup__header">
-                <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
-              </div>
-              <div class="cart-popup__main">
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-popup__footer">
-                <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="header__item header__item--clickable header__item--search col-sm-1">
-            <div class="search-btn">
-              <svg class="icon search-btn__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__catalog container js-catalog">
-        <div class="catalog">
-          <div class="catalog__row row">
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Обувь</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Ботинки</a><a class="catalog__category-item" href="#">Кеды</a><a class="catalog__category-item" href="#">Шлёпанцы</a><a class="catalog__category-item" href="#">Слипоны</a><a class="catalog__category-item" href="#">Мокасины</a><a class="catalog__category-item" href="#">Сапоги</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Одежда</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a><a class="catalog__category-item" href="#">Купальники</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Багаж</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a><a class="catalog__category-item" href="#">Чехлы для сёрфа</a><a class="catalog__category-item" href="#">Чехлы для телефонов</a><a class="catalog__category-item" href="#">Чехлы для ноутбуков</a><a class="catalog__category-item" href="#">Чехлы для планшетов</a><a class="catalog__category-item" href="#">Чехлы для скейта</a><a class="catalog__category-item" href="#">Сумки для ботинок</a><a class="catalog__category-item" href="#">Ланчбоксы</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Скеитбординг</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Лонгборды и круизеры</a><a class="catalog__category-item" href="#">Скейтборды в сборе</a><a class="catalog__category-item" href="#">Амортизаторы</a><a class="catalog__category-item" href="#">Винты</a><a class="catalog__category-item" href="#">Деки</a><a class="catalog__category-item" href="#">Кингпины</a><a class="catalog__category-item" href="#">Колеса для скейта</a><a class="catalog__category-item" href="#">Подвески для скейта</a><a class="catalog__category-item" href="#">Подкладки под траки</a><a class="catalog__category-item" href="#">Подшипники для скейта</a><a class="catalog__category-item" href="#">Шкурка для скейта</a><a class="catalog__category-item" href="#">Ключи для скейта</a><a class="catalog__category-item" href="#">Парафин</a><a class="catalog__category-item" href="#">Слайдеры для скейта</a><a class="catalog__category-item" href="#">Рейлы для скейта</a><a class="catalog__category-item" href="#">Ластики для шкурки</a></div>
-            </div>
-          </div>
-          <div class="catalog__divider"></div>
-          <div class="catalog__row row">
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Сноуборд и лыжи</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Сноуборды</a><a class="catalog__category-item" href="#">Крепления для сноуборда</a><a class="catalog__category-item" href="#">Ботинки для сноуборда</a><a class="catalog__category-item" href="#">Горные лыжи Newschool</a><a class="catalog__category-item" href="#">Крепления для горных лыж</a><a class="catalog__category-item" href="#">Сноускейты</a><a class="catalog__category-item" href="#">Инструменты</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Самокаты</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Самокаты в сборе</a><a class="catalog__category-item" href="#">Вилки для кикскутеров</a><a class="catalog__category-item" href="#">Зажимы и компрессии</a><a class="catalog__category-item" href="#">Рули для самокатов</a><a class="catalog__category-item" href="#">Тормоза для самокатов</a><a class="catalog__category-item" href="#">Шкурки для самокатов</a><a class="catalog__category-item" href="#">Колеса для самокатов</a><a class="catalog__category-item" href="#">Деки для самокатов</a><a class="catalog__category-item" href="#">Грипсы</a><a class="catalog__category-item" href="#">Баренды для самокатов</a><a class="catalog__category-item" href="#">Пеги</a><a class="catalog__category-item" href="#">Запчасти для самокатов</a><a class="catalog__category-item" href="#">Рулевая</a><a class="catalog__category-item" href="#">Подшипники</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Водный спорт</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Трапеции</a><a class="catalog__category-item" href="#">Коврики</a><a class="catalog__category-item" href="#">Аксессуары</a><a class="catalog__category-item" href="#">Одежда для серфинга</a></div><a class="catalog__category-title" href="#">Защита</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Шлемы</a><a class="catalog__category-item" href="#">Маски для сноуборда</a><a class="catalog__category-item" href="#">Защита туловища</a><a class="catalog__category-item" href="#">Наколенники</a><a class="catalog__category-item" href="#">Налокотники</a><a class="catalog__category-item" href="#">Защита кисти</a><a class="catalog__category-item" href="#">Комплекты защиты</a><a class="catalog__category-item" href="#">Шорты защитные</a></div>
-            </div>
-            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Аксессуары</a>
-              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Банданы</a><a class="catalog__category-item" href="#">Наклейки</a><a class="catalog__category-item" href="#">Полотенца</a><a class="catalog__category-item" href="#">Ремни</a><a class="catalog__category-item" href="#">Кошельки</a><a class="catalog__category-item" href="#">Напульсники</a><a class="catalog__category-item" href="#">Солнцезащитные очки</a><a class="catalog__category-item" href="#">Шнурки</a><a class="catalog__category-item" href="#">Фингерборды</a><a class="catalog__category-item" href="#">Пряжки</a><a class="catalog__category-item" href="#">Нашивки</a><a class="catalog__category-item" href="#">Линзы для IPhone</a><a class="catalog__category-item" href="#">Брелоки</a><a class="catalog__category-item" href="#">Йо-Йо</a><a class="catalog__category-item" href="#">Часы</a><a class="catalog__category-item" href="#">Журналы</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="main-slider">
-      <div class="main-slider__slides js-main-slider">
-        <div class="main-slider__slide" style="background-image: url('img/main-slider-image-1.jpg');"></div>
-        <div class="main-slider__slide" style="background-image: url('img/main-slider-image-2.jpg');"></div>
-      </div>
-      <div class="main-slider__contents container js-main-slider-content">
-        <div class="main-slider__item">
-          <div class="main-slider__content">
-            <div class="main-slider__head">
-              <div class="main-slider__head-top">Новые коллекции</div>
-              <div class="main-slider__head-bottom">Весна 2017</div>
-            </div>
-            <div class="main-slider__main-content">
-              <h2 class="main-slider__title">Adidas originals</h2>
-              <div class="main-slider__subtitle">Уже во всех сквотах</div>
-            </div>
-            <div></div>
-          </div>
-        </div>
-        <div class="main-slider__item">
-          <div class="main-slider__content">
-            <div class="main-slider__head">
-              <div class="main-slider__head-top">Новые коллекции</div>
-              <div class="main-slider__head-bottom">Весна 2017</div>
-            </div>
-            <div class="main-slider__main-content">
-              <h2 class="main-slider__title">Nike originals</h2>
-              <div class="main-slider__subtitle">Уже во всех сквотах</div>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div class="main-slider__navigation container">
-        <div class="main-slider__navigation__controls">
-          <div class="main-slider__navigation-left js-slick-prev">
-            <div class="slider-arrow">
-              <svg class="slider-arrow__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-left-arrow"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="main-slider__navigation-right js-slick-next">
-            <div class="slider-arrow">
-              <svg class="slider-arrow__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-right-arrow"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
+<body>
+  <div class="container">
+    <div class="fix">
+      <div class="flex flexCenter">
+        <h1>SKVOT (html/css)</h1>
+        <i class="ico ico-logo"></i>
       </div>
     </div>
-    <main class="main container">
-      <div class="top">
-        <div class="top__tabs tabs">
-          <div class="row row--2">
-            <div class="col-sm-4 tabs__tab tabs__tab--active" data-tab="tab-1">Топ этой недели</div>
-            <div class="col-sm-4 tabs__tab" data-tab="tab-2">
-              <div>Сквот.дисконт</div>
-              <div class="tabs__tab-label">-70%</div>
-            </div>
-            <div class="col-sm-4 tabs__tab" data-tab="tab-3">Покупают прямо сейчас</div>
-          </div>
+    <div class="content">
+      <div class="flex flexWrap">
+        <div class="links">
+          <h2>Core pages</h2>
+          <ul class="">
+            <li><a href="homepage.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Homepage <span>(Главная)</span></a></li>
+            <li><a href="catalog.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Catalog <span>(Каталог)</span></a></li>
+            <li><a href="product.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Product <span>(Товар)</span></a></li>
+            <li><a href="brands.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Brands <span>(Бренды)</span></a></li>
+          </ul>
         </div>
-        <div class="top__contents tabs-contents">
-          <div class="tabs-contents__content tabs-contents__content--active" id="tab-1"><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a></div>
-          <div class="tabs-contents__content" id="tab-2"><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a></div>
-          <div class="tabs-contents__content" id="tab-3"><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item top-item--big" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-2.jpg" style="background-image: url(img/top-2.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Лонгборд "Рыбка" GLOBE Sun City Complete 30" half dip bamboo/blue</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a><a class="top-item" href="#">
-              <div class="top-item__top">
-                <div class="top-item__image" href="img/top-1.jpg" style="background-image: url(img/top-1.jpg);"></div>
-                <div class="top-item__view button">Посмотреть</div>
-              </div>
-              <div class="top-item__content">
-                <div class="top-item__title">Зимние ботинки ELEMENT Donnelly Bark</div>
-                <div class="top-item__price">
-                  <div class="top-item__price-old">18400 ₽</div>
-                  <div class="top-item__price-new">8400 ₽</div>
-                </div>
-                <div class="top-item__label">-30%</div>
-              </div></a></div>
-        </div>
-        <div class="top__more"><a class="more" href="#">
-            <svg class="icon more__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-reload"></use>
-            </svg>
-            <div class="more__text">Показать еще</div></a></div>
-      </div>
-      <div class="collections"><a class="collection collection--horizontal" href="#" style="background-image: url(img/collection-h.jpg);">
-          <div class="collection__label collection__label--sale">sale</div>
-          <div class="collection__content">
-            <div class="collection__brand">DICKIES</div>
-            <div class="collection__title">Лукбук лето 2017</div>
-          </div>
-          <div class="collection__button button button--white">Смотреть</div></a><a class="collection collection--vertical" href="#" style="background-image: url(img/collection-v.jpg);">
-          <div class="collection__label">new</div>
-          <div class="collection__content">
-            <div class="collection__brand">BILLABONG</div>
-            <div class="collection__title">Весенние новинки для милых дам</div>
-          </div>
-          <div class="collection__button button button--white">Смотреть</div></a><a class="collection" href="#" style="background-image: url(img/collection.jpg);">
-          <div class="collection__label">new</div>
-          <div class="collection__content">
-            <div class="collection__brand">ELEMENT SKATEBOARDING</div>
-            <div class="collection__title">Распродажа летней коллекции</div>
-          </div>
-          <div class="collection__button button button--white">Смотреть</div></a><a class="collection" href="#" style="background-image: url(img/collection.jpg);">
-          <div class="collection__label">new</div>
-          <div class="collection__content">
-            <div class="collection__brand">ELEMENT SKATEBOARDING</div>
-            <div class="collection__title">Распродажа летней коллекции</div>
-          </div>
-          <div class="collection__button button button--white">Смотреть</div></a></div>
-      <div class="services">
-        <div class="row row--2"><a class="col-md-3 col-sm-6 col-xs-12 service" href="#">
-            <svg class="icon service__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-delivery"></use>
-            </svg>
-            <div class="service__title">БЫСТРАЯ ДОСТАВКА</div>
-            <div class="service__subtitle">Мы отправляем все заказы уже на следующий день после оформления</div>
-            <div class="service__detail">
-              <div class="service__detail-text">Подробнее</div>
-              <svg class="icon service__detail-icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-detail"></use>
-              </svg>
-            </div></a><a class="col-md-3 col-sm-6 col-xs-12 service" href="#">
-            <svg class="icon service__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-24h"></use>
-            </svg>
-            <div class="service__title">ЗАКАЗЫВАЙТЕ КРУГЛОСУТОЧНО</div>
-            <div class="service__subtitle">Подтверждаем и собираем заказы в течение суток</div>
-            <div class="service__detail">
-              <div class="service__detail-text">Подробнее</div>
-              <svg class="icon service__detail-icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-detail"></use>
-              </svg>
-            </div></a><a class="col-md-3 col-sm-6 col-xs-12 service" href="#">
-            <svg class="icon service__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-exchange"></use>
-            </svg>
-            <div class="service__title">ОБМЕН И ВОЗВРАТ</div>
-            <div class="service__subtitle">Любой товар вы можете вернуть или поменять на нужный без лишних сложностей</div>
-            <div class="service__detail">
-              <div class="service__detail-text">Подробнее</div>
-              <svg class="icon service__detail-icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-detail"></use>
-              </svg>
-            </div></a><a class="col-md-3 col-sm-6 col-xs-12 service" href="#">
-            <svg class="icon service__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-promo"></use>
-            </svg>
-            <div class="service__title">ПРОМО-КОДЫ И КАРТЫ</div>
-            <div class="service__subtitle">Возвращаем до 40% от суммы заказа и дарим дисконтную карту каждому</div>
-            <div class="service__detail">
-              <div class="service__detail-text">Подробнее</div>
-              <svg class="icon service__detail-icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-detail"></use>
-              </svg>
-            </div></a></div>
-      </div>
-      <div class="reviews">
-        <div class="reviews__title">Отзывы о товарах</div>
-        <div class="reviews__content">
-          <div class="review row row--2">
-            <div class="col-md-3 col-sm-3 review__image-wrap review__images">
-              <div class="review__image" style="background-image: url(img/review.png);"></div>
-              <div class="review__image" style="background-image: url(img/review-1.png);"></div>
-            </div>
-            <div class="col-md-6 col-sm-7 review__content js-review-slider">
-              <div class="review__slides">
-                <div class="review__item">
-                  <div class="review__text">Качественный наждак, приехал завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">Евгений Великоиваненко</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">Завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">Сергей Минаев</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-2 review__controls">
-              <div class="review__control review-prev">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-left-arrow"></use>
-                </svg>
-              </div>
-              <div class="review__control review-next">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-right-arrow"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="review review--style-2 row row--2">
-            <div class="col-md-3 col-sm-3 review__image-wrap review__images">
-              <div class="review__image" style="background-image: url(img/review-1.png);"></div>
-              <div class="review__image" style="background-image: url(img/review-3.png);"></div>
-            </div>
-            <div class="col-md-6 col-sm-7 review__content js-review-slider">
-              <div class="review__slides">
-                <div class="review__item">
-                  <div class="review__text">Качественный наждак, приехал завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">Евгений Великоиваненко</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">Завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">John Doe</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-2 review__controls">
-              <div class="review__control review-prev">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-left-arrow"></use>
-                </svg>
-              </div>
-              <div class="review__control review-next">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-right-arrow"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="review review--style-3 row row--2">
-            <div class="col-md-3 col-sm-3 review__image-wrap review__images">
-              <div class="review__image" style="background-image: url(img/review-3.png);"></div>
-              <div class="review__image" style="background-image: url(img/review.png);"></div>
-            </div>
-            <div class="col-md-6 col-sm-7 review__content js-review-slider">
-              <div class="review__slides">
-                <div class="review__item">
-                  <div class="review__text">Качественный наждак, приехал завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">Elizabeth II</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">Завёрнутым в рулон. В коробке дали наклейки и тетрадку. Нормальный в общем магазин, не понимаю чего все в соцсетях гонят.</div>
-                  <div class="review__bottom">
-                    <div class="review__author">Jack Brocker</div>
-                    <div class="review__thing">Написал <a href="#">о рюкзаке DAKINE Mission Pack 105 L Dark Blue</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-2 review__controls">
-              <div class="review__control review-prev">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-left-arrow"></use>
-                </svg>
-              </div>
-              <div class="review__control review-next">
-                <svg class="icon review__icon">
-                  <use xlink:href="img/svg-sprites/sprite.svg#icon-right-arrow"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
+        <div class="links">
+          <h2>Text pages</h2>
+          <ul class="">
+
+          </ul>
         </div>
       </div>
-      <div class="blog-news">
-        <div class="blog-news__title">Новое из блога</div>
-        <div class="row row--2"><a class="col-md-4 col-sm-6 blog-item" href="#">
-            <div class="blog-item__image" style="background-image: url('img/blogItem-1.jpg');"></div>
-            <div class="blog-item__label">Скейтборд</div>
-            <div class="blog-item__title">Новогодний скейтборд-контест в боуле при поддержке Сквота и Dickies</div>
-            <div class="blog-item__describe">PickPoint - пионер на российском рынке постаматов — специализированных терминалов для выдачи товаров, купленных в интернет-магазине.</div>
-            <div class="blog-item__date">Март 22, 2017</div></a><a class="col-md-4 col-sm-6 blog-item" href="#">
-            <div class="blog-item__image" style="background-image: url('img/blogItem-1.jpg');"></div>
-            <div class="blog-item__label">Скейтборд</div>
-            <div class="blog-item__title">Новогодний скейтборд-контест в боуле при поддержке Сквота и Dickies</div>
-            <div class="blog-item__describe">PickPoint - пионер на российском рынке постаматов — специализированных терминалов для выдачи товаров, купленных в интернет-магазине.</div>
-            <div class="blog-item__date">Март 22, 2017</div></a><a class="col-md-4 col-sm-6 blog-item" href="#">
-            <div class="blog-item__image" style="background-image: url('img/blogItem-1.jpg');"></div>
-            <div class="blog-item__label">Скейтборд</div>
-            <div class="blog-item__title">Новогодний скейтборд-контест в боуле при поддержке Сквота и Dickies</div>
-            <div class="blog-item__describe">PickPoint - пионер на российском рынке постаматов — специализированных терминалов для выдачи товаров, купленных в интернет-магазине.</div>
-            <div class="blog-item__date">Март 22, 2017</div></a></div>
+
+      <div class="flex flexWrap">
+        <div class="links">
+          <h2>Profile</h2>
+          <ul class="">
+
+          </ul>
+        </div>
+        <div class="links">
+          <h2>...</h2>
+          <ul class="">
+
+          </ul>
+        </div>
       </div>
-      <div class="we-socials">
-        <div class="we-socials__title">Мы в соцсетях</div>
-        <div class="we-socials__content row row--2"><a class="col-sm-3 col-xs-6 we-social we-social--vimeo" href="#">
-            <svg class="icon we-social__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-vimeo"></use>
-            </svg>
-            <div class="we-social__name">Vimeo</div>
-            <div class="we-social__number">22089</div>
-            <div class="we-social__subscribers">Подписчиков</div>
-            <div class="we-social__hash">#skvotboardshop</div></a><a class="col-sm-3 col-xs-6 we-social we-social--vk" href="#">
-            <svg class="icon we-social__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-vk"></use>
-            </svg>
-            <div class="we-social__name">Вконтакте</div>
-            <div class="we-social__number">52089</div>
-            <div class="we-social__subscribers">Подписчиков</div>
-            <div class="we-social__hash">#skvotboardshop</div></a><a class="col-sm-3 col-xs-6 we-social we-social--instagram" href="#">
-            <svg class="icon we-social__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-instagram"></use>
-            </svg>
-            <div class="we-social__name">Instagram</div>
-            <div class="we-social__number">92089</div>
-            <div class="we-social__subscribers">Подписчиков</div>
-            <div class="we-social__hash">#skvotboardshop</div></a><a class="col-sm-3 col-xs-6 we-social we-social--facebook" href="#">
-            <svg class="icon we-social__icon">
-              <use xlink:href="img/svg-sprites/sprite.svg#icon-facebook"></use>
-            </svg>
-            <div class="we-social__name">Facebook</div>
-            <div class="we-social__number">12089</div>
-            <div class="we-social__subscribers">Подписчиков</div>
-            <div class="we-social__hash">#skvotboardshop</div></a></div>
-      </div>
-    </main>
-    <div class="modal js-modal" data-modal="city">
-      <div class="modal__content">
-        <div class="modal__title modal__item">Где вы находитесь?</div>
-        <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
-        <div class="modal__title modal__item">Другой город?</div>
-        <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
-        <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
+
+
+    </div>
+    <div class="fix">
+      <div class="flex flexEnd">
+      <div class="footer">
+        Brought to you by <a href="http://f-end.ru/">@Sergey Khmelevskoy</a>
       </div>
     </div>
-    <div class="modal js-modal" data-modal="city-accept">
-      <div class="modal__content">
-        <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
-        <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
-        <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
-      </div>
     </div>
-    <div class="subscription">
-      <div class="subscription__container container">
-        <form class="subscription-form">
-          <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
-          <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
-          <div class="subscription-form__form">
-            <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
-            <button type="submit">
-              <svg class="icon subscription-form__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="col-md-4 col-sm-5 footer--about">
-          <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
-            <p>Федеральная сеть бордшопов, основанная 2003 году</p>
-            <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
-            <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
-          </div>
-        </div>
-        <div class="footer__menus col-md-4 col-sm-7 footer--menus">
-          <div class="footer__menu">
-            <div class="footer__menu-title">Помощь</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
-          </div>
-          <div class="footer__menu">
-            <div class="footer__menu-title">Мы в соцсетях</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
-          </div>
-        </div>
-        <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
-          <div class="footer__info">
-            <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
-              <div class="footer__info-text">
-                <p>По будням с 9.00 до 20.00</p>
-                <p>По субботам с 10.00 до 18.00</p>
-              </div>
-            </div>
-            <div class="footer__info-payment">
-              <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
-              <div class="footer__info-text">
-                <p>Доставляем курьером, почтой, в постматы</p>
-                <p>и в пункты выдачи по России</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <svg class="icon up js-up">
-      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-    </svg>
-    <script src="js/vendor.js"></script>
-    <script src="js/commons.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+
+  </div>
+</body>
 </html>

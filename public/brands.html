@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Skvot Project</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+  </head>
+  <body data-page="brands">
+    <header class="header">
+      <div class="header__top">
+        <div class="container header__container header__container--top">
+          <div class="header__top-content">
+            <div class="header__menu">
+              <nav class="menu"><a class="menu__item" href="#">Главная</a><a class="menu__item" href="#">Доставка и оплата</a><a class="menu__item" href="#">Наши магазины</a><a class="menu__item" href="#">Блог</a><a class="menu__item" href="#">Команда</a><a class="menu__item" href="#">О сквоте</a><a class="menu__item" href="#">Бренды</a></nav>
+            </div>
+            <div class="header__auth">
+              <div class="auth">
+                <div class="auth__element auth__element--lk"><a class="auth__nav js-lk-trigger" href="#"><span>Иван Петров</span>
+                    <svg class="icon auth__icon">
+                      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
+                    </svg></a>
+                  <nav class="lk js-lk"><a class="lk__item" href="#">Мои заказы</a><a class="lk__item" href="#">Промо-коды</a><a class="lk__item" href="#">Настройки</a></nav>
+                </div>
+                <div class="auth__element auth__element--divider">/</div><a class="auth__element" href="#">Выход</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container header__container">
+          <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
+            <div class="catalog-btn">
+              <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
+              <div class="catalog-btn__text">Весь каталог</div>
+            </div>
+          </div>
+          <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
+            <div class="information information--location">
+              <svg class="icon information__icon">
+                <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
+              </svg>
+              <div class="information__content">
+                <div class="information__title">Москва</div>
+                <div class="information__describe">З магазина в городе</div>
+              </div>
+            </div>
+          </div>
+          <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
+            <div class="information">
+              <svg class="icon information__icon">
+                <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
+              </svg>
+              <div class="information__content">
+                <div class="information__title">8 800 100-41-69</div>
+                <div class="information__describe">Бесплатно по России</div>
+              </div>
+            </div></a>
+          <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
+            <div class="cart-btn">
+              <svg class="icon information__icon">
+                <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
+              </svg>
+              <div class="cart-btn__count">54</div>
+            </div>
+            <div class="cart-popup js-cart-popup">
+              <div class="cart-popup__header">
+                <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
+              </div>
+              <div class="cart-popup__main">
+                <div class="cart-popup-item">
+                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                    <div class="cart-popup-item__price">
+                      <div class="cart-popup-item__price-old">9854 ₽</div>
+                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                    </div>
+                    <ul class="cart-popup-item__description">
+                      <li>Цвет: Белый</li>
+                      <li>Размер: 178</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-popup-item">
+                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                    <div class="cart-popup-item__price">
+                      <div class="cart-popup-item__price-old">9854 ₽</div>
+                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                    </div>
+                    <ul class="cart-popup-item__description">
+                      <li>Цвет: Белый</li>
+                      <li>Размер: 178</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-popup-item">
+                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                    <div class="cart-popup-item__price">
+                      <div class="cart-popup-item__price-old">9854 ₽</div>
+                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                    </div>
+                    <ul class="cart-popup-item__description">
+                      <li>Цвет: Белый</li>
+                      <li>Размер: 178</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-popup__footer">
+                <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="header__item header__item--clickable header__item--search col-sm-1">
+            <div class="search-btn">
+              <svg class="icon search-btn__icon">
+                <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__catalog container js-catalog">
+        <div class="catalog">
+          <div class="catalog__row row">
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Обувь</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Ботинки</a><a class="catalog__category-item" href="#">Кеды</a><a class="catalog__category-item" href="#">Шлёпанцы</a><a class="catalog__category-item" href="#">Слипоны</a><a class="catalog__category-item" href="#">Мокасины</a><a class="catalog__category-item" href="#">Сапоги</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Одежда</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a><a class="catalog__category-item" href="#">Купальники</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Багаж</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a><a class="catalog__category-item" href="#">Чехлы для сёрфа</a><a class="catalog__category-item" href="#">Чехлы для телефонов</a><a class="catalog__category-item" href="#">Чехлы для ноутбуков</a><a class="catalog__category-item" href="#">Чехлы для планшетов</a><a class="catalog__category-item" href="#">Чехлы для скейта</a><a class="catalog__category-item" href="#">Сумки для ботинок</a><a class="catalog__category-item" href="#">Ланчбоксы</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Скеитбординг</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Лонгборды и круизеры</a><a class="catalog__category-item" href="#">Скейтборды в сборе</a><a class="catalog__category-item" href="#">Амортизаторы</a><a class="catalog__category-item" href="#">Винты</a><a class="catalog__category-item" href="#">Деки</a><a class="catalog__category-item" href="#">Кингпины</a><a class="catalog__category-item" href="#">Колеса для скейта</a><a class="catalog__category-item" href="#">Подвески для скейта</a><a class="catalog__category-item" href="#">Подкладки под траки</a><a class="catalog__category-item" href="#">Подшипники для скейта</a><a class="catalog__category-item" href="#">Шкурка для скейта</a><a class="catalog__category-item" href="#">Ключи для скейта</a><a class="catalog__category-item" href="#">Парафин</a><a class="catalog__category-item" href="#">Слайдеры для скейта</a><a class="catalog__category-item" href="#">Рейлы для скейта</a><a class="catalog__category-item" href="#">Ластики для шкурки</a></div>
+            </div>
+          </div>
+          <div class="catalog__divider"></div>
+          <div class="catalog__row row">
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Сноуборд и лыжи</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Сноуборды</a><a class="catalog__category-item" href="#">Крепления для сноуборда</a><a class="catalog__category-item" href="#">Ботинки для сноуборда</a><a class="catalog__category-item" href="#">Горные лыжи Newschool</a><a class="catalog__category-item" href="#">Крепления для горных лыж</a><a class="catalog__category-item" href="#">Сноускейты</a><a class="catalog__category-item" href="#">Инструменты</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Самокаты</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Самокаты в сборе</a><a class="catalog__category-item" href="#">Вилки для кикскутеров</a><a class="catalog__category-item" href="#">Зажимы и компрессии</a><a class="catalog__category-item" href="#">Рули для самокатов</a><a class="catalog__category-item" href="#">Тормоза для самокатов</a><a class="catalog__category-item" href="#">Шкурки для самокатов</a><a class="catalog__category-item" href="#">Колеса для самокатов</a><a class="catalog__category-item" href="#">Деки для самокатов</a><a class="catalog__category-item" href="#">Грипсы</a><a class="catalog__category-item" href="#">Баренды для самокатов</a><a class="catalog__category-item" href="#">Пеги</a><a class="catalog__category-item" href="#">Запчасти для самокатов</a><a class="catalog__category-item" href="#">Рулевая</a><a class="catalog__category-item" href="#">Подшипники</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Водный спорт</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Трапеции</a><a class="catalog__category-item" href="#">Коврики</a><a class="catalog__category-item" href="#">Аксессуары</a><a class="catalog__category-item" href="#">Одежда для серфинга</a></div><a class="catalog__category-title" href="#">Защита</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Шлемы</a><a class="catalog__category-item" href="#">Маски для сноуборда</a><a class="catalog__category-item" href="#">Защита туловища</a><a class="catalog__category-item" href="#">Наколенники</a><a class="catalog__category-item" href="#">Налокотники</a><a class="catalog__category-item" href="#">Защита кисти</a><a class="catalog__category-item" href="#">Комплекты защиты</a><a class="catalog__category-item" href="#">Шорты защитные</a></div>
+            </div>
+            <div class="catalog__category col-sm-3"><a class="catalog__category-title" href="#">Аксессуары</a>
+              <div class="catalog__category-items"><a class="catalog__category-item" href="#">Банданы</a><a class="catalog__category-item" href="#">Наклейки</a><a class="catalog__category-item" href="#">Полотенца</a><a class="catalog__category-item" href="#">Ремни</a><a class="catalog__category-item" href="#">Кошельки</a><a class="catalog__category-item" href="#">Напульсники</a><a class="catalog__category-item" href="#">Солнцезащитные очки</a><a class="catalog__category-item" href="#">Шнурки</a><a class="catalog__category-item" href="#">Фингерборды</a><a class="catalog__category-item" href="#">Пряжки</a><a class="catalog__category-item" href="#">Нашивки</a><a class="catalog__category-item" href="#">Линзы для IPhone</a><a class="catalog__category-item" href="#">Брелоки</a><a class="catalog__category-item" href="#">Йо-Йо</a><a class="catalog__category-item" href="#">Часы</a><a class="catalog__category-item" href="#">Журналы</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-head page-head--darken" style="background-image: url('img/brands.jpg');">
+      <div class="page-head__title">Бренды</div>
+      <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Бренды</a></div>
+    </div>
+    <main class="main container">
+      <div class="brands">
+        <div class="brands__images">
+          <div class="brands-images"><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a><a class="brands-images__image" href="#">
+              <div class="brands-image" style="background-image: url(img/brandimage.jpg);"></div></a></div>
+        </div>
+        <div class="brands__navigation">
+          <div class="brands-nav">
+            <div class="brands-nav__item brands-nav__item--active" data-section="a">a</div>
+            <div class="brands-nav__item" data-section="b">b</div>
+            <div class="brands-nav__item" data-section="c">c</div>
+            <div class="brands-nav__item" data-section="d">d</div>
+            <div class="brands-nav__item" data-section="f">f</div>
+            <div class="brands-nav__item" data-section="g">g</div>
+            <div class="brands-nav__item" data-section="h">h</div>
+            <div class="brands-nav__item" data-section="i">i</div>
+            <div class="brands-nav__item" data-section="j">j</div>
+          </div>
+        </div>
+        <div class="brands__alphabet">
+          <div class="brands-alphabet">
+            <div class="brands-section" data-section="a">
+              <div class="brands-section__letter">a</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">ADDICT</a><a class="brands-section__item" href="#">ADIDAS</a><a class="brands-section__item" href="#">ADIO</a><a class="brands-section__item" href="#">AIRBLASTER</a><a class="brands-section__item" href="#">ALMOST</a><a class="brands-section__item" href="#">ALTAMONT</a><a class="brands-section__item" href="#">ANDALE</a><a class="brands-section__item" href="#">ANON</a><a class="brands-section__item" href="#">AO</a><a class="brands-section__item" href="#">APEX</a><a class="brands-section__item" href="#">APO</a><a class="brands-section__item" href="#">ASHBURY</a><a class="brands-section__item" href="#">AWS</a></div>
+            </div>
+            <div class="brands-section" data-section="b">
+              <div class="brands-section__letter">b</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">BAKER</a><a class="brands-section__item" href="#">BILLABONG</a><a class="brands-section__item" href="#">BIRDHOUSE</a><a class="brands-section__item" href="#">BLACK LABEL</a><a class="brands-section__item" href="#">BLACKBOX</a><a class="brands-section__item" href="#">BLAST</a><a class="brands-section__item" href="#">BLIND</a><a class="brands-section__item" href="#">BLITZ</a><a class="brands-section__item" href="#">BLUNT</a><a class="brands-section__item" href="#">BRITISH KNIGHTS</a><a class="brands-section__item" href="#">Bro Style</a><a class="brands-section__item" href="#">BRONSON</a><a class="brands-section__item" href="#">BULLET</a><a class="brands-section__item" href="#">BURTON</a></div>
+            </div>
+            <div class="brands-section" data-section="c">
+              <div class="brands-section__letter">c</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">C1RCA</a><a class="brands-section__item" href="#">CLICHE</a><a class="brands-section__item" href="#">CLWR</a><a class="brands-section__item" href="#">CONVERSE</a><a class="brands-section__item" href="#">CREATURE</a><a class="brands-section__item" href="#">CRIME</a></div>
+            </div>
+            <div class="brands-section" data-section="d">
+              <div class="brands-section__letter">d</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">DAKINE</a><a class="brands-section__item" href="#">DARKSTAR</a><a class="brands-section__item" href="#">DC</a><a class="brands-section__item" href="#">DEATH LENS</a><a class="brands-section__item" href="#">DEKLINE</a><a class="brands-section__item" href="#">DESTROYER</a><a class="brands-section__item" href="#">DESTROYER</a><a class="brands-section__item" href="#">DESTRUCTO</a><a class="brands-section__item" href="#">DEWAR'S</a><a class="brands-section__item" href="#">DIAMOND</a><a class="brands-section__item" href="#">DICKIES</a><a class="brands-section__item" href="#">DUOTONE</a><a class="brands-section__item" href="#">DUSTERS</a><a class="brands-section__item" href="#">DVS</a></div>
+            </div>
+            <div class="brands-section" data-section="e">
+              <div class="brands-section__letter">e</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">ELEMENT</a><a class="brands-section__item" href="#">EMERGENCY</a><a class="brands-section__item" href="#">EMERICA</a><a class="brands-section__item" href="#">ENJOI</a><a class="brands-section__item" href="#">ES</a><a class="brands-section__item" href="#">ETHIC</a><a class="brands-section__item" href="#">ETNIES</a></div>
+            </div>
+            <div class="brands-section" data-section="f">
+              <div class="brands-section__letter">f</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">ELEMENT</a><a class="brands-section__item" href="#">FALLEN</a><a class="brands-section__item" href="#">FLATFITTY</a><a class="brands-section__item" href="#">FLAVOR</a><a class="brands-section__item" href="#">FLIP</a><a class="brands-section__item" href="#">FORUM</a><a class="brands-section__item" href="#">FOUNDATION</a></div>
+            </div>
+            <div class="brands-section" data-section="g">
+              <div class="brands-section__letter">g</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">GALLAZ</a><a class="brands-section__item" href="#">GLOBE</a><a class="brands-section__item" href="#">GOLD CUP</a><a class="brands-section__item" href="#">GREMMIE</a><a class="brands-section__item" href="#">GRENADE</a><a class="brands-section__item" href="#">GRIZZLY</a></div>
+            </div>
+            <div class="brands-section" data-section="h">
+              <div class="brands-section__letter">h</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">HABITAT</a><a class="brands-section__item" href="#">HALTI</a><a class="brands-section__item" href="#">HELLA GRIP</a><a class="brands-section__item" href="#">HOBO</a><a class="brands-section__item" href="#">HOOK-UPS</a><a class="brands-section__item" href="#">HUF</a></div>
+            </div>
+            <div class="brands-section" data-section="i">
+              <div class="brands-section__letter">i</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">ICON</a><a class="brands-section__item" href="#">IMPERIVM</a><a class="brands-section__item" href="#">INDEPENDENT</a><a class="brands-section__item" href="#">INNES</a><a class="brands-section__item" href="#">INSIGHT</a></div>
+            </div>
+            <div class="brands-section" data-section="j">
+              <div class="brands-section__letter">j</div>
+              <div class="brands-section__list"><a class="brands-section__item" href="#">JEE VICE</a><a class="brands-section__item" href="#">JESSUP</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal js-modal" data-modal="city">
+      <div class="modal__content">
+        <div class="modal__title modal__item">Где вы находитесь?</div>
+        <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
+        <div class="modal__title modal__item">Другой город?</div>
+        <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
+        <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
+      </div>
+    </div>
+    <div class="modal js-modal" data-modal="city-accept">
+      <div class="modal__content">
+        <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
+        <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
+        <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
+      </div>
+    </div>
+    <div class="subscription">
+      <div class="subscription__container container">
+        <form class="subscription-form">
+          <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
+          <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
+          <div class="subscription-form__form">
+            <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
+            <button type="submit">
+              <svg class="icon subscription-form__icon">
+                <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="col-md-4 col-sm-5 footer--about">
+          <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
+            <p>Федеральная сеть бордшопов, основанная 2003 году</p>
+            <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
+            <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
+          </div>
+        </div>
+        <div class="footer__menus col-md-4 col-sm-7 footer--menus">
+          <div class="footer__menu">
+            <div class="footer__menu-title">Помощь</div>
+            <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-title">Мы в соцсетях</div>
+            <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
+          </div>
+        </div>
+        <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
+          <div class="footer__info">
+            <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
+              <div class="footer__info-text">
+                <p>По будням с 9.00 до 20.00</p>
+                <p>По субботам с 10.00 до 18.00</p>
+              </div>
+            </div>
+            <div class="footer__info-payment">
+              <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
+              <div class="footer__info-text">
+                <p>Доставляем курьером, почтой, в постматы</p>
+                <p>и в пункты выдачи по России</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <svg class="icon up js-up">
+      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
+    </svg>
+    <script src="js/vendor.js"></script>
+    <script src="js/commons.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

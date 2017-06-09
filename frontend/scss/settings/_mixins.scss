@@ -50,7 +50,12 @@
     border-bottom: 1px solid transparent;
     transition: $t-normal;
 }
-
+@mixin dark-link {
+    font-size: $fs-14;
+    color: $c-black-2;
+    border-bottom: 1px solid $c-grey;
+    transition: $t-normal;
+}
 @mixin liminText($lines, $lineHeight) {
    overflow: hidden;
    text-overflow: ellipsis;

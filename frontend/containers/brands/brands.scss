@@ -1,0 +1,16 @@
+.brands {
+  &__navigation {
+    display: none;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .brands {
+    &__navigation {
+      display: block;
+    }
+  }
+}

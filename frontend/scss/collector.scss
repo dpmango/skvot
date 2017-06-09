@@ -81,6 +81,11 @@
 @import '../components/productRecommend/productRecommend';
 @import '../components/productFeedback/productFeedback';
 
+@import '../components/brands/brandsImage/brandsImage';
+@import '../components/brands/brandsImages/brandsImages';
+@import '../components/brands/brandsSection/brandsSection';
+@import '../components/brands/brandsNavigation/brandsNavigation';
+
 //------------------------------
 // Containers
 //------------------------------
@@ -98,3 +103,6 @@
 @import '../containers/filterAside/filterAside';
 
 @import '../containers/product/product';
+
+@import '../containers/brands/brands';
+@import '../containers/brands/brandsAlphabet/brandsAlphabet';
