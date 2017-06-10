@@ -22,6 +22,7 @@ import {views} from './modules/filter/views'
 import {reset} from './modules/filter/reset'
 import {select} from './modules/customSelect'
 import {brands} from './modules/brands'
+import {brand} from './modules/brand'
 
 import {productPreview} from './modules/productPreview'
 import {product} from './modules/product'
@@ -30,6 +31,17 @@ import svg4everybody from 'svg4everybody/dist/svg4everybody.legacy.js'
 import { page } from './config'
 
 $(document).ready(function() {
+  if(page === 'catalog') {
+    rangeSlider.init();
+    views.init();
+    reset();
+  }
+  if(page === 'brands') {
+    brands.init();
+  }
+  if(page === 'brand') {
+    brand.init();
+  }
 
   catalog.init();
   sliders.init();
@@ -42,16 +54,10 @@ $(document).ready(function() {
   textCollapse.init();
   item.init();
   select.init();
-  if(page === 'catalog') {
-    rangeSlider.init();
-    views.init();
-    reset();
-  }
-
   asideSection.init();
   checkbox.init();
   color.init();
-  brands.init();
+
   svg4everybody();
 
   productPreview.init();

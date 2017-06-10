@@ -68,6 +68,21 @@
     min-width: 75px;
     text-align: center;
   }
+  &--inverse {
+    background: transparent;
+    color: $c-black-2;
+    border: 1px solid $c-light-grey-2;
+    span {
+      border-bottom: 1px solid $c-black-2;
+      transition: $t-normal;
+    }
+    &:hover {
+      background: $c-light-grey-2;
+      span {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
 }
 .button--link {
   background: transparent;

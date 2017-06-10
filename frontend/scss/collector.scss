@@ -85,6 +85,10 @@
 @import '../components/brands/brandsImages/brandsImages';
 @import '../components/brands/brandsSection/brandsSection';
 @import '../components/brands/brandsNavigation/brandsNavigation';
+@import '../components/brand/brandInfo/brandInfo';
+@import '../components/brand/brandProducts/brandProducts';
+@import '../components/brand/brandCategory/brandCategory';
+@import '../components/brand/brandTabs/brandTabs';
 
 //------------------------------
 // Containers
@@ -106,3 +110,5 @@
 
 @import '../containers/brands/brands';
 @import '../containers/brands/brandsAlphabet/brandsAlphabet';
+
+@import '../containers/brand/brand';

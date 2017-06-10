@@ -1,0 +1,47 @@
+.brand {
+  &__show-more {
+    display: none;
+  }
+  &__category {
+    margin-bottom: 40px;
+  }
+  &__item {
+    margin: 40px;
+    &--tabs {
+      margin: 0;
+      display: none;
+    }
+    &--np {
+      margin: 40px 0;
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .brand {
+    &__show-more {
+      display: block;
+    }
+    &__category {
+      margin-bottom: 0;
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+    &__item {
+      &--info,
+      &--products {
+        display: none;
+      }
+      &--np {
+        margin: 0;
+      }
+      &--tabs {
+        display: block;
+      }
+    }
+  }
+}

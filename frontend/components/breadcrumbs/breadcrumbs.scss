@@ -7,7 +7,7 @@
       content: '';
       width: 5px;
       height: 100%;
-      background-image: url('../img/right-arrow-2.svg');
+      background-image: url('../img/right-arrow.svg');
       @include backgroundContain;
       position: absolute;
       top: 0;
@@ -27,6 +27,9 @@
     .breadcrumbs__link {
       color: $c-light-blue-2;
       font-size: $fs-12;
+      &:not(:last-child):after {
+        background-image: url('../img/right-arrow-2.svg');
+      }
       &:hover {
         color: $c-white;
       }

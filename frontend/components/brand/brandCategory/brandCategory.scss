@@ -1,0 +1,28 @@
+.brand-category {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @include title;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid $c-light-grey-2;
+  }
+  &__button {
+    display: inline-block;
+    margin: 40px auto 0;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .brand-category {
+    &__title,
+    &__button {
+      display: none;
+    }
+  }
+}
