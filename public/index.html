@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Skvot</title>
     <style>
-    *{padding: 0;  margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
-    body{
+      *{padding: 0;  margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+      body{
       font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 16px;
       color: white;
@@ -14,8 +14,8 @@
       height: auto;
       background-color: #181B1E;
       overflow-x: hidden;
-    }
-    .container{
+      }
+      .container{
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -23,101 +23,101 @@
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-align: stretch;
       -webkit-align-items: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
       min-height: 400px;
       height: 100vh;
-    }
-    a{color: inherit; text-decoration: none;}
-    h1{
+      }
+      a{color: inherit; text-decoration: none;}
+      h1{
       margin: 5vh 3vw 0 3vw;
       padding-bottom: 1vh;
       color: white;
       display: block;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-    .ico{
+      }
+      .ico{
       display: inline-block;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
       content: ' ';
       font-style: normal;
-    }
-    .ico-status{
+      }
+      .ico-status{
       border-radius: 0;
       transform: rotate(45deg);
       width: 6px;
       height: 6px;
       margin-right: 5px;
       vertical-align: 2px;
-    }
-    .ico-status--ready{
+      }
+      .ico-status--ready{
       background: forestgreen;
-    }
-    .ico-status--no{
+      }
+      .ico-status--no{
       background: tomato;
-    }
-    .ico-status--done{
+      }
+      .ico-status--done{
       background: black;
-    }
-    .ico-logo{
+      }
+      .ico-logo{
       margin: 5vh 3vw 0 3vw;
       background-image: url(img/logo@2x.png);
       width: 207px;
       height: 65px;
-    }
-    .links{
-       background-color: white;
-       border-radius: 10px;
-       margin: 5vh 2.5vw;
-       padding: 5vh 3vw;
-       width: 45vw;
-       flex: 1 1 40%
-       float: left;
-       color: rgba(0,0,0,.7);
       }
-    .flex{
+      .links{
+      background-color: white;
+      border-radius: 10px;
+      margin: 5vh 2.5vw;
+      padding: 5vh 3vw;
+      width: 45vw;
+      flex: 1 1 40%
+      float: left;
+      color: rgba(0,0,0,.7);
+      }
+      .flex{
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
       max-width: 1280px;
       margin: 0 auto;
-    }
-    .flexCenter{
+      }
+      .flexCenter{
       -webkit-box-align: center;
       -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-    }
-    .content{
+      -ms-flex-align: center;
+      align-items: center;
+      }
+      .content{
       -webkit-box-flex: 1;
       -webkit-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
-    }
-    .flexEnd{
+      -ms-flex: 1;
+      flex: 1;
+      }
+      .flexEnd{
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;;
-    }
-    ul{list-style: decimal-leading-zero;;}
-    ul li{
+      -ms-flex-pack: end;
+      justify-content: flex-end;;
+      }
+      ul{list-style: decimal-leading-zero;;}
+      ul li{
       margin-left: 3vw;
       color: #838B90;
-    }
-    ul li a{
+      }
+      ul li a{
       display: block;
       padding: 1.3vh 0vw 1.3vh 1vw;
       width: 100%;
@@ -126,104 +126,95 @@
       border-bottom: 1px solid rgba(0,0,0,.2);
       -webkit-transition: all .2s ease-in-out;
       transition: all .2s ease-in-out;
-    }
-    ul li a span{
+      }
+      ul li a span{
       opacity: .5;
       margin-left: .5em;
       float: right;
-    }
-    ul li a:hover{
+      }
+      ul li a:hover{
       border-left: 4px solid #D2A36E;
       /*background: rgba(0,0,0,.1);*/
       color: #D2A36E;
       border-bottom: 1px solid rgba(0,0,0,.4);
-    }
-    h2{
+      }
+      h2{
       margin-bottom: 3vh;
-    }
-    .footer{
+      }
+      .footer{
       margin: 5vh 3vw 3vh 3vw;
       border-top: 1px dotted rgba(255,255,255,.25);
       padding-top: 2vh;
       font-size: 0.825em;
       color: #838B90;
-    }
-    .footer a{
+      }
+      .footer a{
       color: white;
-    }
-    .flexWrap{
+      }
+      .flexWrap{
       -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-    }
-    @media(max-width: 700px){
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      }
+      @media(max-width: 700px){
       h1{
-        font-size: 1.75em;
+      font-size: 1.75em;
       }
       .container{
-        display: block;
+      display: block;
       }
       .links{
-        width: 94vw;
+      width: 94vw;
       }
       ul li {
-        margin-left: 10vw;
+      margin-left: 10vw;
       }
-    }
+      }
     </style>
   </head>
-<body>
-  <div class="container">
-    <div class="fix">
-      <div class="flex flexCenter">
-        <h1>SKVOT (html/css)</h1>
-        <i class="ico ico-logo"></i>
-      </div>
-    </div>
-    <div class="content">
-      <div class="flex flexWrap">
-        <div class="links">
-          <h2>Core pages</h2>
-          <ul class="">
-            <li><a href="homepage.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Homepage <span>(Главная)</span></a></li>
-            <li><a href="catalog.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Catalog <span>(Каталог)</span></a></li>
-            <li><a href="product.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Product <span>(Товар)</span></a></li>
-            <li><a href="brands.html" target="_blank"><i class='ico ico-status ico-status--ready'></i> Brands <span>(Бренды)</span></a></li>
-          </ul>
-        </div>
-        <div class="links">
-          <h2>Text pages</h2>
-          <ul class="">
-
-          </ul>
+  <body>
+    <div class="container">
+      <div class="fix">
+        <div class="flex flexCenter">
+          <h1>SKVOT (html/css)</h1><i class="ico ico-logo"></i>
         </div>
       </div>
-
-      <div class="flex flexWrap">
-        <div class="links">
-          <h2>Profile</h2>
-          <ul class="">
-
-          </ul>
+      <div class="content">
+        <div class="flex flexWrap">
+          <div class="links">
+            <h2>Core pages</h2>
+            <ul>
+              <li><a href="homepage.html" target="_blank"><i class="ico ico-status ico-status--ready"></i> Homepage<span>(Главная)</span></a></li>
+              <li><a href="catalog.html" target="_blank"><i class="ico ico-status ico-status--ready"></i> Catalog<span>(Каталог)</span></a></li>
+              <li><a href="product.html" target="_blank"><i class="ico ico-status ico-status--ready"></i> Product<span>(Товар)</span></a></li>
+              <li><a href="brands.html" target="_blank"><i class="ico ico-status ico-status--ready"></i> Brands<span>(Бренды)</span></a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Text pages</h2>
+            <ul></ul>
+          </div>
         </div>
-        <div class="links">
-          <h2>...</h2>
-          <ul class="">
-
-          </ul>
+        <div class="flex flexWrap">
+          <div class="links">
+            <h2>Profile</h2>
+            <ul></ul>
+          </div>
+          <div class="links">
+            <h2>...</h2>
+            <ul></ul>
+          </div>
         </div>
       </div>
-
-
-    </div>
-    <div class="fix">
-      <div class="flex flexEnd">
-      <div class="footer">
-        Brought to you by <a href="http://f-end.ru/">@Sergey Khmelevskoy</a>
+      <div class="fix">
+        <div class="flex flexEnd">
+          <!--
+          <div class="footer">
+          Brought to you by <a href="http://f-end.ru/">@Sergey Khmelevskoy</a>
+          </div>
+          -->
+        </div>
       </div>
     </div>
-    </div>
-
-  </div>
-</body>
+  </body>
 </html>

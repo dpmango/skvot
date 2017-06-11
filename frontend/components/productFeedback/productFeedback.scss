@@ -19,7 +19,7 @@
   }
   &__feedback {
     border-top: 1px solid $c-light-grey-2;
-    padding: 20px 70px;
+    padding: 15px 70px;
     font-size: $fs-14;
     display: flex;
     &:last-child {
@@ -48,15 +48,15 @@
 @media #{$tablet} {
   .product-feedback {
     &__title {
-      padding-left: 20px;
+      padding-left: 15px;
     }
     &__button {
       padding: 0;
-      padding-right: 20px;
+      padding-right: 15px;
       padding-top: 40px;
     }
     &__feedback {
-      padding: 20px;
+      padding: 15px;
       &-date {
         min-width: 100px;
       }
@@ -66,10 +66,10 @@
 
 @media #{$phone} {
   .product-feedback {
-    padding: 20px 0;
+    padding: 15px 0;
     &__button {
       text-align: center;
-      padding: 20px 0;
+      padding: 15px 0;
     }
     &__feedback {
       flex-direction: column;

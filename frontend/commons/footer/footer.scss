@@ -7,7 +7,10 @@
   font-size: $fs-12;
   color: $c-grey-3;
 }
-
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+}
 .footer__about-menu {
   margin-top: 15px;
   display: flex;

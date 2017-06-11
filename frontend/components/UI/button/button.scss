@@ -17,6 +17,7 @@
   &__icon {
     margin-right: 5px;
     fill: $c-white;
+    transition: $t-normal;
   }
   &__add {
     transform: translateY(-100%);
@@ -42,7 +43,12 @@
     }
   }
   &:hover {
-    background: $c-blue-2;
+    background: $c-white;
+    border-color: $c-blue;
+    color: $c-blue;
+    .button__icon {
+      fill: $c-blue;
+    }
   }
   &--white {
     background: $c-white;
@@ -58,9 +64,14 @@
     background: $c-white;
     color: $c-black-2;
     &:hover {
-      box-shadow: none;
+      border-color: transparent;
       background: $c-white;
       color: $c-blue;
+      box-shadow: $bs-button-2;
+    }
+    &:active {
+      box-shadow: none;
+      transform: translateY(3px);
     }
   }
   &--modal {
@@ -78,6 +89,7 @@
     }
     &:hover {
       background: $c-light-grey-2;
+      border: 1px solid $c-light-grey-2;
       span {
         border-bottom: 1px solid transparent;
       }
@@ -95,6 +107,7 @@
   &:hover {
     background: transparent;
     color: $c-black-2;
+    border-color: transparent;
     border-bottom: 1px solid $c-black-2;
   }
 }

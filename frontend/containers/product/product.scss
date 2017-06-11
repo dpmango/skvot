@@ -19,6 +19,12 @@
 }
 @media #{$tablet} {
   .product {
-    margin-top: 15px;
+    &__container {
+      padding: 0;
+    }
+    &__preview {
+      padding: 0;
+    }
+    margin-top: 0;
   }
 }
