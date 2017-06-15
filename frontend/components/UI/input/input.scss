@@ -4,4 +4,19 @@
   border: 1px solid $c-light-grey-3;
   outline: none;
   color: $c-light-grey-4;
+  -webkit-appearance: none;
+}
+
+.input--form {
+  border-radius: 10px;
+  color: $c-black-2;
+  transition: $t-normal;
+  width: 100%;
+  font-size: $fs-14;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &:focus {
+    border-color: $c-grey;
+  }
 }

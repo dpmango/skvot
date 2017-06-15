@@ -1,0 +1,20 @@
+.auth-form
+  .auth-form__title Авторизация:
+  form.auth-form__form
+    .form-group
+      input(type="email" placeholder="Email адрес").input.input--form
+      input(type="password" placeholder="Пароль").input.input--form
+    .form-group
+      a(href="#").link Забыли пароль?
+    .form-group
+      .checkbox
+        input(type="checkbox" name="registration-confirm" value="registration-confirm")#registration-confirm.checkbox__input
+        label(for="registration-confirm").checkbox__label
+          .checkbox__box
+            svg.icon.checkbox__icon
+              use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
+          .checkbox__name Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных
+    .form-group
+      button(type="submit").button Войти
+  .auth-form__title Нет аккаунта?
+  a(href="registration.html").link Зарегистрироваться

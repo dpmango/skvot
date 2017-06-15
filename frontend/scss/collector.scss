@@ -40,6 +40,8 @@
 @import '../components/UI/checkbox/checkbox';
 @import '../components/UI/color/color';
 @import '../components/UI/title/title';
+@import '../components/UI/count/count';
+@import '../components/UI/form/form';
 
 // Components
 @import '../components/menu/menu';
@@ -90,6 +92,8 @@
 @import '../components/brand/brandCategory/brandCategory';
 @import '../components/brand/brandTabs/brandTabs';
 
+@import '../components/cart/cartItem/cartItem';
+
 //------------------------------
 // Containers
 //------------------------------
@@ -112,3 +116,10 @@
 @import '../containers/brands/brandsAlphabet/brandsAlphabet';
 
 @import '../containers/brand/brand';
+
+@import '../containers/cart/cart';
+@import '../containers/cart/ordering/cart-ordering';
+
+@import '../containers/registration/registration';
+@import '../containers/authForm/auth';
+@import '../containers/settings/settings';

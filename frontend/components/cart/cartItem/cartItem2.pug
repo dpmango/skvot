@@ -1,0 +1,26 @@
+.cart-item-wrap
+  .cart-item
+    .cart-item__item.cart-item__item--image
+      .cart-item__image(style="background-image: url('img/cart-image-2.jpg')")
+    .cart-item__details
+      .cart-item__item.cart-item__item--content
+        .cart-item__content
+          a(href="#").cart-item__name.js-cart-item-name Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL
+          .cart-item__size Размер: L
+      .cart-item__item.cart-item__item--prices
+        .cart-item__prices
+          .cart-item__price-per-one 6850₽
+          .cart-item__count
+            include ../../UI/count/count
+          .cart-item__price-total 16850₽
+      .cart-item__item.cart-item__item--action
+        .cart-item__action
+          .cart-item__action-text Удалить
+          svg.icon.cart-item__action-icon
+            use(xlink:href="img/svg-sprites/sprite.svg#icon-close")
+  //- Genering content from cart-item__content text by JS
+  .cart-item.cart-item--mobile
+    .cart-item__item
+      .cart-item__content
+        a(href="#").cart-item__name.js-cart-item-name-mobile
+

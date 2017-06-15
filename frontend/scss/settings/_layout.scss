@@ -9,7 +9,16 @@ body {
     color: $c-black-2;
     -webkit-text-size-adjust: 100%;
 }
-
+.link {
+  font-size: $fs-14;
+  border-bottom: 1px solid $c-blue-op;
+  transition: $t-normal;
+  &:visited,
+  &:hover {
+      color: $c-black-2;
+      border-color: $c-grey;
+  }
+}
 .main.container {
     position: relative;
     z-index: 10;

@@ -7,6 +7,7 @@
   background-color: $c-blue;
   border-top: 1px solid $c-white;
   padding: 30px;
+  overflow: auto;
 }
 
 .catalog__divider {
@@ -73,7 +74,7 @@
 //------------------------------
 // Responsive
 //------------------------------
-@media #{$desktop} {
+@media #{$screen} {
   .catalog {
     left: 0;
   }

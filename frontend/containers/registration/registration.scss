@@ -1,0 +1,28 @@
+.registration {
+  padding: 60px 15px;
+  max-width: 800px;
+  margin: auto;
+  &__title {
+    font-size: $fs-24;
+    font-weight: $fw-semibold;
+  }
+  &__content {
+    font-size: $fs-14;
+  }
+  &__form {
+    max-width: 450px;
+  }
+  &__capcha {
+    height: 40px;
+    @include backgroundContain;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .registration {
+    padding: 20px 15px;
+  }
+}

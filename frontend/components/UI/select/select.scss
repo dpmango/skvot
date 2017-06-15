@@ -91,3 +91,46 @@ $select-height: 32px;
     }
   }
 }
+
+.select-wrap--form {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .select {
+
+    padding: 10px 20px;
+
+    outline: none;
+    color: $c-black-2;
+    width: 100%;
+    font-size: $fs-14;
+    -webkit-appearance: none;
+    height: 38px;
+
+  }
+  .select-styled {
+    border-radius: 10px;
+    border: 1px solid $c-light-grey-3;
+    padding: 10px 20px;
+    color: $c-grey-4;
+    &.active {
+      border-color: $c-grey;
+    }
+  }
+  .select-options {
+    border-radius: 10px;
+    top: calc(100% + 10px);
+    li {
+      padding: 10px;
+    }
+    li:first-child {
+      display: none;
+    }
+    li:nth-child(2) {
+      border-radius: 10px 10px 0 0;
+    }
+    li:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}

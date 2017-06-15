@@ -1,0 +1,33 @@
+.cart-item-wrap
+  .cart-item
+    .cart-item__item.cart-item__item--image
+      .cart-item__image(style="background-image: url('img/cart-image.jpg')")
+    .cart-item__details
+      .cart-item__item.cart-item__item--content
+        .cart-item__content
+          a(href="#").cart-item__name.js-cart-item-name Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL
+          .cart-item__size Размер: L
+          ul.cart-item__addresses.js-cart-item-addresses Наличие:
+            li - Белинского 38, ул. Белинского, дом 38
+            li - м. Лесная, Полюстровский
+            li - пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"
+            li - м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364
+            li - Интернет магазин
+      .cart-item__item.cart-item__item--prices
+        .cart-item__prices
+          .cart-item__price-per-one 6850₽
+          .cart-item__count
+            include ../../UI/count/count
+          .cart-item__price-total 6850₽
+      .cart-item__item.cart-item__item--action
+        .cart-item__action
+          .cart-item__action-text Удалить
+          svg.icon.cart-item__action-icon
+            use(xlink:href="img/svg-sprites/sprite.svg#icon-close")
+  //- Genering content from cart-item__content text by JS
+  .cart-item.cart-item--mobile
+    .cart-item__item
+      .cart-item__content
+        a(href="#").cart-item__name.js-cart-item-name-mobile
+        .cart-item__button.button.button--inverse(data-modal="cart").js-modal-trigger Наличие в магазинах
+

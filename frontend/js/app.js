@@ -3,6 +3,8 @@
 import './../static/libs/mediaCheck.js'
 import './../static/libs/jquery.magnific-popup.js'
 
+import {header} from './modules/header'
+
 import {catalog} from './modules/catalog'
 import {sliders} from './modules/sliders'
 import {lkPopup} from './modules/lkPopup'
@@ -26,6 +28,10 @@ import {brand} from './modules/brand'
 
 import {productPreview} from './modules/productPreview'
 import {product} from './modules/product'
+
+import {count} from './modules/count'
+
+import {cart} from './modules/cart'
 import svg4everybody from 'svg4everybody/dist/svg4everybody.legacy.js'
 
 import { page } from './config'
@@ -42,7 +48,7 @@ $(document).ready(function() {
   if(page === 'brand') {
     brand.init();
   }
-
+  header.init();
   catalog.init();
   sliders.init();
   lkPopup.init();
@@ -57,7 +63,8 @@ $(document).ready(function() {
   asideSection.init();
   checkbox.init();
   color.init();
-
+  count.init();
+  cart.init();
   svg4everybody();
 
   productPreview.init();

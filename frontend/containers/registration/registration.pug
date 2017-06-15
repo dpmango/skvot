@@ -1,0 +1,30 @@
+.registration
+  .registration__title Регистрация
+  .registration__content
+    p Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.
+    p Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.
+  form.registration__form
+    .form-group
+        input(type="email" placeholder="Email адрес").input.input--form
+        input(type="text" placeholder="Фамилия").input.input--form
+        input(type="text" placeholder="Имя").input.input--form
+        input(type="text" placeholder="Отчество").input.input--form
+        input(type="text" placeholder="Телефон").input.input--form
+        include ../../components/UI/select/selectGender
+        input(type="password" placeholder="Пароль").input.input--form
+        input(type="password" placeholder="Подтверждение пароля").input.input--form
+    .form-group
+      .form-label Введите символы с картинки
+      .form-double
+        input(type="text" placeholder="Капча").input.input--form
+        .registration__capcha(style="background-image: url('img/captcha.jpg')")
+    .form-group
+      .checkbox
+        input(type="checkbox" name="registration-confirm" value="registration-confirm")#registration-confirm.checkbox__input
+        label(for="registration-confirm").checkbox__label
+          .checkbox__box
+            svg.icon.checkbox__icon
+              use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
+          .checkbox__name Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных
+    .form-group
+      button(type="submit").button Зарегистрироваться

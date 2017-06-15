@@ -1,0 +1,23 @@
+.settings
+  .settings__setting
+    .settings__title-wrap
+      .settings__title Персональные данные:
+      .settings__subtitle username@mail.com
+    form.settings__form-info
+      .form-group
+          input(type="email" placeholder="Email адрес" name="email" value="username@mail.com").input.input--form
+          input(type="text" placeholder="Фамилия" name="surname" value="Pupkin").input.input--form
+          input(type="text" placeholder="Имя" name="name" value="Ivan").input.input--form
+          input(type="text" placeholder="Отчество" name="patronymic" value="Petrovich").input.input--form
+          input(type="text" placeholder="Телефон" name="phone" value="+38099543423").input.input--form
+          include ../../components/UI/select/selectGenderMale
+      .form-group
+        button(type="submit").button Сохранить
+    .auth-form__title Смена пароля:
+    form.settings__form-password
+      .form-group
+        input(type="password" placeholder="Старый пароль" name="old-password").input.input--form
+        input(type="password" placeholder="Новый пароль" name="new-password").input.input--form
+        input(type="password" placeholder="Подтверждение нового пароля").input.input--form
+      .form-group
+        button(type="submit").button Сохранить

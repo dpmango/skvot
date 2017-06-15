@@ -1,6 +1,10 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
+  transition: $t-long;
 }
 
 //------------------------------
@@ -31,7 +35,7 @@
   align-items: center;
   justify-content: center;
   border-left: 1px solid $c-white-op-2;
-  transition: $t-normal;
+  transition: background-color $t-normal;
 }
 
 .header__item:last-child {
@@ -84,6 +88,10 @@
   }
   .header__item:first-child {
     border: none;
+  }
+  .header__catalog {
+    max-width: 100%;
+    width: 100%;
   }
 }
 @media #{$tablet} {

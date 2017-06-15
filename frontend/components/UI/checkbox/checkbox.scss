@@ -7,7 +7,11 @@
         transform: scale(1);
       }
     }
+    &[type="radio"]:checked + label > .checkbox__name {
+      color: $c-grey;
+    }
   }
+
   &__label {
     user-select: none;
     display: flex;
@@ -15,12 +19,14 @@
     cursor: pointer;
   }
   &__box {
+    align-self: flex-start;
     width: 20px;
     height: 20px;
     min-width: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
     border: 1px solid $c-light-grey-3;
   }
   &__icon {
@@ -34,5 +40,31 @@
   &__name {
     padding: 0 5px;
     word-break: break-word;
+    font-size: $fs-14;
+    transition: color $t-normal;
+  }
+
+  &--big {
+    .checkbox__box {
+      border-color: $c-grey;
+    }
+    .checkbox__name {
+      font-size: $fs-18;
+      padding: 0 0 0 8px;
+      font-weight: $fw-semibold;
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .checkbox {
+    &--big {
+      .checkbox__name {
+        font-size: $fs-16;
+      }
+    }
   }
 }

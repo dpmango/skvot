@@ -82,9 +82,3 @@
     }
   }
 }
-
-@media #{$tablet} {
-  &:not(:first-child) {
-    border-top: none;
-  }
-}
