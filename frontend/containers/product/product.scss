@@ -1,7 +1,11 @@
 .product {
   // padding-bottom: 100px;
+  margin-top: 50px;
   &__container {
-    padding: 0 55px;
+    padding: 0 70px;
+  }
+  &__info {
+    padding-left: 50px;
   }
 }
 
@@ -14,13 +18,15 @@
     &__container {
       padding: 0 15px;
     }
-
+    &__info {
+      padding-left: 15px;
+    }
   }
 }
 @media #{$tablet} {
   .product {
     &__container {
-      padding: 0;
+      padding: 15px;
     }
     &__preview {
       padding: 0;

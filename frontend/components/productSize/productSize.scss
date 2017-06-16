@@ -45,6 +45,8 @@
     }
   }
   &__table {
+    display: inline-block;
+    margin-top: 15px;
     font-size: $fs-12;
     color: $c-light-grey-6;
     border-bottom: 1px solid $c-light-grey-6;
