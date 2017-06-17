@@ -5,13 +5,21 @@
     p Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.
   form.registration__form
     .form-group
+      .form-inner-group
         input(type="email" placeholder="Email адрес").input.input--form
+      .form-inner-group
         input(type="text" placeholder="Фамилия").input.input--form
+      .form-inner-group
         input(type="text" placeholder="Имя").input.input--form
+      .form-inner-group
         input(type="text" placeholder="Отчество").input.input--form
+      .form-inner-group
         input(type="text" placeholder="Телефон").input.input--form
+      .form-inner-group
         include ../../components/UI/select/selectGender
+      .form-inner-group
         input(type="password" placeholder="Пароль").input.input--form
+      .form-inner-group
         input(type="password" placeholder="Подтверждение пароля").input.input--form
     .form-group
       .form-label Введите символы с картинки
@@ -27,4 +35,4 @@
               use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
           .checkbox__name Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных
     .form-group
-      button(type="submit").button Зарегистрироваться
+      button(type="submit").button.button--bs-2 Зарегистрироваться

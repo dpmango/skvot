@@ -1,17 +1,19 @@
 .product.section
   .product__container.row.row--2
-    .col-lg-5.col-sm-5.product__preview.no-padding
-      include ../../components/productPreview/productPreview
-      .product__description
-        include ../../components/productDiscription/productDiscription
-    .col-lg-7.col-sm-7.product__info.no-padding
-      include ../../components/productPrice/productPrice
-      include ../../components/productSize/productSize
-      include ../../components/productButtons/productButtons
-      include ../../components/productInfo/productInfo
-      include ../../components/productDelivery/productDelivery
+    .col-lg-5.col-sm-5.no-padding
+      .product__preview
+        include ../../components/Product/productPreview/productPreview
+        .product__description
+          include ../../components/Product/productDiscription/productDiscription
+    .col-lg-7.col-sm-7.no-padding
+      .product__info
+        include ../../components/Product/productPrice/productPrice
+        include ../../components/Product/productSize/productSize
+        include ../../components/Product/productButtons/productButtons
+        include ../../components/Product/productInfo/productInfo
+        include ../../components/Product/productDelivery/productDelivery
       .product__description-second
   .col-xs-12.no-padding
-    include ../../components/productFeedback/productFeedback
+    include ../../components/Product/productFeedback/productFeedback
   .col-xs-12.no-padding
-    include ../../components/productRecommend/productRecommend
+    include ../../components/Product/productRecommend/productRecommend

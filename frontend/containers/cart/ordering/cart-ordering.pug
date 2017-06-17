@@ -12,8 +12,10 @@ form.cart-ordering
                   use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
               .checkbox__name Я зарегистрированный пользователь
         .form-group
-          input(type="email" placeholder="Email адрес" name="reg-email").input.input--form
-          input(type="password" placeholder="Пароль" name="reg-password").input.input--form
+          .form-inner-group
+            input(type="email" placeholder="Email адрес" name="reg-email").input.input--form
+          .form-inner-group
+            input(type="password" placeholder="Пароль" name="reg-password").input.input--form
         .form-group
           .form-info Если вы зарегистрированны и не авторизуетесь, все скидки и бонусы, накопленные ранее не будут учтены в дальнейших заказах.
         .form-group
@@ -29,13 +31,20 @@ form.cart-ordering
                   use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
               .checkbox__name Я новый пользователь
         .form-group
-          input(type="email" placeholder="Email адрес" disabled="disabled").input.input--form
-          input(type="text" placeholder="Фамилия" disabled="disabled").input.input--form
-          input(type="text" placeholder="Имя" disabled="disabled").input.input--form
-          input(type="text" placeholder="Отчество" disabled="disabled").input.input--form
-          input(type="text" placeholder="Телефон" disabled="disabled").input.input--form
-          input(type="password" placeholder="Пароль" disabled="disabled").input.input--form
-          input(type="password" placeholder="Подтверждение пароля" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="email" placeholder="Email адрес" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="text" placeholder="Фамилия" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="text" placeholder="Имя" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="text" placeholder="Отчество" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="text" placeholder="Телефон" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="password" placeholder="Пароль" disabled="disabled").input.input--form
+          .form-inner-group
+            input(type="password" placeholder="Подтверждение пароля" disabled="disabled").input.input--form
   .cart-ordering__bottom
     .checkbox.cart-ordering__confirm
       input(type="checkbox" name="cart-order-confirm" value="cart-order-confirm")#cart-order-confirm.checkbox__input

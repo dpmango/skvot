@@ -21,15 +21,16 @@
     color: $c-white;
     text-transform: uppercase;
     padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   &--type-2 {
     .page-head__container {
       display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
       text-align: left;
+      padding: 0 15px;
     }
     .page-head__info {
       width: calc(55% - 10px);
@@ -70,6 +71,15 @@
 //------------------------------
 // Responsive
 //------------------------------
+@media #{$screen} {
+  .page-head {
+    &--type-2 {
+      .page-head__container {
+        width: 100%;
+      }
+    }
+  }
+}
 @media #{$desktop} {
   .page-head {
     &--type-2 {
@@ -80,16 +90,20 @@
       .page-head__info,
       .page-head__brand {
         width: 100%;
+        max-width: 75%;
+      }
+      .page-head__info {
+        align-self: flex-start;
       }
       .page-head__brand {
         margin-top: 20px;
+        align-self: flex-end;
       }
-
     }
   }
 }
 
-@media #{$phone} {
+@media #{$tablet} {
   .page-head {
     &--type-2 {
       .page-head__title {

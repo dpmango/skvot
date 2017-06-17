@@ -1,0 +1,25 @@
+.semi {
+  font-weight: $fw-semibold;
+}
+.lighter {
+  color: $c-light-grey-4;
+}
+.yellow {
+  color: $c-yellow;
+}
+.important {
+  color: $c-red;
+}
+.p {
+  margin: 20px 0;
+}
+.link {
+  font-size: $fs-14;
+  border-bottom: 1px solid $c-blue-op;
+  transition: $t-normal;
+  &:visited,
+  &:hover {
+      color: $c-black-2;
+      border-color: $c-grey;
+  }
+}

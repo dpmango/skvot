@@ -1,21 +1,21 @@
 .input {
+  display: flex;
+  align-items: center;
   border-radius: 50px;
   padding: 10px 20px;
   border: 1px solid $c-light-grey-3;
   outline: none;
   color: $c-light-grey-4;
+  line-height: 1em;
   -webkit-appearance: none;
 }
 
 .input--form {
   border-radius: 10px;
   color: $c-black-2;
-  transition: $t-normal;
+  transition: border-color $t-normal;
   width: 100%;
   font-size: $fs-14;
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
   &:focus {
     border-color: $c-grey;
   }

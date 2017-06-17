@@ -16,6 +16,7 @@
 @import 'settings/fonts';
 @import 'settings/mixins';
 @import 'settings/layout';
+@import 'settings/typography';
 
 //------------------------------
 // Commons
@@ -42,84 +43,99 @@
 @import '../components/UI/title/title';
 @import '../components/UI/count/count';
 @import '../components/UI/form/form';
+@import '../components/UI/tooltip/tooltip';
 
 // Components
-@import '../components/menu/menu';
-@import '../components/auth/auth';
-@import '../components/catalogBtn/catalogBtn';
-@import '../components/information/information';
-@import '../components/logo/logo';
-@import '../components/cartBtn/cartBtn';
-@import '../components/searchBtn/searchBtn';
-@import '../components/catalog/catalog';
-@import '../components/subscriptionForm/subscriptionForm';
-@import '../components/lkPopup/lkPopup';
-@import '../components/cartPopupItem/cartPopupItem';
-@import '../components/weSocial/weSocial';
-@import '../components/service/service';
-@import '../components/blogItem/blogItem';
-@import '../components/topItem/topItem';
-@import '../components/collection/collection';
-@import '../components/review/review';
-@import '../components/showMore/showMore';
+// FORMS
+@import '../components/Forms/formSubscription/formSubscription';
+@import '../components/Forms/formAuth/formAuth';
+@import '../components/Forms/formOrder/formOrder';
 
-@import '../components/breadcrumbs/breadcrumbs';
-@import '../components/textCollapse/textCollapse';
-@import '../components/filterBar/filterBar';
-@import '../components/filterCategories/filterCategories';
-@import '../components/filterPrice/filterPrice';
-@import '../components/filterCheckbox/filterCheckbox';
-@import '../components/filterColors/filterColors';
-@import '../components/filterButtons/filterButtons';
-@import '../components/pagination/pagination';
+// HEADER
+@import '../components/Header/menu/menu';
+@import '../components/Header/auth/auth';
+@import '../components/Header/catalogBtn/catalogBtn';
+@import '../components/Header/information/information';
+@import '../components/Header/cartBtn/cartBtn';
+@import '../components/Header/searchBtn/searchBtn';
+@import '../components/Header/catalog/catalog';
+@import '../components/Header/lkPopup/lkPopup';
+@import '../components/Header/cartPopupItem/cartPopupItem';
 
-@import '../components/productPreview/productPreview';
-@import '../components/productDiscription/productDiscription';
-@import '../components/productPrice/productPrice';
-@import '../components/productSize/productSize';
-@import '../components/productButtons/productButtons';
-@import '../components/productInfo/productInfo';
-@import '../components/productDelivery/productDelivery';
-@import '../components/productRecommend/productRecommend';
-@import '../components/productFeedback/productFeedback';
+// COMMON
+@import '../components/Common/logo/logo';
+@import '../components/Common/weSocial/weSocial';
+@import '../components/Common/service/service';
+@import '../components/Common/blogItem/blogItem';
+@import '../components/Common/topItem/topItem';
+@import '../components/Common/collection/collection';
+@import '../components/Common/review/review';
+@import '../components/Common/showMore/showMore';
+@import '../components/Common/breadcrumbs/breadcrumbs';
+@import '../components/Common/textCollapse/textCollapse';
+@import '../components/Common/pagination/pagination';
 
-@import '../components/brands/brandsImage/brandsImage';
-@import '../components/brands/brandsImages/brandsImages';
-@import '../components/brands/brandsSection/brandsSection';
-@import '../components/brands/brandsNavigation/brandsNavigation';
-@import '../components/brand/brandInfo/brandInfo';
-@import '../components/brand/brandProducts/brandProducts';
-@import '../components/brand/brandCategory/brandCategory';
-@import '../components/brand/brandTabs/brandTabs';
+// CART
+@import '../components/Cart/cartItem/cartItem';
 
-@import '../components/cart/cartItem/cartItem';
+// FILTER
+@import '../components/Filter/filterBar/filterBar';
+@import '../components/Filter/filterCategories/filterCategories';
+@import '../components/Filter/filterPrice/filterPrice';
+@import '../components/Filter/filterCheckbox/filterCheckbox';
+@import '../components/Filter/filterColors/filterColors';
+@import '../components/Filter/filterButtons/filterButtons';
+
+// PRODUCT
+@import '../components/Product/productPreview/productPreview';
+@import '../components/Product/productDiscription/productDiscription';
+@import '../components/Product/productPrice/productPrice';
+@import '../components/Product/productSize/productSize';
+@import '../components/Product/productButtons/productButtons';
+@import '../components/Product/productInfo/productInfo';
+@import '../components/Product/productDelivery/productDelivery';
+@import '../components/Product/productRecommend/productRecommend';
+@import '../components/Product/productFeedback/productFeedback';
+
+// BRANDS
+@import '../components/Brands/brandsImage/brandsImage';
+@import '../components/Brands/brandsImages/brandsImages';
+@import '../components/Brands/brandsSection/brandsSection';
+@import '../components/Brands/brandsNavigation/brandsNavigation';
+
+// BRAND
+@import '../components/Brand/brandInfo/brandInfo';
+@import '../components/Brand/brandProducts/brandProducts';
+@import '../components/Brand/brandCategory/brandCategory';
+@import '../components/Brand/brandTabs/brandTabs';
 
 //------------------------------
 // Containers
 //------------------------------
-@import '../containers/mainSlider/mainSlider';
-@import '../containers/cartPopup/cartPopup';
-@import '../containers/weSocials/weSocials';
-@import '../containers/services/services';
-@import '../containers/blogNews/blogNews';
-@import '../containers/top/top';
-@import '../containers/collections/collections';
-@import '../containers/reviews/reviews';
+@import '../containers/MainSlider/mainSlider';
+@import '../containers/CartPopup/cartPopup';
+@import '../containers/WeSocials/weSocials';
+@import '../containers/Services/services';
+@import '../containers/BlogNews/blogNews';
+@import '../containers/Top/top';
+@import '../containers/Collections/collections';
+@import '../containers/Reviews/reviews';
 
-@import '../containers/pageHead/pageHead';
-@import '../containers/catalog/catalog';
-@import '../containers/filterAside/filterAside';
+@import '../containers/PageHead/pageHead';
 
-@import '../containers/product/product';
+@import '../containers/Catalog/catalog';
+@import '../containers/Catalog/FilterAside/filterAside';
 
-@import '../containers/brands/brands';
-@import '../containers/brands/brandsAlphabet/brandsAlphabet';
+@import '../containers/Product/product';
 
-@import '../containers/brand/brand';
+@import '../containers/Brands/brands';
+@import '../containers/Brands/brandsAlphabet/brandsAlphabet';
 
-@import '../containers/cart/cart';
-@import '../containers/cart/ordering/cart-ordering';
+@import '../containers/Brand/brand';
 
-@import '../containers/registration/registration';
-@import '../containers/authForm/auth';
-@import '../containers/settings/settings';
+@import '../containers/Cart/cart';
+@import '../containers/Cart/ordering/cart-ordering';
+@import '../containers/Cart/payment/payment';
+@import '../containers/Registration/registration';
+
+@import '../containers/Settings/settings';

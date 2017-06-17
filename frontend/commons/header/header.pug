@@ -3,23 +3,23 @@ header.header
     .container.header__container.header__container--top
       .header__top-content
         .header__menu
-          include ../../components/menu/menu
+          include ../../components/Header/menu/menu
         .header__auth
-          include ../../components/auth/auth
+          include ../../components/Header/auth/auth
   .header__bottom
     .container.header__container
       .header__item.header__item--clickable.js-catalog-btn.col-lg-2.col-sm-1.col-xs-2
-        include ../../components/catalogBtn/catalogBtn
+        include ../../components/Header/catalogBtn/catalogBtn
       .header__item.col-lg-2.col-sm-3.col-xs-2(data-modal="city-accept").header__item--clickable.js-modal-trigger
-        include ../../components/information/information-location
+        include ../../components/Header/information/information-location
       .header__item.col-lg-4.col-sm-5.col-xs-6
-        include ../../components/logo/logo
+        include ../../components/Common/logo/logo
       a(href="tel:+88001004169").header__item.header__item--phone.header__item--clickable.col-lg-2.col-sm-1
-        include ../../components/information/information-phone
+        include ../../components/Header/information/information-phone
       .header__item.col-sm-1.header__item--cart.js-cart-trigger.col-xs-2
-        include ../../components/cartBtn/cartBtn
+        include ../../components/Header/cartBtn/cartBtn
         include ../../containers/cartPopup/cartPopup
       .header__item.header__item--clickable.header__item--search.col-sm-1
-        include ../../components/searchBtn/searchBtn
+        include ../../components/Header/searchBtn/searchBtn
   .header__catalog.container.js-catalog
-        include ../../components/catalog/catalog
+        include ../../components/Header/catalog/catalog

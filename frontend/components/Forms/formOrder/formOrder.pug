@@ -1,0 +1,53 @@
+form.form-order
+  .form-order__top
+    .form-group
+      .form-order__title Персональная информация:
+      .form-group
+        .form-order__buyer
+          span.lighter Покупатель:
+          span.semi  Петров Иван Васильевич
+      .form-group
+        .form-require
+          input(type="text" value="+7 (953) 568-89-12" name="phone").input.input--form
+          .form-require-star.important *
+      .form-group
+        label(for="additional-info" name="phone").form-label Дополнительная информация:
+        .form-require
+          textarea#additional-info.input.input--form
+    .form-group
+      .form-order__title Скидка на заказ:
+      .form-group
+        label(for="discount").form-label Номер дисконтной карты:
+        .form-double
+          input(type="text" id="discount" name="discount").input.input--form
+          .form-order__discount
+            a(href="#").link Применить дисконтную карту
+      .form-double
+        .form-or или
+      .form-group
+        .form-double
+          label.form-label
+            span Промо-код:
+            .form-info.tooltip-trigger(data-tooltip="Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут." data-tooltip-positions="top;bottom;left;right")
+              svg.icon
+                use(xlink:href="img/svg-sprites/sprite.svg#icon-question")
+
+        .form-double
+          input(type="text" id="code" name="code").input.input--form
+          .form-order__discount
+            a(href="#").link Применить код
+  .form-order__total
+    span.semi Итого к оплате: 3 850₽ + 200₽ за доставку =
+    span.yellow.semi  4 050₽
+  .form-order__bottom
+    .form-group
+      .form-group
+        .checkbox
+          input(type="checkbox" name="registration-confirm" value="registration-confirm")#registration-confirm.checkbox__input
+          label(for="registration-confirm").checkbox__label
+            .checkbox__box
+              svg.icon.checkbox__icon
+                use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
+            .checkbox__name Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных
+      .form-group
+        button(type="submit").button.button--bs-2 Оформить заказ

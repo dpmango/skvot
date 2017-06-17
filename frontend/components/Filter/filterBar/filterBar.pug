@@ -1,0 +1,15 @@
+.filter-bar.row.row--2
+  .col-md-3.col-sm-4.filter-bar__item.filter-bar__item--title
+    .filter-bar__title Фильтры
+  .col-md-3.col-sm-4.col-xs-12.filter-bar__item.no-padding.filter-bar__item--views
+    .filter-bar__views
+      .filter-bar__views-view.filter-bar__views-view--active(data-view="grid")
+        svg.icon.filter-bar__views-icon
+          use(xlink:href="img/svg-sprites/sprite.svg#icon-grid")
+      .filter-bar__views-view(data-view="list")
+        svg.icon.filter-bar__views-icon
+          use(xlink:href="img/svg-sprites/sprite.svg#icon-list")
+  .col-md-3.col-sm-4.filter-bar__item.filter-bar__item--available
+    include ../../UI/select/selectFilterAvailable
+  .col-md-3.col-xs-12.filter-bar__item.filter-bar__item--sort
+    include ../../UI/select/selectFilterSort

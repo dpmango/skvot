@@ -18,12 +18,12 @@ export let header = {
     $(window).scroll(() => {
       let scrollTop = $(window).scrollTop();
 
-      if (scrollTop < 200 && scrolled === true) {
+      if (scrollTop < 99 && scrolled === true) {
         $(this.header).css('top', '0px')
         scrolled = false
       }
 
-      if (scrollTop > 200 && scrolled === false) {
+      if (scrollTop > 99 && scrolled === false) {
         $(this.header).css('top', '' + -headerTopHeight + 'px')
         scrolled = true
       }

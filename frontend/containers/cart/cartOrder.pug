@@ -1,14 +1,16 @@
 .cart
   .cart__items
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
-    include ../../components/cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
+    include ../../components/Cart/cartItem/cartItemOrder
     .cart__total.row.row--2
-      .col-lg-2.col-lg-offset-8.cart__total-total Итого: <span>34565P</span>
-  //- .cart__ordering
-  //-   include ordering/cart-ordering
+      .col-lg-2.col-lg-offset-8.cart__total-total Итого: <span>3442565P</span>
+  .cart__payment
+    include payment/payment
+  .cart__form-order
+    include ../../components/Forms/formOrder/formOrder

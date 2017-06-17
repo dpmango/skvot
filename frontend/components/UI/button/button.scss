@@ -59,6 +59,9 @@
       background: $c-white;
     }
   }
+  &--bs-2 {
+    box-shadow: $bs-button-3;
+  }
   &--bs {
     box-shadow: $bs-button;
     background: $c-white;

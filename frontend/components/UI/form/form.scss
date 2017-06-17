@@ -2,6 +2,9 @@
   &-group {
     padding: 10px 0;
   }
+  &-inner-group {
+    margin: 10px 0;
+  }
   &-info {
     font-size: $fs-14;
   }
@@ -15,15 +18,43 @@
       color: $c-black-2;
     }
   }
+  &-or {
+    text-align: center;
+    font-size: $fs-12;
+    font-weight: $fw-semibold;
+  }
   &-label {
+    font-weight: $fw-semibold;
     font-size: $fs-14;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &-double {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     & > * {
       width: calc(50% - 10px);
+    }
+  }
+  &-require {
+    display: flex;
+    align-items: center;
+    & > * {
+      max-width: calc(100% - 20px);
+      &:nth-child(1) {
+        width: calc(100% - 20px);
+      }
+      &:nth-child(2) {
+        width: 20px;
+      }
+    }
+    &-star {
+      display: flex;
+      font-size: $fs-18;
+      justify-content: center;
     }
   }
 }

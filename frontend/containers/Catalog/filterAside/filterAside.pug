@@ -1,0 +1,37 @@
+form.filter-aside
+  .filter-aside__section
+    .filter-aside__title Категории
+    .filter-aside__content
+      include ../../../components/Filter/filterCategories/filterCategories
+  .filter-aside__section.filter-aside__section--grey
+    .filter-aside__title Цена, руб
+    .filter-aside__content
+      include ../../../components/Filter/filterPrice/filterPrice
+  .filter-aside__section
+    .filter-aside__title Пол
+    .filter-aside__content
+      include ../../../components/Filter/filterCheckbox/filterCheckboxSex
+  .filter-aside__section
+    .filter-aside__title Производители
+    .filter-aside__content
+      include ../../../components/Filter/filterCheckbox/filterCheckboxManufacturers
+    button(type="button").filter-aside__close
+      svg.icon.filter-aside__close-icon
+        use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
+  .filter-aside__section
+    .filter-aside__title Цвет
+    .filter-aside__content
+      include ../../../components/Filter/filterColors/filterColors
+    button(type="button").filter-aside__close
+      svg.icon.filter-aside__close-icon
+        use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
+  .filter-aside__section
+    .filter-aside__title Параметры
+    .filter-aside__content
+      include ../../../components/Filter/filterCheckbox/filterCheckboxParameters
+    button(type="button").filter-aside__close
+      svg.icon.filter-aside__close-icon
+        use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
+  .filter-aside__section
+    .filter-aside__content
+      include ../../../components/Filter/filterButtons/filterButtons

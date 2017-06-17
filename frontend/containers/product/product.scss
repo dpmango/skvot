@@ -16,10 +16,21 @@
   .product {
     // padding-bottom: 100px;
     &__container {
-      padding: 0 15px;
+      padding: 0 50px;
     }
     &__info {
-      padding-left: 15px;
+      padding-left: 30px;
+    }
+  }
+}
+@media #{$desktop} {
+  .product {
+    // padding-bottom: 100px;
+    &__container {
+      padding: 0 30px;
+    }
+    &__info {
+      padding-left: 30px;
     }
   }
 }
@@ -27,6 +38,9 @@
   .product {
     &__container {
       padding: 15px;
+    }
+    &__info {
+      padding: 0;
     }
     &__preview {
       padding: 0;

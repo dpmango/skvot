@@ -93,9 +93,6 @@ $select-height: 32px;
 }
 
 .select-wrap--form {
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
   .select {
 
     padding: 10px 20px;

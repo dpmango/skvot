@@ -241,8 +241,8 @@ gulp.task('dev',
             'serve',
             function() {
               gulp.watch('frontend/**/*.scss', gulp.series('styles'));
-              gulp.watch('frontend/**/*.pug', gulp.series('pug'));
               gulp.watch('frontend/img/*.*', gulp.series('images'));
+              gulp.watch('frontend/**/*.pug', gulp.series('pug'));
               gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
               gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
             }

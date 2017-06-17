@@ -33,10 +33,12 @@ import {count} from './modules/count'
 
 import {cart} from './modules/cart'
 import svg4everybody from 'svg4everybody/dist/svg4everybody.legacy.js'
+import {tooltipp} from './modules/tooltip'
 
 import { page } from './config'
 
 $(document).ready(function() {
+  svg4everybody();
   if(page === 'catalog') {
     rangeSlider.init();
     views.init();
@@ -65,8 +67,7 @@ $(document).ready(function() {
   color.init();
   count.init();
   cart.init();
-  svg4everybody();
-
   productPreview.init();
   product.init();
+  tooltipp.init();
 });

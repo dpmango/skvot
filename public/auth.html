@@ -162,16 +162,22 @@
       </div>
     </header>
     <div class="page-head">
-      <div class="page-head__title">Регистрация на сайте</div>
-      <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Регистрация</a></div>
+      <div class="page-head__container">
+        <div class="page-head__title">Регистрация на сайте</div>
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Регистрация</a></div>
+      </div>
     </div>
     <main class="main container">
       <div class="auth-form">
         <div class="auth-form__title">Авторизация:</div>
         <form class="auth-form__form">
           <div class="form-group">
-            <input class="input input--form" type="email" placeholder="Email адрес"/>
-            <input class="input input--form" type="password" placeholder="Пароль"/>
+            <div class="form-inner-group">
+              <input class="input input--form" type="email" placeholder="Email адрес"/>
+            </div>
+            <div class="form-inner-group">
+              <input class="input input--form" type="password" placeholder="Пароль"/>
+            </div>
           </div>
           <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
           <div class="form-group">
@@ -188,7 +194,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button class="button" type="submit">Войти</button>
+            <button class="button button--bs-2" type="submit">Войти</button>
           </div>
         </form>
         <div class="auth-form__title">Нет аккаунта?</div><a class="link" href="registration.html">Зарегистрироваться</a>

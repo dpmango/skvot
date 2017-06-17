@@ -79,6 +79,8 @@
     "lodash": "^4.16.6",
     "slick-carousel": "^1.6.0",
     "svg4everybody": "^2.1.8",
+    "tooltip": "^1.6.1",
+    "tooltip-js": "^2.0.1",
     "webpack": "^1.14.0"
   }
 }

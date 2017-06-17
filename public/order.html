@@ -162,8 +162,10 @@
       </div>
     </header>
     <div class="page-head">
-      <div class="page-head__title">Оформление заказа</div>
-      <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Оформление заказа</a></div>
+      <div class="page-head__container">
+        <div class="page-head__title">Оформление заказа</div>
+        <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Оформление заказа</a></div>
+      </div>
     </div>
     <main class="main container">
       <div class="cart">
@@ -449,8 +451,147 @@
             </div>
           </div>
           <div class="cart__total row row--2">
-            <div class="col-lg-2 col-lg-offset-8 cart__total-total">Итого: <span>34565P</span></div>
+            <div class="col-lg-2 col-lg-offset-8 cart__total-total">Итого: <span>3442565P</span></div>
           </div>
+        </div>
+        <div class="cart__payment">
+          <div class="cart-payment">
+            <div class="cart-payment__delivery">
+              <div class="cart-payment__container">
+                <div class="cart-payment__title">Город доставки</div>
+              </div>
+              <div class="cart-payment__section">
+                <div class="cart-payment__container">
+                  <div class="cart-payment__city">Санкт петербург</div><a class="link cart-payment__change" href="#">Изменить</a>
+                </div>
+              </div>
+              <div class="cart-payment__container">
+                <div class="cart-payment__title">Способ доставки:</div>
+              </div>
+              <div class="cart-payment__section">
+                <div class="cart-payment__container">
+                  <div class="cart-payment__method">
+                    <div class="cart-payment__method-title">Пункты выдачи заказов: «Главпункт»</div>
+                  </div><a class="link cart-payment__change" href="#">Изменить</a>
+                </div>
+                <div class="cart-payment__container">
+                  <div class="cart-payment__method-content">
+                    <div class="p">
+                      <div><span class="semi">Адрес:</span> Санкт-Петербург, Алтайская ул., д.16</div>
+                      <div>Стоимость доставки: 200 руб.</div>
+                      <div>Срок доставки: 4 дня</div>
+                    </div>
+                    <div class="p important">Важно: Нельзя выкупить заказ частично и примерить перед покупкой. Не доставляют заказы дороже 15 000 руб.</div>
+                    <div class="p">
+                      <div><span class="semi">Время работы:</span></div>
+                      <div>пн (09:00 - 21:00;)</div>
+                      <div>вт (09:00 - 21:00;)</div>
+                      <div>ср (09:00 - 21:00;)</div>
+                      <div>чт (09:00 - 21:00;)</div>
+                      <div>пт (09:00 - 21:00;)</div>
+                      <div>сб (09:00 - 21:00;)</div>
+                      <div>сб (09:00 - 21:00;)</div>
+                    </div>
+                    <div class="p">
+                      <div><span class="semi">Как добраться:</span></div>
+                      <div>Ст. м. "Комендантский проспект". 5-я линия метро. Правый выход из метро к Комендантскому пр-кту. Выйти из метро и идти прямо 100 метров к ул. Ильюшина. Транспорт: автобус № 126. Проехать 5 остановок. Выйти на ост. "Богатырский проспект" Пункт выдачи заказов расположен на первом этаже многоэтажного жилого дома, вывеска "Яркий Фотомаркет".</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-payment__container">
+                <div class="cart-payment__title">Способ оплаты:</div>
+              </div>
+              <div class="cart-payment__section">
+                <div class="cart-payment__container">
+                  <div class="cart-payment__payment-services">
+                    <div class="cart-payment__section-title">Электронные платежные системы</div>
+                  </div><a class="link cart-payment__change" href="#">Изменить</a>
+                </div>
+                <div class="cart-payment__container">
+                  <div class="cart-payment__payments-icons">
+                    <div class="cart-payment__payments-icon" style="background-image: url(img/mastercart.svg);"></div>
+                    <div class="cart-payment__payments-icon" style="background-image: url(img/mastercart1.svg);"></div>
+                    <div class="cart-payment__payments-icon" style="background-image: url(img/paypal.svg);"></div>
+                    <div class="cart-payment__payments-icon" style="background-image: url(img/visa1.svg);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart__form-order">
+          <form class="form-order">
+            <div class="form-order__top">
+              <div class="form-group">
+                <div class="form-order__title">Персональная информация:</div>
+                <div class="form-group">
+                  <div class="form-order__buyer"><span class="lighter">Покупатель:</span><span class="semi"> Петров Иван Васильевич</span></div>
+                </div>
+                <div class="form-group">
+                  <div class="form-require">
+                    <input class="input input--form" type="text" value="+7 (953) 568-89-12" name="phone"/>
+                    <div class="form-require-star important">*</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="additional-info" name="phone">Дополнительная информация:</label>
+                  <div class="form-require">
+                    <textarea class="input input--form" id="additional-info"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-order__title">Скидка на заказ:</div>
+                <div class="form-group">
+                  <label class="form-label" for="discount">Номер дисконтной карты:</label>
+                  <div class="form-double">
+                    <input class="input input--form" type="text" id="discount" name="discount"/>
+                    <div class="form-order__discount"><a class="link" href="#">Применить дисконтную карту</a></div>
+                  </div>
+                </div>
+                <div class="form-double">
+                  <div class="form-or">или</div>
+                </div>
+                <div class="form-group">
+                  <div class="form-double">
+                    <label class="form-label"><span>Промо-код:</span>
+                      <div class="form-info tooltip-trigger" data-tooltip="Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут. Ваш текст тут." data-tooltip-positions="top;bottom;left;right">
+                        <svg class="icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-question"></use>
+                        </svg>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="form-double">
+                    <input class="input input--form" type="text" id="code" name="code"/>
+                    <div class="form-order__discount"><a class="link" href="#">Применить код</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-order__total"><span class="semi">Итого к оплате: 3 850₽ + 200₽ за доставку =</span><span class="yellow semi"> 4 050₽</span></div>
+            <div class="form-order__bottom">
+              <div class="form-group">
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
+                    <label class="checkbox__label" for="registration-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Оформить заказ</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </main>
