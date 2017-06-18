@@ -6,7 +6,8 @@ export let header = {
   headerTop: '.header__top',
   init () {
     let scrolled = false;
-    let headerTopHeight = $(this.headerTop).height();
+    let headerTopHeight = $(this.headerTop).outerHeight();
+    console.log(headerTopHeight)
     // Margin next content
     this.setMarginToNextSubling();
     $(window).resize(debounce(() => {

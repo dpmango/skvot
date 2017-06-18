@@ -50,7 +50,9 @@ $(document).ready(function() {
   if(page === 'brand') {
     brand.init();
   }
-  header.init();
+  $(window).load(function() {
+    header.init();
+  });
   catalog.init();
   sliders.init();
   lkPopup.init();

@@ -7,6 +7,7 @@
   visibility: hidden;
   opacity: 0;
   transition: $t-normal;
+  pointer-events: none;
   &:after {
     content: '';
     position: absolute;
@@ -22,6 +23,7 @@
   &--opened {
     visibility: visible;
     opacity: 1;
+    pointer-events: all;
   }
 }
 

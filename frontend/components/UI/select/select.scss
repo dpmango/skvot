@@ -94,24 +94,34 @@ $select-height: 32px;
 
 .select-wrap--form {
   .select {
-
     padding: 10px 20px;
-
     outline: none;
     color: $c-black-2;
     width: 100%;
     font-size: $fs-14;
     -webkit-appearance: none;
     height: 38px;
-
   }
   .select-styled {
     border-radius: 10px;
     border: 1px solid $c-light-grey-3;
     padding: 10px 20px;
     color: $c-grey-4;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background: $c-light-grey-2;
+      right: 30px;
+      top: 0;
+      transition: background-color $t-normal;
+    }
     &.active {
       border-color: $c-grey;
+      &:before {
+        background: $c-grey;
+      }
     }
   }
   .select-options {

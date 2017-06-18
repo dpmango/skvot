@@ -176,17 +176,29 @@
           </div>
           <form class="settings__form-info">
             <div class="form-group">
-              <input class="input input--form" type="email" placeholder="Email адрес" name="email" value="username@mail.com"/>
-              <input class="input input--form" type="text" placeholder="Фамилия" name="surname" value="Pupkin"/>
-              <input class="input input--form" type="text" placeholder="Имя" name="name" value="Ivan"/>
-              <input class="input input--form" type="text" placeholder="Отчество" name="patronymic" value="Petrovich"/>
-              <input class="input input--form" type="text" placeholder="Телефон" name="phone" value="+38099543423"/>
-              <div class="select-wrap select-wrap--form">
-                <select class="select-wrap__field">
-                  <option>Мужской</option>
-                  <option>Мужской</option>
-                  <option>Женский</option>
-                </select>
+              <div class="form-inner-group">
+                <input class="input input--form" type="email" placeholder="Email адрес" name="email" value="username@mail.com"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Фамилия" name="surname" value="Pupkin"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Имя" name="name" value="Ivan"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Отчество" name="patronymic" value="Petrovich"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Телефон" name="phone" value="+38099543423"/>
+              </div>
+              <div class="form-inner-group">
+                <div class="select-wrap select-wrap--form">
+                  <select class="select-wrap__field">
+                    <option>Мужской</option>
+                    <option>Мужской</option>
+                    <option>Женский</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div class="form-group">
@@ -196,9 +208,15 @@
           <div class="auth-form__title">Смена пароля:</div>
           <form class="settings__form-password">
             <div class="form-group">
-              <input class="input input--form" type="password" placeholder="Старый пароль" name="old-password"/>
-              <input class="input input--form" type="password" placeholder="Новый пароль" name="new-password"/>
-              <input class="input input--form" type="password" placeholder="Подтверждение нового пароля"/>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Старый пароль" name="old-password"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Новый пароль" name="new-password"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Подтверждение нового пароля"/>
+              </div>
             </div>
             <div class="form-group">
               <button class="button button--bs-2" type="submit">Сохранить</button>
