@@ -1,0 +1,26 @@
+.blog-list {
+  &__pagination {
+    border-bottom: 1px solid $c-light-grey-2;
+  }
+  &__pagination-inner {
+    max-width: 430px;
+    margin: auto;
+  }
+  &__tagging {
+    position: absolute;
+    right: 0;
+    transform: translateY(-100%);
+    z-index: 100;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .blog-list {
+    &__tagging {
+      display: none;
+    }
+  }
+}

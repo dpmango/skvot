@@ -32,6 +32,8 @@ import {product} from './modules/product'
 import {count} from './modules/count'
 
 import {cart} from './modules/cart'
+
+import {team} from './modules/team'
 import svg4everybody from 'svg4everybody/dist/svg4everybody.legacy.js'
 import {tooltipp} from './modules/tooltip'
 
@@ -49,6 +51,9 @@ $(document).ready(function() {
   }
   if(page === 'brand') {
     brand.init();
+  }
+  if(page === 'team') {
+    team.init();
   }
   $(window).load(function() {
     header.init();

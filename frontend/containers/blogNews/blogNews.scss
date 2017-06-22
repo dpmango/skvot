@@ -1,3 +1,9 @@
 .blog-news__title {
   @include title;
 }
+
+.blog-news {
+  &__content {
+    border-top: 1px solid $c-light-grey-2;
+  }
+}

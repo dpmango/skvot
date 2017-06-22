@@ -1,0 +1,10 @@
+.team {
+
+  &__category {
+    padding: 40px 40px 150px 40px;
+    border-bottom: 1px solid $c-light-grey-2;
+    &:not([data-category="all"]) {
+      display: none;
+    }
+  }
+}

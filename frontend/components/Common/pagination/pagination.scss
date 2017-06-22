@@ -39,6 +39,23 @@
   &__item--after-dots:not(:nth-last-child(2)) {
     display: none;
   }
+
+  //------------------------------
+  // Modifiers
+  //------------------------------
+  &--blogs {
+    .pagination__item {
+      width: 14.2857143%;
+    }
+    .pagination__item:last-child {
+      border-right: 1px solid $c-light-grey-2;
+    }
+    .pagination__item--before-dots:not(:nth-child(-n+4)) {
+      display: none;
+
+    }
+  }
+
 }
 
 //------------------------------

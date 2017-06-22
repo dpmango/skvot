@@ -11,6 +11,31 @@ $select-height: 32px;
   flex-wrap: wrap;
   font-size: $fs-13;
   width: 100%;
+  &--blog {
+    .select {
+      background: $c-white;
+      padding: 10px;
+      box-sizing: content-box;
+      text-transform: uppercase;
+      font-weight: $fw-semibold;
+    }
+    .select-styled {
+      padding: 10px;
+      padding-right: 30px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      &:after {
+        top: 24px;
+        right: 15px;
+      }
+    }
+    .select-options {
+      padding: 10px;
+      text-align: center;
+    }
+  }
 }
 .select-wrap__label {
   margin-right: 10px;

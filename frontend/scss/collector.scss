@@ -109,6 +109,12 @@
 @import '../components/Brand/brandCategory/brandCategory';
 @import '../components/Brand/brandTabs/brandTabs';
 
+// TEAM
+@import '../components/Team/PersonItem/personItem';
+
+// BLOG LIST
+
+
 //------------------------------
 // Containers
 //------------------------------
@@ -139,3 +145,7 @@
 @import '../containers/Registration/registration';
 
 @import '../containers/Settings/settings';
+
+@import '../containers/Team/team';
+
+@import '../containers/BlogList/blogList';
