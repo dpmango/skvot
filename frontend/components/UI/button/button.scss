@@ -1,19 +1,19 @@
 .button {
   position: relative;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   border: none;
   border-radius: 50px;
   background: $c-blue;
-  padding: 12px 30px;
-  justify-content: center;
+  padding: 10px 30px;
   color: $c-white;
+  line-height: 1.3em;
   outline: none;
   transition: $t-normal;
   font-weight: $fw-semibold;
   font-size: $fs-14;
   border: 2px solid transparent;
   cursor: pointer;
+  text-align: center;
   &__icon {
     margin-right: 5px;
     fill: $c-white;
@@ -57,6 +57,26 @@
     font-size: $fs-16;
     &:hover {
       background: $c-white;
+    }
+  }
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--white-2 {
+    padding: 10px 18px;
+    background: $c-white;
+    color: $c-blue;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $bs-button;
+    .button__icon {
+      margin-left: 10px;
+      fill: $c-blue;
+      width: 12px;
+      height: 12px;
     }
   }
   &--bs-2 {

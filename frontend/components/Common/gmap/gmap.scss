@@ -1,0 +1,25 @@
+.gmap {
+  &-wrap {
+    position: relative;
+    &--delivery {
+      .gmap-map {
+        height: 600px;
+      }
+      .gmap-overlay {
+        display: none;
+      }
+    }
+  }
+  &-map {
+    width: 100%;
+    height: 420px;
+  }
+  &-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+}

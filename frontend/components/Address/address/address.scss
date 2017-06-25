@@ -1,0 +1,32 @@
+.address-item {
+  padding: 25px;
+  &__content {
+    font-size: $fs-13;
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+  }
+  &__title {
+    font-size: $fs-20;
+    font-family: $f-osward;
+    margin-bottom: 25px;
+  }
+  &__line {
+    display: flex;
+    line-height: $lh-1-5;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__button {
+    margin-top: 25px;
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    fill: $c-blue;
+    margin-right: 7px;
+  }
+}

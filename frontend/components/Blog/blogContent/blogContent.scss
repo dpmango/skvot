@@ -1,0 +1,59 @@
+.blog-content {
+  &__title {
+    font-size: $fs-28;
+    font-family: $f-osward;
+    padding-bottom: 15px;
+    &--min {
+      padding-bottom: 0;
+      font-size: $fs-24;
+    }
+  }
+  &__text {
+    color: $c-grey-2;
+    padding: 15px 0;
+    line-height: $lh-1-75;
+  }
+  &__image {
+    @include backgroundCover;
+    height: 430px;
+    width: 100%;
+    max-width: 750px;
+    margin: 15px auto;
+  }
+  &__blockquote {
+    padding: 15px 0;
+  }
+  &__subcontent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    &-item {
+      width: 50%;
+      position: relative;
+    }
+    .blog-content {
+      max-width: calc(100% - 90px);
+    }
+  }
+}
+
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$phone} {
+  .blog-content {
+    &__image {
+      height: 230px;
+    }
+    &__subcontent {
+      flex-direction: column;
+      &-item {
+        width: 100%;
+      }
+      .blog-content {
+        max-width: 100%;
+      }
+    }
+  }
+}

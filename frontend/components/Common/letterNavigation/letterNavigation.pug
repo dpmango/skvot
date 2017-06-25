@@ -1,0 +1,6 @@
+mixin letterNav(props)
+  - var letters = props.letters || ['a']
+
+  .letter-nav
+    each letter in letters
+      .letter-nav__item.js-letter-nav(data-section=letter)= letter

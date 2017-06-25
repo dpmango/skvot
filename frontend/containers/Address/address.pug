@@ -1,0 +1,20 @@
+include ../../components/Address/address/address
+include ../../components/Common/gmap/gmap
+.address
+  +gmap({ lat: '55.793989', lng: '37.490245' })
+  .address__addresses.row.row--2
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Москва', content: [{address: 'ул. Маршала Мерецкова, дом 4', time1: '11.00—20.00 пн-сб', time2: '11.00—19.00 вс', phone: 'Телефон: +7 (499) 194-00-31' }]})]
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Санкт-Петербург', content: [{address: 'Коломяжский проспект, д.17, к.2, литера А, помещение 364', time1: '0.00—22.00', phone: 'Телефон: +7 (969) 713-84-79' }, {address: ' ул. Садовая, дом 28/30', time1: '11.00—21.00',  phone: 'Телефон: +7 (900) 657-27-70' }]})]
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Екатеринбург', content: [{address: 'ул. Вайнера, дом 9А', time1: '11.00—20.00', phone: 'Телефон: +7 (965) 534-87-05' }]})]
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Пермь', content: [{address: 'ул. Швецова 41', time1: '11.00—20.00', phone: 'Телефон: +7 (342) 294-24-42' }]})]
+  .address__addresses.row.row--2
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Волгоград', content: [{address: 'пр. Ленина, д. 54Б ТРЦ "Европа Сити Молл", 3 этаж', time1: '10.00—22.00', phone: 'Телефон: +7 8442 24-70-28' }]})]
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Новосибирск', content: [{address: 'ул. Красный проспект, дом 55', time1: '10.00—21.00 пн-пт', time2: '10.00—21.00 пн-пт', phone: 'Телефон: +7 (383) 221-12-81' }]})]
+    .col-lg-3.col-md-4.col-sm-6
+      | #[+address({ title: 'Нижний Новгород', content: [{address: 'ул. Белинского, дом 38', time1: '11.00—20.00', phone: 'Телефон: +7 (831) 421-64-38' }]})]

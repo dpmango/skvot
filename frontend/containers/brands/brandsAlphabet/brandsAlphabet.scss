@@ -1,4 +1,4 @@
-.brands-alphabet {
+.alphabet {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -9,7 +9,7 @@
 // Responsive
 //------------------------------
 @media #{$tablet} {
-  .brands-alphabet {
+  .alphabet {
     border-top: none;
     margin-top: 0px;
   }

@@ -1,0 +1,7 @@
+include ../../components/Blog/blogHeader/blogHeader
+include ../../components/Common/tags/tags
+.blog-post
+  +blogHeader({ addClass: 'blog-post__header' })
+  .blog-post__content
+    include ../../components/Blog/blogContent/blogContent
+    +tags({ addClass: 'blog-post__tags' })

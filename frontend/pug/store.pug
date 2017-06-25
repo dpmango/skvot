@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        title Skvot Project
+        include common/head
+        script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
+    body(data-page="store")
+        include ../commons/Header/header
+        include ../containers/PageHead/pageHeadStore
+        main.main.container
+          include ../containers/Store/store
+        //- modals
+        include ../containers/Modals/city
+        include ../containers/Modals/cityAccept
+        include ../containers/Modals/cartItemMobile
+
+        include ../commons/Subscription/subscription
+        include ../commons/Footer/footer
+        include ../components/UI/up/up
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript")
+        include common/scripts
+        script.
+            VK.Widgets.Group("vk-group", {mode: 4, wide: 1, height: "500", width: 'auto'}, 14535294);

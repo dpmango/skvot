@@ -74,6 +74,12 @@
 @import '../components/Common/breadcrumbs/breadcrumbs';
 @import '../components/Common/textCollapse/textCollapse';
 @import '../components/Common/pagination/pagination';
+@import '../components/Common/blockquote/blockquote';
+@import '../components/Common/tags/tags';
+@import '../components/Common/letterNavigation/letterNavigation';
+@import '../components/Common/letterContent/letterContent';
+@import '../components/Common/gmap/gmap';
+@import '../components/Common/slider/slider';
 
 // CART
 @import '../components/Cart/cartItem/cartItem';
@@ -100,8 +106,6 @@
 // BRANDS
 @import '../components/Brands/brandsImage/brandsImage';
 @import '../components/Brands/brandsImages/brandsImages';
-@import '../components/Brands/brandsSection/brandsSection';
-@import '../components/Brands/brandsNavigation/brandsNavigation';
 
 // BRAND
 @import '../components/Brand/brandInfo/brandInfo';
@@ -113,6 +117,13 @@
 @import '../components/Team/PersonItem/personItem';
 
 // BLOG LIST
+
+// ADDRESS
+@import '../components/Address/address/address';
+
+// BLOG HEADER
+@import '../components/Blog/blogHeader/blogHeader';
+@import '../components/Blog/blogContent/blogContent';
 
 
 //------------------------------
@@ -149,3 +160,10 @@
 @import '../containers/Team/team';
 
 @import '../containers/BlogList/blogList';
+@import '../containers/Offer/offer';
+@import '../containers/Address/address';
+@import '../containers/BlogPost/blogPost';
+@import '../containers/Delivery/delivery';
+@import '../containers/About/about';
+@import '../containers/Store/store';
+@import '../containers/DeliveryPoint/deliveryPoint';

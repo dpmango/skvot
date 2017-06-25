@@ -1,0 +1,133 @@
+.delivery-point {
+  padding: 40px 0;
+  &__map {
+    position: relative;
+  }
+  &__title {
+    padding: 0 70px;
+    font-size: $fs-24;
+  }
+
+  &__locations {
+    margin-top: 40px;
+  }
+  &__content {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    padding: 10px 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    &--active {
+      pointer-events: all;
+    }
+    &-btn {
+      pointer-events: all;
+      height: 40px;
+      cursor: pointer;
+      width: 40px;
+      border: 1px solid $c-light-grey-2;
+      display: flex;
+      align-items: center;
+      background: $c-white;
+      justify-content: center;
+      &-icon {
+        width: 12px;
+        height: 12px;
+      }
+      &--active {
+        .delivery-point__content-btn-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    margin-left: -1px;
+    &--active {
+      .delivery-point__block-right > *,
+      .delivery-point__block-left > * {
+        position: relative;
+        transform: translateX(0%);
+      }
+      .delivery-point__block-right > * {
+        transition-delay: .15s;
+      }
+      .delivery-point__block-left > * {
+        transition-delay: 0s;
+      }
+    }
+  }
+  &__block-right,
+  &__block-left {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__block-right > *,
+  &__block-left > * {
+    position: relative;
+    transform: translateX(-120%);
+    transition: $t-normal;
+  }
+  &__block-right > * {
+    transition-delay: 0s;
+  }
+  &__block-left > * {
+    transition-delay: .15s;
+  }
+
+  &__block-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__list-items {
+    max-width: 300px;
+    overflow-y: scroll;
+    max-height: calc(100% - 20px);
+  }
+  &__list-item {
+    cursor: pointer;
+    user-select: none;
+    font-size: $fs-13;
+    border: 1px solid $c-light-grey-2;
+    padding: 11px;
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+    &--active {
+      background: $c-light-grey-2;
+    }
+    background: $c-white;
+  }
+
+  &__abouts {
+    position: relative;
+    width: 100%;
+    max-width: 666px;
+    max-height: 280px;
+    min-height: 100px;
+  }
+  &__about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    opacity: 0;
+    transition: $t-normal;
+    background: $c-white;
+    overflow-y: auto;
+  }
+}

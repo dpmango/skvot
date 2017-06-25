@@ -1,0 +1,32 @@
+include ../../components/Common/gmap/gmap
+
+.store
+  .store__map
+    +gmap({ lat: '60.002491', lng: '30.297160' })
+  .store__details.row.row--2
+    .col-lg-3.col-md-4.col-sm-6
+      .store__detail.store__detail--grey
+        svg.icon.store__detail-icon
+          use(xlink:href='img/svg-sprites/sprite.svg#icon-print')
+        a(href="#").store__detail-text Распечатайте адрес и схему проезда
+    .col-lg-2.col-md-3.col-sm-6
+      .store__detail
+        svg.icon.store__detail-icon
+          use(xlink:href='img/svg-sprites/sprite.svg#icon-train')
+        .store__detail-text м. Пионерская
+    .col-lg-2.col-md-2.col-sm-6
+      .store__detail
+        svg.icon.store__detail-icon
+          use(xlink:href='img/svg-sprites/sprite.svg#icon-clock')
+        .store__detail-text 10.00—22.00
+    .col-lg-2.col-md-3.col-sm-6
+      .store__detail
+        svg.icon.store__detail-icon
+          use(xlink:href='img/svg-sprites/sprite.svg#icon-phone2')
+        .store__detail-text +7 (969) 713-84-79
+  .store__slider
+    .store__slider-title Коломяжский проспект, д.17, к.2, литера А, помещение 364 ТРЦ "Сити Молл"
+    include ../../components/Common/slider/slider
+  .store__public
+    .store__public-title Новости магазина
+    #vk-group

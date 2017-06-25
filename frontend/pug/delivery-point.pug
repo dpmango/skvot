@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        title Skvot Project
+        include common/head
+    body(data-page="delivery-point")
+        include ../commons/Header/header
+        include ../containers/PageHead/pageHeadDeliveryPoint
+        main.main.container
+          include ../containers/DeliveryPoint/deliveryPoint
+        //- modals
+        include ../containers/Modals/city
+        include ../containers/Modals/cityAccept
+
+        include ../commons/Subscription/subscription
+        include ../commons/Footer/footer
+        include ../components/UI/up/up
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript")
+        include common/scripts

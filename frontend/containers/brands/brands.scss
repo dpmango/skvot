@@ -1,16 +1,12 @@
-.brands {
-  &__navigation {
-    display: none;
-  }
+.alphabet-navigation {
+  display: none;
 }
-
 //------------------------------
 // Responsive
 //------------------------------
 @media #{$tablet} {
-  .brands {
-    &__navigation {
-      display: block;
-    }
-  }
+.alphabet-navigation {
+  display: block;
+}
+
 }

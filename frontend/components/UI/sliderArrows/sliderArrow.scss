@@ -12,6 +12,15 @@
   &:hover {
     background-color: $c-white-op;
   }
+  &--dark {
+    border: 2px solid $c-light-grey-2;
+    &:hover {
+      background-color: $c-light-grey-2;
+    }
+    .slider-arrow__icon {
+      fill: $c-dark-2;
+    }
+  }
 }
 .slider-arrow__icon {
   width: 100%;

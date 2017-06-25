@@ -16,3 +16,15 @@
     margin-top: 15px;
   }
 }
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .person-item {
+    &__avatar {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}

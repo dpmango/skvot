@@ -1,0 +1,36 @@
+include ../../components/Common/gmap/gmap
+
+.delivery-point
+  .delivery-point__title Пункты выдачи заказов интернет магазина Сквот в «Владимирская область»
+  .delivery-point__locations
+    .delivery-point__map
+      +gmap({ addClass: 'gmap-wrap--delivery', lat: '55.793989', lng: '37.490245' })
+      .delivery-point__content
+        .delivery-point__content-btn
+          svg.icon.delivery-point__content-btn-icon
+             use(xlink:href='img/svg-sprites/sprite.svg#icon-right-arrow')
+        .delivery-point__blocks
+          .delivery-point__block-left
+            .delivery-point__list-items
+              .delivery-point__list-item(data-id="1") Санкт петербург, Автовская ул. д.3
+              .delivery-point__list-item(data-id="2") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="3") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="4") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="5") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="6") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="7") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="8") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="9") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="10") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="11") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="12") Санкт петербург, В.О. ул. 6-ая лн., д.25
+              .delivery-point__list-item(data-id="13") Санкт петербург, В.О. ул. 6-ая лн., д.25
+
+          .delivery-point__block-right
+            input.input.input--form.delivery-point__search(placeholder="Поиск адреса")
+            .delivery-point__abouts
+              .delivery-point__about(data-id="1")
+                .delivery-point__about-close X
+                h1 Hello
+              .delivery-point__about(data-id="2")
+                h1 World

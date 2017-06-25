@@ -1,0 +1,24 @@
+.address {
+  position: relative;
+  &__addresses {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    padding-bottom: 25px;
+  }
+  &__map-wrap {
+    position: relative;
+  }
+  &__map {
+    width: 100%;
+    height: 420px;
+  }
+  &__map-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+}

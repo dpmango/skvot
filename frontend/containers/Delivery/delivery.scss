@@ -1,0 +1,36 @@
+.delivery {
+  padding-top: 20px;
+  &__info {
+    padding: 30px 70px;
+    line-height: $lh-1-75;
+    font-size: $fs-14;
+    &-bottom {
+      margin-top: 30px;
+      color: $c-grey;
+    }
+  }
+  &__content {
+    margin-top: 0;
+  }
+  &__search {
+    padding: 30px 70px;
+    border-top: 1px solid $c-light-grey-2;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$tablet} {
+  .delivery {
+    padding-top: 0;
+    &__search {
+      border-bottom: 1px solid $c-light-grey-2;
+      padding: 30px 15px;
+    }
+    &__info {
+      padding: 30px 15px;
+    }
+  }
+}
+

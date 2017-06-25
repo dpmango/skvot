@@ -1,0 +1,139 @@
+include ../../components/Common/letterNavigation/letterNavigation
+include ../../components/Common/letterContent/letterContent
+
+.delivery
+  .delivery__info.
+    Вы можете выбрать любой удобный Вам способ доставки и оплаты Вашего заказа. <br>
+    На этой странице приведена сводная информация о видах доставки и оплаты, более подробную информацию о доставке в конкретный город вы можете узнать, выбрав из списка ваш город на этой странице, или в процессе оформления заказа в корзине нашего магазина, где так же Вы найдете информацию о точной стоимости доставки Вашего заказа. Мы гарантируем, что доставка Вашего заказа будет стоить именно столько, сколько указано на нашем сайте.
+
+    <div class="delivery__info-bottom">Не нашли свой населенный пункт? — Укажите область или край. Стоимость доставки уточнит оператор перед отправкой заказа.</div>
+  form.delivery__search
+    .form-group.form-group-input-btn
+      input(type="text" placeholder="Введите ваш город").input.input--form
+      button.button Узнать
+  .delivery__navigation.alphabet-navigation
+    +letterNav({ letters: ['главные', 'а', 'б', 'в', 'д', 'е', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'х', 'ч', 'я'] })
+  .alphabet.delivery__content
+    +letterContent({ letter: 'главные', addClass: 'letter-section--no-title letter-section--no-up', names: [
+      'Москва',
+      'Московская область',
+      'Санкт-Петербург',
+      'Ленинградская область'
+      ]})
+    +letterContent({ letter: 'а', addClass: 'letter-section--no-up', names: [
+      'Адыгея республика',
+      'Алтай республика',
+      'Алтайский край',
+      'Амурская область',
+      'Архангельская область',
+      'Астраханская область'
+      ]})
+    +letterContent({ letter: 'б', addClass: 'letter-section--no-up', names: [
+      'Белгородская область',
+      'Брянская область'
+      ]})
+    +letterContent({ letter: 'в', addClass: 'letter-section--no-up', names: [
+      'Владимирская область',
+      'Волгоградская область',
+      'Вологодская область',
+      'Воронежская область'
+      ]})
+    +letterContent({ letter: 'д', addClass: 'letter-section--no-up', names: [
+      'Дагестан республика'
+      ]})
+    +letterContent({ letter: 'е', addClass: 'letter-section--no-up', names: [
+      'Еврейская автономная область'
+      ]})
+    +letterContent({ letter: 'з', addClass: 'letter-section--no-up', names: [
+      'Забайкальский край'
+      ]})
+    +letterContent({ letter: 'и', addClass: 'letter-section--no-up', names: [
+      'Ивановская область',
+      'Ингушетия республика',
+      'Иркутская область'
+      ]})
+    +letterContent({ letter: 'к', addClass: 'letter-section--no-up', names: [
+      'Калининградская область',
+      'Калмыкия республика',
+      'Калужская область',
+      'Камчатский край',
+      'Карачаево-Черкесская республика',
+      'Кемеровская область',
+      'Кировская область',
+      'Костромская область',
+      'Краснодарский край',
+      'Красноярский край',
+      'Курганская область',
+      'Курская область'
+      ]})
+    +letterContent({ letter: 'л', addClass: 'letter-section--no-up', names: [
+      'Липецкая область'
+      ]})
+    +letterContent({ letter: 'м', addClass: 'letter-section--no-up', names: [
+      'Магаданская область',
+      'Мурманская область'
+      ]})
+    +letterContent({ letter: 'н', addClass: 'letter-section--no-up', names: [
+      'Нижегородская область',
+      'Новгородская область',
+      'Новосибирская область'
+      ]})
+    +letterContent({ letter: 'о', addClass: 'letter-section--no-up', names: [
+      'Омская область',
+      'Оренбургская область',
+      'Орловская область'
+      ]})
+    +letterContent({ letter: 'п', addClass: 'letter-section--no-up', names: [
+      'Пензенская область',
+      'Пермский край',
+      'Приморский край',
+      'Псковская область'
+      ]})
+    +letterContent({ letter: 'р', addClass: 'letter-section--no-up', names: [
+      'Республика Башкортостан',
+      'Республика Бурятия',
+      'Республика Кабардино-Балкарская',
+      'Республика Карелия',
+      'Республика Коми',
+      'Республика Крым',
+      'Республика Марий Эл',
+      'Республика Мордовия',
+      'Республика Саха (Якутия)',
+      'Республика Татарстан',
+      'Республика Удмуртская',
+      'Республика Хакасия',
+      'Ростовская область',
+      'Рязанская область'
+      ]})
+    +letterContent({ letter: 'с', addClass: 'letter-section--no-up', names: [
+      'Самарская область',
+      'Саратовская область',
+      'Сахалинская область',
+      'Свердловская область',
+      'Северная Осетия республика',
+      'Смоленская область',
+      'Ставропольский край'
+      ]})
+    +letterContent({ letter: 'т', addClass: 'letter-section--no-up', names: [
+      'Тамбовская область',
+      'Тверская область',
+      'Томская область',
+      'Тульская область',
+      'Тыва республика',
+      'Тюменская область'
+      ]})
+    +letterContent({ letter: 'у', addClass: 'letter-section--no-up', names: [
+      'Ульяновская область'
+      ]})
+    +letterContent({ letter: 'х', addClass: 'letter-section--no-up', names: [
+      'Хабаровский край'
+      ]})
+    +letterContent({ letter: 'ч', addClass: 'letter-section--no-up', names: [
+      'Челябинская область',
+      'Чеченская республика',
+      'Чувашская республика',
+      'Чукотский автономный округ'
+      ]})
+    +letterContent({ letter: 'я', addClass: 'letter-section--no-up', names: [
+      'Ярославская область'
+      ]})

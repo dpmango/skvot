@@ -1,0 +1,10 @@
+mixin letterContent(props)
+  - var letter = props.letter || ''
+  - var names = props.names || []
+  - var addClass = props.addClass || ''
+
+  .letter-section.js-letter-section(data-section=letter class=addClass)
+    .letter-section__letter= letter
+    .letter-section__list
+      each name in names
+        a(href="#").letter-section__item= name

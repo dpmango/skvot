@@ -39,6 +39,13 @@
       width: calc(50% - 10px);
     }
   }
+  &-group-input-btn {
+    max-width: 630px;
+    display: flex;
+    & > input {
+      margin-right: 15px;
+    }
+  }
   &-require {
     display: flex;
     align-items: center;

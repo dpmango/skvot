@@ -1,0 +1,16 @@
+.offer-text {
+  font-size: $fs-14;
+  padding: 40px 100px;
+  &__point {
+    padding: 10px 0;
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$desktop} {
+  .offer-text {
+    padding: 15px;
+  }
+}

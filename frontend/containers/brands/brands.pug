@@ -1,7 +1,10 @@
+include ../../components/Common/letterNavigation/letterNavigation
+
+
 .brands
   .brands__images
     include ../../components/Brands/brandsImages/brandsImages
-  .brands__navigation
-    include ../../components/Brands/brandsNavigation/brandsNavigation
+  .brands__navigation.alphabet-navigation
+    +letterNav({ letters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] })
   .brands__alphabet
     include brandsAlphabet/brandsAlphabet

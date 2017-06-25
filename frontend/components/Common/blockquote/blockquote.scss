@@ -1,0 +1,48 @@
+.blockquote {
+  position: relative;
+  min-height: 170px;
+  border: 1px solid $c-light-grey-2;
+  margin: 25px 0 0;
+  &__quote {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: $c-blue;
+    box-sizing: content-box;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: $bs-label;
+  }
+  &__icon {
+    width: 13px;
+    height: 13px;
+    fill: $c-white;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 170px;
+    padding: 35px 15px 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__text {
+    font-size: $fs-18;
+    color: $c-grey-6;
+  }
+  &__author {
+    font-style: normal;
+    text-transform: uppercase;
+    color: $c-grey;
+    font-size: $fs-12;
+    padding-top: 30px;
+  }
+}

@@ -1,0 +1,9 @@
+mixin tags(props)
+  - var addClass = props.addClass || '';
+
+  .tags(class=addClass)
+    .tags__text Тэги:
+    .tags__tags
+      a(href="#").tags__tag Скейтборд
+      a(href="#").tags__tag Сноуборд
+      a(href="#").tags__tag Одежда

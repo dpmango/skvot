@@ -10,6 +10,9 @@
   text-align: center;
   padding-bottom: 95px;
   padding-top: 20px;
+  &--gray {
+    background: $c-grey-6;
+  }
   &--darken {
     &:before {
       @include overlayBg($c-black-op);

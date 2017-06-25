@@ -1,0 +1,50 @@
+.store {
+  &__public {
+    &-title {
+      @include title();
+    }
+  }
+  &__details {
+    padding: 10px 0;
+    border-bottom: 1px solid $c-light-grey-2;
+  }
+  &__slider {
+    padding: 0 15px;
+    &-title {
+      color: $c-dark-2;
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: $lh-1-75;
+      padding: 30px 0;
+    }
+  }
+  &__detail {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    &-icon {
+      width: 17px;
+      height: 17px;
+      margin-right: 10px;
+      fill: $c-blue;
+    }
+    &-text {
+      color: $c-dark-2;
+      font-size: $fs-12;
+    }
+    &--grey {
+      .store__detail-icon {
+        fill: $c-grey;
+      }
+      .store__detail-text {
+        border-bottom: 1px solid $c-grey;
+        transition: $t-normal;
+        color: $c-grey;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

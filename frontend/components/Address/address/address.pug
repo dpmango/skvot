@@ -1,0 +1,30 @@
+mixin address(prop)
+  - var title = prop.title || ''
+  - var content = prop.content || ''
+  //- - var time1 = prop.time1 || ''
+  //- - var time2 = prop.time2 || ''
+  //- - var phone = prop.phone || ''
+
+  .address-item
+    .address-item__title= title
+    each item in content
+      .address-item__content
+        .address-item__line
+          svg.icon.address-item__icon
+            use(xlink:href='img/svg-sprites/sprite.svg#icon-location')
+          .address-item__text= item.address
+        .address-item__line.address-item__line--time
+          svg.icon.address-item__icon
+            use(xlink:href='img/svg-sprites/sprite.svg#icon-clock')
+          .address-item__text
+            div= item.time1
+            div= item.time2
+        .address-item__line
+
+          svg.icon.address-item__icon
+            use(xlink:href='img/svg-sprites/sprite.svg#icon-phone2')
+          .address-item__text= item.phone
+      a(href="#").address-item__button.button.button--white-2
+        span Подробнее
+        svg.icon.button__icon
+          use(xlink:href='img/svg-sprites/sprite.svg#icon-detail')
