@@ -1,0 +1,28 @@
+.close {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: 1px solid $c-light-grey-2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $t-normal;
+  &:hover {
+    background: $c-light-grey-2;
+  }
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    left: 12px;
+    width: 10px;
+    height: 2px;
+    background: $c-dark;
+  }
+  &:after {
+    transform: rotate(45deg)
+  }
+  &:before {
+    transform: rotate(-45deg)
+  }
+}

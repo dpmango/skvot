@@ -1,3 +1,4 @@
+require('simple-scrollbar')
 import GMaps from 'gmaps'
 
 export let dgmap = {

@@ -50,6 +50,13 @@
       fill: $c-blue;
     }
   }
+  &--yellow {
+    background: $c-yellow;
+    &:hover {
+      border-color: $c-yellow;
+      color: $c-yellow;
+    }
+  }
   &--white {
     background: $c-white;
     color: $c-black-2;

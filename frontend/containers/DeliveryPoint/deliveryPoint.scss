@@ -47,6 +47,7 @@
   }
 
   &__blocks {
+    width: 100%;
     display: flex;
     margin-left: -1px;
     &--active {
@@ -68,7 +69,12 @@
     position: relative;
     overflow: hidden;
   }
-
+  &__block-right {
+    width: 65%;
+  }
+  &__block-left {
+    width: 35%;
+  }
   &__block-right > *,
   &__block-left > * {
     position: relative;
@@ -91,10 +97,30 @@
     position: relative;
     overflow: hidden;
   }
+  // POST
+  &__post {
+    padding: 50px 70px 30px;
+  }
+  &__post-content {
+    line-height: $lh-1-5;
+  }
+  &__post-top {
+    display: flex;
+    align-items: center;
+  }
+  &__post-title {
+    font-size: $fs-24;
+  }
+  &__post-title-logo {
+    width: 50px;
+    height: 30px;
+    @include backgroundContain;
+    margin-left: 15px;
+  }
   &__list-items {
-    max-width: 300px;
-    overflow-y: scroll;
-    max-height: calc(100% - 20px);
+    width: 100%;
+    overflow-y: auto;
+    max-height: 100%;
   }
   &__list-item {
     cursor: pointer;
@@ -114,12 +140,11 @@
   &__abouts {
     position: relative;
     width: 100%;
-    max-width: 666px;
-    max-height: 280px;
-    min-height: 100px;
+    height: 350px;
   }
   &__about {
     position: absolute;
+    padding: 20px;
     top: 0;
     left: 0;
     width: 100%;
@@ -127,7 +152,176 @@
     left: -100%;
     opacity: 0;
     transition: $t-normal;
-    background: $c-white;
+    background: $c-white-op-3;
     overflow-y: auto;
+    &-content {
+      margin-top: 20px;
+      font-size: $fs-14;
+    }
+    &-close {
+      margin-left: 15px;
+    }
+    &-top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &-title {
+      font-size: $fs-18;
+      margin-right: auto;
+    }
+  }
+  &__search {
+    max-width: 300px;
+  }
+
+  // INFO
+  .delivery-point__info-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .delivery-point__info {
+    min-width: 1000px;
+    overflow: hidden;
+    font-size: $fs-14;
+    border-top: 1px solid $c-light-grey-2;
+    display: flex;
+    flex-direction: column;
+    &-p-icon {
+      @include backgroundContain;
+      width: 30px;
+      height: 30px;
+    }
+    &-icon {
+      width: 14px;
+      height: 14px;
+      &--false {
+        fill: $c-red;
+        width: 12px;
+        height: 12px;
+      }
+      &--true {
+        fill: $c-blue;
+      }
+    }
+    &-top {
+      display: flex;
+      .delivery-point__info-item {
+        background: $c-light-grey-2;
+        font-weight: $fw-semibold;
+      }
+    }
+    &-bottom {
+      display: flex;
+      .delivery-point__info-item {
+        min-height: 50px;
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+      flex: 1;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $c-light-grey-3;
+      border-right: 1px solid $c-light-grey-3;
+      &--static {
+        width: 20px;
+        flex: none !important;
+      }
+      &--payment,
+      &--money {
+        width: 220px;
+        flex: none !important;
+        & > *:not(:first-child) {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}
+
+//------------------------------
+// Responsive
+//------------------------------
+@media #{$screen} {
+  .delivery-point {
+    // POST
+    &__post {
+      padding: 50px 15px;
+    }
+    &__about {
+      &-top {
+        flex-direction: column;
+        & > *:nth-child(1) {
+          order: 3;
+          margin-right: auto;
+          margin-top: 15px;
+        }
+        & > *:nth-child(2) {
+          order: 2;
+          margin-top: 15px;
+        }
+        & > *:nth-child(3) {
+          order: 1;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+@media #{$desktop} {
+  .delivery-point {
+    &__title {
+      padding: 15px;
+    }
+    &__blocks {
+      flex-direction: column;
+    }
+    &__block-right,
+    &__block-left {
+      width: 100%;
+    }
+    &__content {
+      padding: 15px;
+      flex-direction: column;
+    }
+    &__block-right {
+      padding-left: 0;
+      margin-top: 15px;
+    }
+    &__abouts {
+      margin-top: 15px;
+      max-width: 100%;
+    }
+    &__about {
+
+    }
+    &__list-items {
+      max-height: 200px;
+      height: 200px !important;
+    }
+    // INFO
+    // .delivery-point__info {
+    //   flex-direction: row;
+    //   &-top {
+    //     flex-direction: column;
+    //   }
+    //   &-bottom {
+    //     flex-direction: column;
+    //     flex: 1;
+    //   }
+    //   &-item {
+    //     &--static {
+    //       display: none;
+    //     }
+    //     &--payment,
+    //     &--money {
+    //       width: auto;
+    //     }
+    //   }
+    // }
   }
 }
