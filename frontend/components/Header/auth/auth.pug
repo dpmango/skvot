@@ -1,16 +1,16 @@
 .auth
   //- Not Loggined
-  //- a(href="#").auth__element Войти
-  //- .auth__element.auth__element--divider /
-  //- a(href="#").auth__element Регистрация
+  a(href="#" data-modal="login").auth__element.js-modal-trigger Войти
+  .auth__element.auth__element--divider /
+  a(href="#" data-modal="registration").auth__element.js-modal-trigger Регистрация
 
   //- Loggined
-  .auth__element.auth__element--lk
-    a(href="#").auth__nav.js-lk-trigger
-      span Иван Петров
-      svg.icon.auth__icon
-        use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
-    include ../lkPopup/lkPopup
-  .auth__element.auth__element--divider /
-  a(href="#").auth__element Выход
+  //- .auth__element.auth__element--lk
+  //-   a(href="#").auth__nav.js-lk-trigger
+  //-     span Иван Петров
+  //-     svg.icon.auth__icon
+  //-       use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
+  //-   include ../lkPopup/lkPopup
+  //- .auth__element.auth__element--divider /
+  //- a(href="#").auth__element Выход
 

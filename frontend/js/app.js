@@ -59,7 +59,7 @@ $(document).ready(function() {
   if(page === 'team') {
     team.init();
   }
-  $(window).load(function() {
+  $(window).on('load', function() {
     header.init();
   });
   catalog.init();

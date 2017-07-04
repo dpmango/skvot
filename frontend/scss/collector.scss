@@ -52,6 +52,7 @@
 @import '../components/Forms/formSubscription/formSubscription';
 @import '../components/Forms/formAuth/formAuth';
 @import '../components/Forms/formOrder/formOrder';
+@import '../components/Forms/formRegistration/formRegistration';
 
 // HEADER
 @import '../components/Header/menu/menu';
@@ -155,7 +156,6 @@
 @import '../containers/Cart/cart';
 @import '../containers/Cart/ordering/cart-ordering';
 @import '../containers/Cart/payment/payment';
-@import '../containers/Registration/registration';
 
 @import '../containers/Settings/settings';
 

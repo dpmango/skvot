@@ -18,6 +18,11 @@
     opacity: 1;
     pointer-events: auto;
   }
+  &--big {
+    .modal__content {
+      max-width: 600px;
+    }
+  }
 }
 
 .modal__content {
@@ -25,6 +30,8 @@
   background: #ffffff;
   width: 100%;
   max-width: 350px;
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
 }
 
 .modal__title {

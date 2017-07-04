@@ -10,8 +10,8 @@
       a(href="#").link Забыли пароль?
     .form-group
       .checkbox
-        input(type="checkbox" name="registration-confirm" value="registration-confirm")#registration-confirm.checkbox__input
-        label(for="registration-confirm").checkbox__label
+        input(type="checkbox" name="auth-confirm" value="auth-confirm")#auth-confirm.checkbox__input
+        label(for="auth-confirm").checkbox__label
           .checkbox__box
             svg.icon.checkbox__icon
               use(xlink:href="img/svg-sprites/sprite.svg#icon-checkbox")
@@ -19,4 +19,4 @@
     .form-group
       button(type="submit").button.button--bs-2 Войти
   .auth-form__title Нет аккаунта?
-  a(href="registration.html").link Зарегистрироваться
+  a(href="#" data-modal="registration").link.js-modal-trigger Зарегистрироваться

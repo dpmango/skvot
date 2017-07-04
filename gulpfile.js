@@ -32,92 +32,93 @@ const image = require('gulp-image');
 
 var isDevelopment = process.env.NODE_ENV === 'production' ? false : true;
 console.log(process.env.NODE_ENV);
- // ========================================================
- // FONTS
- // ========================================================
- gulp.task('fonts', function () {
+// ========================================================
+// FONTS
+// ========================================================
+gulp.task('fonts', function() {
   return gulp.src('frontend/static/fonts/*.*')
-     .pipe(gulp.dest('public/fonts/'));
- });
+    .pipe(gulp.dest('public/fonts/'));
+});
 
- // ========================================================
- // IMAGES TASK
- // ========================================================
- gulp.task('images', function () {
+// ========================================================
+// IMAGES TASK
+// ========================================================
+gulp.task('images', function() {
   return gulp.src('frontend/static/img/*.*')
-     .pipe(gulp.dest('public/img/'));
- });
+    .pipe(gulp.dest('public/img/'));
+});
 //------------------------------
 // SVG Icons -> Sprite
 //------------------------------
 
-gulp.task('svg-icons', function () {
-    var svgs = gulp
-        .src('frontend/static/img/svg-icons/*.svg', { base: 'src/svg' })
-        .pipe(rename({prefix: 'icon-'}))
-        .pipe(svgstore({
-            inlineSvg: true
-        }));
-    function fileContents(filePath, file) {
-        return file.contents.toString();
-    }
-    return gulp
-        .src('frontend/static/img/svg-sprites/*.svg')
-        .pipe(inject(svgs, {
-            transform: fileContents
+gulp.task('svg-icons', function() {
+  var svgs = gulp
+    .src('frontend/static/img/svg-icons/*.svg', { base: 'src/svg' })
+    .pipe(rename({ prefix: 'icon-' }))
+    .pipe(svgstore({
+      inlineSvg: true
+    }));
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+  return gulp
+    .src('frontend/static/img/svg-sprites/*.svg')
+    .pipe(inject(svgs, {
+      transform: fileContents
     }))
     .pipe(gulp.dest('public/img/svg-sprites/'));
 });
 
- // ========================================================
- // STYLES TASKS
- // ========================================================
+// ========================================================
+// STYLES TASKS
+// ========================================================
 gulp.task('styles', function() {
   return gulp.src('frontend/scss/collector.scss')
-      .pipe(rename('index.scss'))
-      .pipe(plumber({
-        errorHandler: notify.onError(err => ({
-          title:   'Styles',
-          message: err.message
-        }))
+    .pipe(rename('index.scss'))
+    .pipe(plumber({
+      errorHandler: notify.onError(err => ({
+        title: 'Styles',
+        message: err.message
       }))
-      .pipe(gulpIf(isDevelopment, sourcemaps.init()))
-      .pipe(sass())
-      .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-      .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
-      .pipe(autoprefixer())
-      .pipe(gulp.dest('public/styles'))
-      .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
+    }))
+    .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+    .pipe(sass())
+    .pipe(gulpIf(isDevelopment, sourcemaps.write()))
+    .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('public/styles'))
+    .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
 });
 
- // ========================================================
- // TEMPLATES TASK
- // ========================================================
+// ========================================================
+// TEMPLATES TASK
+// ========================================================
 gulp.task('pug', function() {
   return gulp.src('frontend/pug/*.pug')
-      .pipe(plumber())
-      .pipe(pug({pretty: true}))
-      .pipe(gulpIf(!isDevelopment, revReplace({
-        manifest: gulp.src('manifest/css.json', {allowEmpty: true})
-      })))
-      .pipe(gulpIf(!isDevelopment, revReplace({
-        manifest: gulp.src('manifest/webpack.json', {allowEmpty: true})
-      })))
-      .pipe(gulp.dest('public'));
+    .pipe(plumber())
+    .pipe(pug({ pretty: true }))
+    .pipe(gulpIf(!isDevelopment, revReplace({
+      manifest: gulp.src('manifest/css.json', { allowEmpty: true })
+    })))
+    .pipe(gulpIf(!isDevelopment, revReplace({
+      manifest: gulp.src('manifest/webpack.json', { allowEmpty: true })
+    })))
+    .pipe(gulp.dest('public'));
 });
 
- // ========================================================
- // WEBPACK
- // ========================================================
+// ========================================================
+// WEBPACK
+// ========================================================
 gulp.task('webpack', function(callback) {
   var VendorChunkPlugin = require('webpack-vendor-chunk-plugin');
   let options = {
-    entry:   {
+    entry: {
       app: './frontend/js/app',
       vendor: ["jquery"]
     },
-    output:  {
-      path:     __dirname + '/public/js',
+    output: {
+      path: __dirname + '/public/js',
       publicPath: '/js/',
       filename: isDevelopment ? '[name].js' : '[name]-[chunkhash:10].js',
       chunkFilename: "[id].chunk.js"
@@ -130,15 +131,14 @@ gulp.task('webpack', function(callback) {
       }
     },
 
-    watch:   isDevelopment,
+    watch: isDevelopment,
     devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
-    module:  {
+    module: {
       loaders: [{
-        test:    /\.js$/,
+        test: /\.js$/,
         include: path.join(__dirname, "frontend"),
-        loader:  'babel?presets[]=es2015'
-      }
-    ],
+        loader: 'babel?presets[]=es2015'
+      }],
     },
     plugins: [
       new webpack.NoErrorsPlugin(), // otherwise error still gives a file
@@ -156,24 +156,24 @@ gulp.task('webpack', function(callback) {
 
   if (!isDevelopment) {
     options.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            // don't show unreachable variables etc
-            warnings:     false,
-            unsafe:       true
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          // don't show unreachable variables etc
+          warnings: false,
+          unsafe: true
+        }
+      }),
+      new AssetsPlugin({
+        filename: 'webpack.json',
+        path: __dirname + '/manifest',
+        processOutput(assets) {
+          for (let key in assets) {
+            assets[key + '.js'] = assets[key].js.slice(options.output.publicPath.length);
+            delete assets[key];
           }
-        }),
-        new AssetsPlugin({
-          filename: 'webpack.json',
-          path:     __dirname + '/manifest',
-          processOutput(assets) {
-            for (let key in assets) {
-              assets[key + '.js'] = assets[key].js.slice(options.output.publicPath.length);
-              delete assets[key];
-            }
-            return JSON.stringify(assets);
-          }
-        })
+          return JSON.stringify(assets);
+        }
+      })
     );
   }
 
@@ -206,23 +206,23 @@ gulp.task('webpack', function(callback) {
   });
 });
 
- // =========================
- // CLEAN TASK
- // =========================
+// =========================
+// CLEAN TASK
+// =========================
 gulp.task('clean', function() {
   return del(['public', 'manifest']);
 });
 
- // =========================
- // BUILD START
- // =========================
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'webpack'), 'pug', 'svg-icons', 'images', 'fonts' ));
+// =========================
+// BUILD START
+// =========================
+gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'webpack'), 'pug', 'svg-icons', 'images', 'fonts'));
 
 
 
- // =========================
- // SERVER START
- // =========================
+// =========================
+// SERVER START
+// =========================
 gulp.task('serve', function() {
   browserSync.init({
     server: 'public'
@@ -231,21 +231,21 @@ gulp.task('serve', function() {
   browserSync.watch('public/**/*.*').on('change', browserSync.reload);
 });
 
- // =========================
- // DEVELOPMENT START
- // =========================
+// =========================
+// DEVELOPMENT START
+// =========================
 gulp.task('dev',
-    gulp.series(
-        'build',
-        gulp.parallel(
-            'serve',
-            function() {
-              gulp.watch('frontend/**/*.scss', gulp.series('styles'));
-              gulp.watch('frontend/img/*.*', gulp.series('images'));
-              gulp.watch('frontend/**/*.pug', gulp.series('pug'));
-              gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
-              gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
-            }
-        )
+  gulp.series(
+    'build',
+    gulp.parallel(
+      'serve',
+      function() {
+        gulp.watch('frontend/**/*.scss', gulp.series('styles'));
+        gulp.watch('frontend/img/*.*', gulp.series('images'));
+        gulp.watch('frontend/**/*.pug', gulp.series('pug'));
+        gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
+        gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
+      }
     )
+  )
 );

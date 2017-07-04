@@ -18,14 +18,8 @@
               <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
             </div>
             <div class="header__auth">
-              <div class="auth">
-                <div class="auth__element auth__element--lk"><a class="auth__nav js-lk-trigger" href="#"><span>Иван Петров</span>
-                    <svg class="icon auth__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-                    </svg></a>
-                  <nav class="lk js-lk"><a class="lk__item" href="cart.html">Мои заказы</a><a class="lk__item" href="#">Промо-коды</a><a class="lk__item" href="settings.html">Настройки</a></nav>
-                </div>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element" href="#">Выход</a>
+              <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
+                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
               </div>
             </div>
           </div>
@@ -239,6 +233,109 @@
         <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
         <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
         <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
+      </div>
+    </div>
+    <div class="modal modal--big js-modal" data-modal="registration">
+      <div class="modal__content">
+        <div class="registration">
+          <div class="registration__title">Регистрация</div>
+          <div class="registration__content">
+            <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
+            <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
+          </div>
+          <form class="registration__form">
+            <div class="form-group">
+              <div class="form-inner-group">
+                <input class="input input--form" type="email" placeholder="Email адрес"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Фамилия"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Имя"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Отчество"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="text" placeholder="Телефон"/>
+              </div>
+              <div class="form-inner-group">
+                <div class="select-wrap select-wrap--form">
+                  <select class="select-wrap__field">
+                    <option>Пол</option>
+                    <option>Мужской</option>
+                    <option>Женский</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Пароль"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label">Введите символы с картинки</div>
+              <div class="form-double">
+                <input class="input input--form" type="text" placeholder="Капча"/>
+                <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
+                <label class="checkbox__label" for="registration-confirm">
+                  <div class="checkbox__box">
+                    <svg class="icon checkbox__icon">
+                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                    </svg>
+                  </div>
+                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--big js-modal" data-modal="login">
+      <div class="modal__content">
+        <div class="auth-form">
+          <div class="auth-form__title">Авторизация:</div>
+          <form class="auth-form__form">
+            <div class="form-group">
+              <div class="form-inner-group">
+                <input class="input input--form" type="email" placeholder="Email адрес"/>
+              </div>
+              <div class="form-inner-group">
+                <input class="input input--form" type="password" placeholder="Пароль"/>
+              </div>
+            </div>
+            <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
+            <div class="form-group">
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
+                <label class="checkbox__label" for="auth-confirm">
+                  <div class="checkbox__box">
+                    <svg class="icon checkbox__icon">
+                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                    </svg>
+                  </div>
+                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="button button--bs-2" type="submit">Войти</button>
+            </div>
+          </form>
+          <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
+        </div>
       </div>
     </div>
     <div class="modal js-modal" data-modal="cart">
