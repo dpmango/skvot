@@ -1,0 +1,30 @@
+include ../../Common/gmap/gmap
+
+.product-min
+  .product-min__item
+    .product-min__image(style="background-image: url(img/product-1.jpg)")
+    .product-min__content
+      p В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.
+      p ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.
+  form.product-min__item
+    .product-min__title Наличие товара
+    .product-min__content.product-min__content--bold
+      p Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"
+      p Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"
+      p Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"
+    .form-group
+      .product-size__title.product-size__title--min Выберите размер:
+      .product-size__sizes
+        .product-size__group
+        input(id="product-size-s-2" type="radio" name="product-size" disabled="true").product-size__size
+        label(for="product-size-s-2").product-size__label s
+        input(id="product-size-m-2" type="radio" name="product-size").product-size__size
+        label(for="product-size-m-2").product-size__label m
+        input(id="product-size-l-2" type="radio" name="product-size").product-size__size
+        label(for="product-size-l-2").product-size__label l
+        input(id="product-size-xl-2" type="radio" name="product-size").product-size__size
+        label(for="product-size-xl-2").product-size__label xl
+    .form-group
+      button(type="submit").button.button--min Забрать в этом магазине
+  .product-min__item
+    +gmap({ lat: '55.793989', lng: '37.490245', addClass: 'gmap-wrap--min', disabledui: "true" })

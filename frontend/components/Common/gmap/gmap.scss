@@ -1,6 +1,11 @@
 .gmap {
   &-wrap {
     position: relative;
+    &--min {
+      .gmap-map {
+        height: 200px;
+      }
+    }
     &--delivery {
       .gmap-map {
         height: 600px;

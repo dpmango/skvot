@@ -8,7 +8,10 @@ export let sgmap = {
     var image = $(self.map).data('image');
     var lat = parseFloat($(self.map).data('lat'));
     var lng = parseFloat($(self.map).data('lng'));
+    var ui = $(self.map).data('disabledui');
+    console.log(ui)
     var map = new GMaps({
+    disableDefaultUI: ui,
       el: self.map,
       lat: lat,
       lng: lng,

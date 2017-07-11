@@ -8,6 +8,8 @@ header.header
           include ../../components/Header/auth/auth
   .header__bottom
     .container.header__container
+      .header__item.header__item--search-field.col-sm-1.js-search
+        include ../../components/Header/searchField/searchField
       .header__item.header__item--clickable.js-catalog-btn.col-lg-2.col-sm-1.col-xs-2
         include ../../components/Header/catalogBtn/catalogBtn
       .header__item.col-lg-2.col-sm-3.col-xs-2(data-modal="city-accept").header__item--clickable.js-modal-trigger
@@ -19,7 +21,7 @@ header.header
       .header__item.col-sm-1.header__item--cart.js-cart-trigger.col-xs-2
         include ../../components/Header/cartBtn/cartBtn
         include ../../containers/cartPopup/cartPopup
-      .header__item.header__item--clickable.header__item--search.col-sm-1
+      .header__item.header__item--clickable.header__item--search.col-sm-1.js-search-btn
         include ../../components/Header/searchBtn/searchBtn
   .header__catalog.container.js-catalog
         include ../../components/Header/catalog/catalog

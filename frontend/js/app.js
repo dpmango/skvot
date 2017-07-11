@@ -15,6 +15,7 @@ import {review} from './modules/reviews'
 import {modal} from './modules/modal'
 import {textCollapse} from './modules/textCollapse'
 import {item} from './modules/item'
+import {search} from './modules/search'
 
 import {rangeSlider} from './modules/filter/rangeSlider'
 import {asideSection} from './modules/filter/asideSection'
@@ -82,8 +83,9 @@ $(document).ready(function() {
   product.init();
   tooltipp.init();
   store.init();
-  dgmap.init();
-  if(page === 'address' || page === 'store') {
-    sgmap.init();
+  search.init();
+  if(page === "delivery-point") {
+    dgmap.init();
   }
+  sgmap.init();
 });

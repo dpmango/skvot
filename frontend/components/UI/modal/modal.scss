@@ -23,6 +23,22 @@
       max-width: 600px;
     }
   }
+  &--biggest {
+    .modal__content {
+      max-width: 800px;
+    }
+  }
+  &--medium {
+    .modal__content {
+      max-width: 530px;
+      padding: 40px 70px;
+    }
+  }
+  &--np {
+    .modal__content {
+      padding: 0;
+    }
+  }
 }
 
 .modal__content {
@@ -102,6 +118,15 @@
 //------------------------------
 // Responsive
 //------------------------------
+@media #{$tablet} {
+  .modal {
+    &--medium {
+      .modal__content {
+        padding: 20px 30px;
+      }
+    }
+  }
+}
 @media #{$phone} {
   .modal__buttons {
     flex-direction: column;

@@ -1,0 +1,10 @@
+.form-one {
+  &__title {
+    font-size: $fs-20;
+    font-weight: $fw-semibold;
+  }
+  p {
+    margin: 0;
+    font-size: $fs-14;
+  }
+}

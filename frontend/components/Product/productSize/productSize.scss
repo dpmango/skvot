@@ -4,6 +4,9 @@
     font-weight: $fw-semibold;
     font-size: $fs-18;
     margin-bottom: 10px;
+    &--min {
+      font-size: $fs-16;
+    }
   }
   &__sizes {
     display: flex;

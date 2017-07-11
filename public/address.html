@@ -20,6 +20,8 @@
             <div class="header__auth">
               <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
                 <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
+                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
+                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
               </div>
             </div>
           </div>
@@ -27,6 +29,12 @@
       </div>
       <div class="header__bottom">
         <div class="container header__container">
+          <div class="header__item header__item--search-field col-sm-1 js-search">
+            <form class="search" id="search">
+              <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
+              <div class="search__overlay"></div>
+            </form>
+          </div>
           <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
             <div class="catalog-btn">
               <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
@@ -111,7 +119,7 @@
               </div>
             </div>
           </div>
-          <div class="header__item header__item--clickable header__item--search col-sm-1">
+          <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
             <div class="search-btn">
               <svg class="icon search-btn__icon">
                 <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
@@ -165,7 +173,7 @@
       <div class="address">
               <div class="gmap-wrap">
                 <div class="gmap-overlay"></div>
-                <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245"></div>
+                <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="false"></div>
               </div>
         <div class="address__addresses row row--2">
           <div class="col-lg-3 col-md-4 col-sm-6">
@@ -535,6 +543,68 @@
         </div>
       </div>
     </div>
+    <div class="modal modal--medium js-modal" data-modal="oneclick">
+      <div class="modal__content">
+        <form class="form-one">
+          <div class="form-one__title">Быстрый заказ в 1 клик</div>
+          <div class="form-group">
+            <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
+          </div>
+          <div class="form-group">
+            <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
+            <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
+          </div>
+          <div class="form-group">
+            <button class="button" type="submit">Заказать</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal--biggest modal--np js-modal" data-modal="product">
+      <div class="modal__content">
+        <div class="product-min">
+          <div class="product-min__item">
+            <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
+            <div class="product-min__content">
+              <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
+              <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
+            </div>
+          </div>
+          <form class="product-min__item">
+            <div class="product-min__title">Наличие товара</div>
+            <div class="product-min__content product-min__content--bold">
+              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+            </div>
+            <div class="form-group">
+              <div class="product-size__title product-size__title--min">Выберите размер:</div>
+              <div class="product-size__sizes">
+                <div class="product-size__group"></div>
+                <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
+                <label class="product-size__label" for="product-size-s-2">s</label>
+                <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
+                <label class="product-size__label" for="product-size-m-2">m</label>
+                <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
+                <label class="product-size__label" for="product-size-l-2">l</label>
+                <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
+                <label class="product-size__label" for="product-size-xl-2">xl</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="button button--min" type="submit">Забрать в этом магазине</button>
+            </div>
+          </form>
+          <div class="product-min__item">
+                    <div class="gmap-wrap gmap-wrap--min">
+                      <div class="gmap-overlay"></div>
+                      <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
     <div class="modal js-modal" data-modal="cart">
       <div class="modal__content js-cart-modal"></div>
     </div>

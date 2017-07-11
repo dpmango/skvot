@@ -109,6 +109,9 @@
     min-width: 75px;
     text-align: center;
   }
+  &--min {
+    padding: 5px 15px;
+  }
   &--inverse {
     background: transparent;
     color: $c-black-2;

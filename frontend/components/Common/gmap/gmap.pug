@@ -1,8 +1,9 @@
 mixin gmap(props)
   - var lat = props.lat || 0
   - var lng = props.lng || 0
+  - var disabledui = props.disabledui || "false"
   - var addClass = props.addClass || ''
 
   .gmap-wrap(class=addClass)
     .gmap-overlay
-    .gmap-map#gmap(data-image="img/mapmarker.png" data-lat=lat data-lng=lng)
+    .gmap-map#gmap(data-image="img/mapmarker.png" data-lat=lat data-lng=lng data-disabledui=disabledui)
