@@ -33,7 +33,12 @@ form.filter-aside
       svg.icon.filter-aside__close-icon
         use(xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow")
   .filter-aside__section
-    .filter-aside__title Размер 
+    .filter-aside__title 
+      span Размер
+      .filter-aside__sizes
+        span см
+        span.active euro
+        span us
     .filter-aside__content
       include ../../../components/Filter/filterCheckbox/filterCheckboxSizes
   .filter-aside__section

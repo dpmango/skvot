@@ -37,6 +37,27 @@
     font-size: $fs-20;
     font-weight: $fw-semibold;
     margin-bottom: 15px;
+    display: flex;
+  }
+  &__sizes{
+    margin-left: auto;
+    span{
+      display: inline-block;
+      margin-right: 10px;
+      color: #afafaf;
+      border-bottom: 1px solid #afafaf;
+      cursor: pointer;
+      line-height: 0.9;
+      transition: all .25s ease;
+      &.active{
+        color: #111111;
+        border-color: transparent;
+      }
+      &:hover:not(.active){
+        color: #111111;
+        border-color: #111111;
+      }
+    }
   }
 }
 
