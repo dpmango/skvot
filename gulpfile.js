@@ -234,7 +234,7 @@ gulp.task('serve', function() {
 // =========================
 // DEVELOPMENT START
 // =========================
-gulp.task('dev',
+gulp.task('default',
   gulp.series(
     'build',
     gulp.parallel(
