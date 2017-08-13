@@ -4,6 +4,8 @@ export let header = {
   header: '.header',
   catalog: '.catalog',
   headerTop: '.header__top',
+  catalogSectionNav: '.catalog__category-section',
+  catalogSection: '.catalog__section',
   init () {
     let scrolled = false;
     let headerTopHeight = $(this.headerTop).outerHeight();
@@ -29,6 +31,27 @@ export let header = {
         scrolled = true
       }
     });
+
+    // Header hover
+    $(this.catalogSectionNav).hover(
+      function() {
+        // mouseover
+        if ( $(this).data('section-id') ){
+          $('.catalog__section').removeClass('visible');
+          $('.catalog__section[data-for-section='+ $(this).data('section-id') +']').addClass('visible');
+
+          // set active class
+          $('.catalog__category-section').removeClass('active');
+          $(this).addClass('active');
+        }
+      }, function() {
+        // mouseleave
+        // if ( $(this).data('section-id') ){
+        //   $('.catalog__section[data-for-section='+ $(this).data('section-id') +']').removeClass('visible');
+        // }
+      }
+    );
+
   },
   setMarginToNextSubling () {
     $(this.header).next().css('margin-top', $(this.header).height() + 'px')

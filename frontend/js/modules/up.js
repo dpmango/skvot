@@ -3,7 +3,6 @@ export let up = {
   init () {
     $(window).scroll(() => {
       let scrollTop = $(window).scrollTop();
-      console.log(scrollTop)
       scrollTop > 1000
         ? $(this.up).addClass('up--visible')
         : $(this.up).removeClass('up--visible')

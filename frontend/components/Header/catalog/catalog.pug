@@ -3,46 +3,78 @@
     .catalog__category.col-sm-4
       // a(href="#").catalog__category-title Обувь
       .catalog__category-items
-        a(href='#').catalog__category-section Обувь
-        a(href='#').catalog__category-section Одежда
-        a(href='#').catalog__category-section Багаж
-        a(href='#').catalog__category-section Скейтбординг
-        a(href='#').catalog__category-section Сноуборд и лыжи
-        a(href='#').catalog__category-section Самокаты
-        a(href='#').catalog__category-section Водный спорт
-        a(href='#').catalog__category-section Защита
-        a(href='#').catalog__category-section Аксессуары
-        a(href='#').catalog__category-section сквот.дисконт
+        a(href='#' data-section-id='1').catalog__category-section Обувь
+        a(href='#' data-section-id='2').catalog__category-section Одежда
+        a(href='#' data-section-id='3').catalog__category-section Багаж
+        a(href='#' data-section-id='4').catalog__category-section Скейтбординг
+        a(href='#' data-section-id='5').catalog__category-section Сноуборд и лыжи
+        a(href='#' data-section-id='6').catalog__category-section Самокаты
+        a(href='#' data-section-id='7').catalog__category-section Водный спорт
+        a(href='#' data-section-id='8').catalog__category-section Защита
+        a(href='#' data-section-id='9').catalog__category-section Аксессуары
+        a(href='#' data-section-id='10').catalog__category-section сквот.дисконт
+          span.catalog__discount-tag -70%
+    
+    .col-sm-8
+      .catalog__section.row(data-for-section='1')
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item Футболки и майки
+            a(href="#").catalog__category-item Джинсы и брюки
+            a(href="#").catalog__category-item Шорты
+            a(href="#").catalog__category-item Толстовки
+            a(href="#").catalog__category-item Куртки
+            a(href="#").catalog__category-item Жилетки
+            a(href="#").catalog__category-item Рубашки
+            a(href="#").catalog__category-item Свитера
+            a(href="#").catalog__category-item Кепки
+            a(href="#").catalog__category-item Перчатки и варежки
+            a(href="#").catalog__category-item Нижнее бельё
+            a(href="#").catalog__category-item Шапки и шарфы
+            a(href="#").catalog__category-item Балаклавы
+            a(href="#").catalog__category-item Термобельё и лайкра
+            a(href="#").catalog__category-item Платья и юбки
 
-
-
-    .catalog__category.col-sm-4
-      .catalog__category-items
-        a(href="#").catalog__category-item Футболки и майки
-        a(href="#").catalog__category-item Джинсы и брюки
-        a(href="#").catalog__category-item Шорты
-        a(href="#").catalog__category-item Толстовки
-        a(href="#").catalog__category-item Куртки
-        a(href="#").catalog__category-item Жилетки
-        a(href="#").catalog__category-item Рубашки
-        a(href="#").catalog__category-item Свитера
-        a(href="#").catalog__category-item Кепки
-        a(href="#").catalog__category-item Перчатки и варежки
-        a(href="#").catalog__category-item Нижнее бельё
-        a(href="#").catalog__category-item Шапки и шарфы
-        a(href="#").catalog__category-item Балаклавы
-        a(href="#").catalog__category-item Термобельё и лайкра
-        a(href="#").catalog__category-item Платья и юбки
-
-    .catalog__category.col-sm-4
-      .catalog__category-items
-        a(href="#").catalog__category-item Рюкзаки
-        a(href="#").catalog__category-item Сумки
-        a(href="#").catalog__category-item Сумки на колесах
-        a(href="#").catalog__category-item Женские сумочки
-        a(href="#").catalog__category-item Сумки на пояс
-        a(href="#").catalog__category-item Косметички
-        a(href="#").catalog__category-item Пеналы
-        a(href="#").catalog__category-item Чехлы для масок
-        a(href="#").catalog__category-item Чехлы для сноубордов
-        a(href="#").catalog__category-item Чехлы для лыж
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item Рюкзаки
+            a(href="#").catalog__category-item Сумки
+            a(href="#").catalog__category-item Сумки на колесах
+            a(href="#").catalog__category-item Женские сумочки
+            a(href="#").catalog__category-item Сумки на пояс
+            a(href="#").catalog__category-item Косметички
+            a(href="#").catalog__category-item Пеналы
+            a(href="#").catalog__category-item Чехлы для масок
+            a(href="#").catalog__category-item Чехлы для сноубордов
+            a(href="#").catalog__category-item Чехлы для лыж
+      
+      // next section
+      .catalog__section.row(data-for-section='2')
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка второй категории
+    
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка второй категории
+            
+      // next section
+      .catalog__section.row(data-for-section='3')
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка третьей категории
+    
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка третьей категории
+            
+      // next section
+      .catalog__section.row(data-for-section='4')
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка четвертой категории
+    
+        .catalog__category.col-sm-6
+          .catalog__category-items
+            a(href="#").catalog__category-item ссылка четвертой категории
+            

@@ -30,11 +30,13 @@ export let checkbox = {
   },
   showGoodsNumber(vm, element) {
     $('.filter-aside__number').remove();
-    let numberElement = "<div class='filter-aside__number'>Показать 67 товаров</div>";
-    $(element).parent().append(numberElement);
-    setTimeout(function(){
-      $(element).parent().find('.filter-aside__number').addClass('visible');
-    },100);
+    if ( $(element).is(':checked') ){
+      let numberElement = "<div class='filter-aside__number'>Показать 67 товаров</div>";
+      $(element).parent().append(numberElement);
+      setTimeout(function(){
+        $(element).parent().find('.filter-aside__number').addClass('visible');
+      },100);
+    }
   }
 }
 
