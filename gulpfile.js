@@ -20,8 +20,6 @@ const revReplace  = require('gulp-rev-replace');
 const plumber     = require('gulp-plumber');
 const notify      = require('gulp-notify');
 const uglify      = require('gulp-uglify');
-const AssetsPlugin = require('assets-webpack-plugin');
-const webpack     = require('webpack');
 const notifier    = require('node-notifier');
 const svgstore    = require('gulp-svgstore');
 const inject      = require('gulp-inject');
@@ -133,110 +131,11 @@ gulp.task('pug', function() {
     .pipe(gulp.dest('public'));
 });
 
-// ========================================================
-// WEBPACK
-// ========================================================
-gulp.task('webpack', function(callback) {
-  var VendorChunkPlugin = require('webpack-vendor-chunk-plugin');
-  let options = {
-    entry: {
-      app: './frontend/js/app',
-      vendor: ["jquery"]
-    },
-    output: {
-      path: __dirname + '/public/js',
-      publicPath: '/js/',
-      filename: isDevelopment ? '[name].js' : '[name]-[chunkhash:10].js',
-      chunkFilename: "[id].chunk.js"
-    },
-    resolve: {
-      extensions: ['', '.js'],
-      alias: {
-        jquery: path.resolve('./node_modules/jquery/dist/jquery.js'),
-        magnigicPopup: path.resolve('./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js')
-      }
-    },
-
-    watch: isDevelopment,
-    devtool: isDevelopment ? 'cheap-module-inline-source-map' : null,
-    module: {
-      loaders: [{
-        test: /\.js$/,
-        include: path.join(__dirname, "frontend"),
-        loader: 'babel?presets[]=es2015'
-      }],
-    },
-    plugins: [
-      new webpack.NoErrorsPlugin(), // otherwise error still gives a file
-      new webpack.optimize.CommonsChunkPlugin({
-        name: ["commons", "vendor"],
-        minChunks: 2
-      }),
-      new webpack.ProvidePlugin({
-        jQuery: "jquery",
-        $: "jquery",
-        'window.jQuery': 'jquery'
-      })
-    ]
-  };
-
-  if (!isDevelopment) {
-    options.plugins.push(
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          // don't show unreachable variables etc
-          warnings: false,
-          unsafe: true
-        }
-      }),
-      new AssetsPlugin({
-        filename: 'webpack.json',
-        path: __dirname + '/manifest',
-        processOutput(assets) {
-          for (let key in assets) {
-            assets[key + '.js'] = assets[key].js.slice(options.output.publicPath.length);
-            delete assets[key];
-          }
-          return JSON.stringify(assets);
-        }
-      })
-    );
-  }
-
-  // https://webpack.github.io/docs/node.js-api.html
-  webpack(options, function(err, stats) {
-    if (!err) { // no hard error
-      // try to get a soft error from stats
-      err = stats.toJson().errors[0];
-    }
-
-    if (err) {
-      notifier.notify({
-        title: 'Webpack',
-        message: err
-      });
-
-      gulplog.error(err);
-    } else {
-      gulplog.info(stats.toString({
-        colors: true
-      }));
-    }
-
-    // task never errs in watch mode, it waits and recompiles
-    if (!options.watch && err) {
-      callback(err);
-    } else {
-      callback();
-    }
-  });
-});
-
 // =========================
 // JAVASCRIPT (without webpack)
 // =========================
 gulp.task('babel', function() {
-  return gulp.src('./frontend/es6/*.js')
+  return gulp.src('frontend/js/main.js')
     .pipe(babel({
         presets: ['es2015']
     }))
@@ -249,6 +148,11 @@ gulp.task('babel', function() {
     .pipe(gulp.dest('./public/js'))
 });
 
+gulp.task('script:lib', function() {
+  return gulp.src('frontend/js/libs/*.*')
+    .pipe(gulp.dest('public/js/'));
+});
+
 // =========================
 // CLEAN TASK
 // =========================
@@ -259,7 +163,7 @@ gulp.task('clean', function() {
 // =========================
 // BUILD START
 // =========================
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'webpack'), 'babel', 'pug', 'svg-icons', 'images', 'fonts'));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'babel'), 'pug', 'svg-icons', 'images', 'fonts', 'script:lib'));
 
 
 
@@ -288,7 +192,8 @@ gulp.task('default',
         gulp.watch('frontend/**/*.pug', gulp.series('pug'));
         gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
         gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
-        gulp.watch('frontend/es6/*.js', gulp.series('babel'));
+        gulp.watch('frontend/js/main.js', gulp.series('babel'));
+        gulp.watch('frontend/js/libs/*.*', gulp.series('script:lib'));
       }
     )
   )
