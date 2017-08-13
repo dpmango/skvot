@@ -1,5 +1,6 @@
 .filter-aside {
   position: relative;
+  z-index: 5;
   border-right: $c-grey-2;
   &__close {
     position: absolute;
@@ -57,6 +58,28 @@
         color: #111111;
         border-color: #111111;
       }
+    }
+  }
+  &__number{
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    right: -60px;
+    z-index: 10;
+    background: $c-blue;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: $fw-semibold;
+    text-transform: uppercase;
+    color: white;
+    padding: 6px 8px;
+    box-shadow: rgba($c-blue, .4) 0px 5px 20px;
+    transform: translate3d(15px,0,0);
+    pointer-events: none;
+    transition: all .25s ease;
+    &.visible{
+      opacity: 1;
+      transform: translate3d(0,0,0);
     }
   }
 }
