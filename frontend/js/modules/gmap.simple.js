@@ -9,7 +9,6 @@ export let sgmap = {
     var lat = parseFloat($(self.map).data('lat'));
     var lng = parseFloat($(self.map).data('lng'));
     var ui = $(self.map).data('disabledui');
-    console.log(ui)
     var map = new GMaps({
     disableDefaultUI: ui,
       el: self.map,

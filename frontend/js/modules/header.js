@@ -9,12 +9,11 @@ export let header = {
   init () {
     let scrolled = false;
     let headerTopHeight = $(this.headerTop).outerHeight();
-    console.log(headerTopHeight)
     // Margin next content
-    this.setMarginToNextSubling();
-    $(window).resize(debounce(() => {
-      this.setMarginToNextSubling()
-    }, 100));
+    // this.setMarginToNextSubling();
+    // $(window).resize(debounce(() => {
+    //   this.setMarginToNextSubling()
+    // }, 100));
     // Catalog scroll
     $(this.catalog).css('max-height', 'calc(100vh - ' + $(this.header).height() + 'px)')
 
@@ -22,12 +21,12 @@ export let header = {
       let scrollTop = $(window).scrollTop();
 
       if (scrollTop < 99 && scrolled === true) {
-        $(this.header).css('top', '0px')
+        $(this.header).css('transform', 'translate3d(0,0,0)')
         scrolled = false
       }
 
       if (scrollTop > 99 && scrolled === false) {
-        $(this.header).css('top', '' + -headerTopHeight + 'px')
+        $(this.header).css('transform', 'translate3d(0,' + -headerTopHeight + 'px,0)')
         scrolled = true
       }
     });

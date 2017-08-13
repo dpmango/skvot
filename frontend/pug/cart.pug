@@ -4,13 +4,15 @@ html(lang="en")
         title Skvot Project
         include common/head
     body(data-page="cart")
-        include ../commons/Header/header
-        include ../containers/PageHead/pageHeadCart
-        main.main.container
-          include ../containers/Cart/cart
-        //- modals
-        include common/modals
-        include ../containers/Modals/cartItemMobile
+      .page
+        .page__content
+          include ../commons/Header/header
+          include ../containers/PageHead/pageHeadCart
+          main.main.container
+            include ../containers/Cart/cart
+          //- modals
+          include common/modals
+          include ../containers/Modals/cartItemMobile
 
         include ../commons/Subscription/subscription
         include ../commons/Footer/footer

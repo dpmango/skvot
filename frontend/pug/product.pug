@@ -4,14 +4,16 @@ html(lang="en")
         title Skvot Project
         include common/head
     body(data-page="product")
-        include ../commons/Header/header
-        include ../containers/PageHead/pageHeadProduct
-        main.main.container
-          include ../containers/Product/Product
-        //- modals
-        include common/modals
+        .page
+          .page__content
+            include ../commons/Header/header
+            include ../containers/PageHead/pageHeadProduct
+            main.main.container
+              include ../containers/Product/Product
+            //- modals
+            include common/modals
 
-        include ../commons/Subscription/subscription
-        include ../commons/Footer/footer
-        include ../components/UI/up/up
-        include common/scripts
+          include ../commons/Subscription/subscription
+          include ../commons/Footer/footer
+          include ../components/UI/up/up
+          include common/scripts

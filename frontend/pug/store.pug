@@ -5,13 +5,15 @@ html(lang="en")
         include common/head
         script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
     body(data-page="store")
-        include ../commons/Header/header
-        include ../containers/PageHead/pageHeadStore
-        main.main.container
-          include ../containers/Store/store
-        //- modals
-        include common/modals
-        include ../containers/Modals/cartItemMobile
+      .page
+        .page__content
+          include ../commons/Header/header
+          include ../containers/PageHead/pageHeadStore
+          main.main.container
+            include ../containers/Store/store
+          //- modals
+          include common/modals
+          include ../containers/Modals/cartItemMobile
 
         include ../commons/Subscription/subscription
         include ../commons/Footer/footer

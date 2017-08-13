@@ -4,17 +4,19 @@ html(lang="en")
         title Skvot Project
         include common/head
     body(data-page="home")
-        include ../commons/header/header
-        include ../containers/mainSlider/mainSlider
-        main.main.container
-            include ../containers/Top/top
-            include ../containers/Collections/collections
-            include ../containers/Services/services
-            include ../containers/Reviews/reviews
-            include ../containers/BlogNews/blogNews
-            include ../containers/WeSocials/weSocials
-        //- modals
-        include common/modals
+      .page
+        .page__content
+          include ../commons/header/header
+          include ../containers/mainSlider/mainSlider
+          main.main.container
+              include ../containers/Top/top
+              include ../containers/Collections/collections
+              include ../containers/Services/services
+              include ../containers/Reviews/reviews
+              include ../containers/BlogNews/blogNews
+              include ../containers/WeSocials/weSocials
+          //- modals
+          include common/modals
 
         include ../commons/Subscription/subscription
         include ../commons/Footer/footer

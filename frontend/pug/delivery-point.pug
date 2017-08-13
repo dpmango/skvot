@@ -4,12 +4,14 @@ html(lang="en")
         title Skvot Project
         include common/head
     body(data-page="delivery-point")
-        include ../commons/Header/header
-        include ../containers/PageHead/pageHeadDeliveryPoint
-        main.main.container
-          include ../containers/DeliveryPoint/deliveryPoint
-        //- modals
-        include common/modals
+      .page
+        .page__content
+          include ../commons/Header/header
+          include ../containers/PageHead/pageHeadDeliveryPoint
+          main.main.container
+            include ../containers/DeliveryPoint/deliveryPoint
+          //- modals
+          include common/modals
 
         include ../commons/Subscription/subscription
         include ../commons/Footer/footer

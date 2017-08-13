@@ -19,7 +19,7 @@ export let product = {
         $(this.firstDescriptionPlace).html(this.descriptionContainer);
       },
       both: function() {
-        console.log('changing state');
+        // changing state
       }
     })
   },

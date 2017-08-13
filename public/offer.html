@@ -10,444 +10,448 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
   </head>
   <body data-page="offer">
-    <header class="header">
-      <div class="header__top">
-        <div class="container header__container header__container--top">
-          <div class="header__top-content">
-            <div class="header__menu">
-              <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
-            </div>
-            <div class="header__auth">
-              <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+    <div class="page">
+      <div class="page__content">
+        <header class="header">
+          <div class="header__top">
+            <div class="container header__container header__container--top">
+              <div class="header__top-content">
+                <div class="header__menu">
+                  <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
+                </div>
+                <div class="header__auth">
+                  <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="header__bottom">
+            <div class="container header__container">
+              <div class="header__item header__item--search-field col-sm-1 js-search">
+                <form class="search" id="search">
+                  <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
+                  <div class="search__overlay"></div>
+                </form>
+              </div>
+              <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
+                <div class="catalog-btn">
+                  <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
+                  <div class="catalog-btn__text">Весь каталог</div>
+                </div>
+              </div>
+              <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
+                <div class="information information--location">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">Москва</div>
+                    <div class="information__describe">З магазина в городе</div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
+                <div class="information">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">8 800 100-41-69</div>
+                    <div class="information__describe">Бесплатно по России</div>
+                  </div>
+                </div></a>
+              <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
+                <div class="cart-btn">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                  <div class="cart-btn__count">54</div>
+                </div>
+                <div class="cart-popup js-cart-popup">
+                  <div class="cart-popup__header">
+                    <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
+                  </div>
+                  <div class="cart-popup__main">
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-popup__footer">
+                    <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
+                <div class="search-btn">
+                  <svg class="icon search-btn__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__catalog container js-catalog">
+            <div class="catalog">
+              <div class="catalog__row row row--2">
+                <div class="catalog__category col-sm-4">
+                  <!-- a(href="#").catalog__category-title Обувь-->
+                  <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="catalog__section row" data-for-section="1">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="2">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="3">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="4">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page-head page-head--gray">
+          <div class="page-head__container">
+            <div class="page-head__title">Публичная оферта</div>
+            <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Публичная оферта</a></div>
+          </div>
         </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container header__container">
-          <div class="header__item header__item--search-field col-sm-1 js-search">
-            <form class="search" id="search">
-              <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
-              <div class="search__overlay"></div>
+        <main class="main container">
+          <div class="offer-text">
+            <p>Настоящим Индивидуальный предприниматель Голубев Денис Алексеевич, далее «Продавец», выражает намерение заключить договор купли-продажи Товаров с Покупателями на условиях настоящей оферты (далее — «Договор»), размещенной на сайте http://www.skvot.com (далее — «Сайт»).</p>
+            <p>Безусловным и полным принятием (акцептом) условий настоящего Договора считается заказ Покупателем Товара в Интернет-Магазине (далее — «Акцепт Оферты»):</p>
+            <p class="offer-text__point"><strong>1. Термины и определения. «Продавец» — ИП Голубев Денис Алексеевич</strong><br/>«Покупатель» — совершеннолетний и дееспособный гражданин, имеющий намерение заказать или приобрести либо заказывающий, приобретающий или использующий товары исключительно для личных, семейных, домашних и иных нужд, не связанных с осуществлением предпринимательской деятельности.<br/>«Товар» — товары, представленные к продаже в Интернет-магазине.<br/>«Интернет-магазин» — Интернет-сайт, принадлежащий Продавцу, имеющий адрес в сети Интернет http://www.skvot.com На нем представлены товары, предлагаемые Продавцом Покупателям для оформления Заказов, а также условия оплаты и доставки этих Заказов Покупателям.<br/>«Сайт» — http://www.skvot.com<br/>«Заказ» — должным образом оформленный запрос Покупателя на доставку по указанному адресу перечня Товаров, выбранных на Сайте.<br/>«Пользовательский счет Покупателя» — персональный интернет — счет, на который Покупатель может перечислять денежные средства для последующей оплаты Товаров на Сайте.<br/>«Личный кабинет» — персональное пространство Покупателя на Сайте для осуществления Заказов и управления персональными данными. Доступ к Личному кабинету имеют зарегистрированные пользователи Cайта.<br/>«Служба работы с Клиентами» — подразделение Интернет-магазина, осуществляющее информационную поддержку и обслуживание Покупателя по всем вопросам, связанным с Заказом Товара в Интернет-магазине.</p>
+            <p class="offer-text__point"><strong>2. Общие положения</strong><br/>2.1. Настоящий Договор является публичной офертой и содержит все существенные условия организации купли-продажи дистанционным способом (т. е. через Интернет-магазин). Настоящий Договор регулирует взаимоотношения Продавца и Покупателя.<br/>2.2. Продавец сохраняет за собой право в одностороннем порядке вносить изменения в настоящий Договор с предварительной их публикацией на Сайте.<br/>2.3. Настоящий Договор имеет приоритет перед иными документами, опубликованными на Сайте.<br/>2.5. Интернет-магазин предназначен для организации дистанционного способа продажи товаров через сеть интернет.<br/>2.6. Осуществляя Заказ в Интернет-магазине, Покупатель принимает на себя обязательства по его оплате и приемке, а Продавец, в свою очередь, обязуется исполнить собственные обязательства по доставке и передаче в собственность Покупателя оплаченного Товара на условиях настоящего Договора.</p>
+            <p class="offer-text__point"><strong>3. Статус Покупателя</strong><br/>3.1. Покупателем является полностью дееспособный гражданин (ка), оформившие заказ в Интернет-магазине на условиях настоящего Договора.<br/>3.2. Покупатель несет ответственность за достоверность предоставленной при оформлении Заказа информации.<br/>3.3. Покупатель, осуществляя Заказ в Интернет-магазине принимает на себя обязательства по оплате Заказа/Товара и его приемке, а Продавец в свою очередь принимает обязательства по доставке и передаче в собственность Покупателя оплаченного последним Заказа/Товара.</p>
+            <p class="offer-text__point"><strong>4. Доступ к информации о Покупателе</strong><br/>4.1. Информация, предоставленная Покупателем является конфиденциальной.<br/>4.2. При оформлении Заявки на Сайте Клиент предоставляет следующую информацию и соглашается на её использование, обработку и хранение Продавцом: Фамилия, Имя, Отчество, адрес электронной почты, контактные телефоны, адрес доставки Товара.<br/>4.3. Клиент, указывая на сайте при регистрации свои контактные данные, понимает, что вносимые им данные не являются персональными данными, идентифицирующими Клиента на основании п.1 ст.8 Федерального Закона от 27.07.2006 N 152-ФЗ в ред. Федерального закона от 25.07.2011 N 261-ФЗ, т.е. предоставляются Продавцу в обезличенной форме, добровольно, и в объеме, необходимом и достаточном для исполнения Продавцом обязательств перед Клиентом.<br/>4.4. Продавец использует предоставленную информацию для выполнения своих обязательств перед Клиентом в соответствии и на основании Федерального Закона от 27.07.2006 N 152-ФЗ в ред. Федерального закона от 25.07.2011 N 261-ФЗ.<br/>4.5. Клиент соглашается на передачу Продавцом предоставленной информации агентам и третьим лицам, действующим на основании договора с Продавцом, для исполнения перед Клиентом обязательств, возникающих из настоящего соглашения и подаваемых через сайт заявок.<br/>4.6. Не считается нарушением обязательств разглашение информации в соответствии с обоснованными и применимыми требованиями закона.<br/>4.7. Клиент соглашается на передачу Продавцу своих данных в целях исполнения заключаемых договоров, в том числе настоящего Соглашения, и принимаемых Продавцом в соответствии с ними обязательств по продаже и доставке Клиенту Товара. Согласие Клиента выражается в указании им информации в соответствующих графах при оформлении Заявки.<br/>4.8. При доступе Покупателя к Сайту Продавец получает информацию об ip-адресе Покупателя. Продавец обязуется не использовать данную информацию для установления личности Покупателя.<br/>4.9. Продавец не несет ответственности за сведения, распространенные Покупателем при помощи Сайта в общедоступной форме.</p>
+            <p class="offer-text__point"><strong>5. Порядок оформления Заказа в Интернет-магазине</strong><br/>5.1. Покупатель самостоятельно оформляет заказ в Интернет-магазине.<br/>5.2. При оформлении заказа в Интернет-магазине, Покупатель обязан предоставить о себе правдивую информацию. В противном случае Продавец не несет ответственности за несвоевременную доставку.</p>
+            <p class="offer-text__point"><strong>6. Условия покупки/продажи Товара</strong><br/>6.1. Продавец обязуется передать в собственность Покупателю товар, а Покупатель обязуется оплатить и принять товар на условиях настоящего Договора.</p>
+            <p class="offer-text__point"><strong>7. Оплата Товара</strong><br/>7.1. Полная стоимость Заказа состоит из стоимости Товара в Интернет-магазине и стоимости доставки.<br/>7.2. Покупатель оплачивает заказ любым способом, выбранным в Интернет-магазине. Способы оплаты Товара указаны на Сайте в разделе «Способы оплаты».<br/>7.3. Стоимость Товара указывается на сайте http://www.skvot.com<br/>7.4. В случае неверного указания цены заказанного Покупателем Товара, Продавец при первой возможности информирует об этом Покупателя для подтверждения Заказа по исправленной цене либо аннулирования Заказа. При невозможности связаться с Покупателем данный Заказ считается аннулированным. Если Заказ был оплачен, Продавец возвращает Клиенту оплаченную за Заказ сумму в соответствии с условиями п.9.8.настоящего Договора.<br/>7.5. Цена Товара на сайте может быть изменена Продавцом в одностороннем порядке. При этом цена на заказанный покупателем Товар изменению не подлежит.<br/>7.6. Скидка по промо-коду, рассчитанная на сайте в процессе оформления заказа может быть в одностороннем порядке отменена Продавцом в случае, если ее применение признано Продавцом неправомерным.</p>
+            <p class="offer-text__point"><strong>8. Доставка заказа</strong><br/>8.1. Общий срок доставки Товара со склада, состоит из срока обработки заказа и срока доставки. Срок обработки Заказа и срок доставки указаны при выборе способа доставки во время оформления заказа.<br/>8.2. Доставка Заказов осуществляется по всей территории Российской Федерации любым выбранным Покупателем способом. Способы доставки указаны на Сайте в соответствующем разделе «Способы доставки».<br/>8.3. Продавец приложит все усилия для соблюдения сроков доставки, указанных на Сайте, тем не менее, задержки в доставке возможны ввиду непредвиденных обстоятельств, произошедших не по вине Продавца. Срок доставки может увеличиться на срок от 1 до 30 дней в связи с некорректной работой служб доставки.<br/>8.4. Риск случайной гибели или случайного повреждения Товара переходит к Покупателю с момента передачи ему Товара и проставления получателем Заказа подписи в документах, подтверждающих доставку. В случае недоставки Товара Продавец возмещает Покупателю стоимость предоплаченного Покупателем Заказа и доставки после получения подтверждения утраты Заказа от Службы доставки.<br/>8.5. Стоимость доставки каждого Заказа рассчитывается индивидуально, исходя из его веса, региона и способа доставки, а иногда и формы оплаты, и указывается на последнем этапе оформления Заказа на Сайте.<br/>8.6. При курьерской доставке Товар вручается Покупателю либо лицу, указанному в качестве Получателя. При отсутствии Покупателя либо указанного им Получателя в месте доставки, Товар вручается лицу, предъявившему документ, подтверждающий размещение либо оплату Заказа.<br/>8.7. Во избежание случаев мошенничества, а также для выполнения взятых на себя обязательств в пункте 8.6., при курьерской доставке предоплаченного Заказа лицо, осуществляющее доставку, вправе затребовать документ, удостоверяющий личность Получателя, а также указать тип и номер предоставленного Получателем документа на квитанции к Заказу. Продавец гарантирует конфиденциальность и защиту персональной информации Получателя (глава 4 настоящего Договора).<br/>8.8. При передаче Товара Покупатель должен проверить его внешний вид и упаковку, количество Товара в Заказе, комплектность, ассортимент.</p>
+            <p class="offer-text__point"><strong>9. Порядок возврата товара</strong><br/>9.1. Покупатель вправе отказаться от заказанного товара в любое время до его получения, а после получения — в течение 14 дней.<br/>9.2. Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид (упаковка, пломбы, ярлыки), потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара (товарный или кассовый чек). Для возврата товара также необходим документ, удостоверяющий личность.<br/>9.3. При возврате товара надлежащего качества, Продавец осуществляет возврат его стоимости не позднее чем через 10 дней с момента получения товара и письменного заявления Покупателя.<br/>9.4. Под Товаром ненадлежащего качества подразумевается Товар, который неисправен и не может обеспечить исполнение своих функциональных качеств. Полученный Товар должен соответствовать описанию на сайте. Отличие элементов дизайна или оформления от заявленных в описании на сайте не является неисправностью или нефункциональностью Товара.<br/>9.5. Внешний вид и комплектность Товара, а также комплектность всего Заказа должны быть проверены Покупателем/Получателем в момент доставки Товара (кроме доставки почтой). При курьерской доставке Товара, Покупатель/Получатель ставит свою подпись в квитанции о доставке, в графе: «Заказ принял, комплектность полная, услуги по доставке оказаны, претензий к количеству и внешнему виду товара не имею. С условиями возврата товара ознакомлен». После получения Заказа претензии к внешним дефектам Товара, его количеству, комплектности и товарному виду не принимаются.<br/>9.6. В связи с особенностями дистанционного способа продажи, замена Товара может быть выполнена только посредством возврата Товара ненадлежащего качества и оформления нового Заказа на аналогичный товар.<br/>9.7. Покупатель вправе отказаться от исполнения Договора, возвратить Товар ненадлежащего качества и потребовать возврата уплаченной за Товар денежной суммы.<br/>9.8. Требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 10 дней со дня предъявления соответствующего требования (ст. 22 Закона РФ «О защите прав потребителей»).<br/>9.9. В случае отказа Покупателя от Товара надлежащего качества, стоимость доставки Товара от Покупателя до Продавца Покупателю не возвращается.<br/>9.10. Покупатель вправе отказаться от предоплаченного Заказа до момента его получения. В этом случае денежные средства, внесенные Покупателем за Заказ автоматически возвращаются на «Пользовательский счет Покупателя», расположенный в разделе «Личный кабинет» на Cайте.</p>
+            <p class="offer-text__point"><strong>10. Ответственность сторон</strong><br/>10.1. В случае форс-мажорных обстоятельств, стороны освобождаются от исполнения настоящего Договора.<br/>10.2. Стороны прилагают максимальные усилия с целью устранения возникающих разногласий путем переговоров. В противном случае договор может быть расторгнут.<br/>10.3. Продавец не несет ответственности, не может выступать в качестве ответчика в суде и не возмещает убытки, возникшие у Покупателя из-за действия или бездействия третьих лиц.<br/>10.4. Продавец не несет ответственности в случае неправильного выбора Покупателем характеристик или модификации Товара, заказанного в Интернет-магазине.<br/>10.5. Продавец не несет ответственности по оплате госпошлин в случае вступления в силу таможенного законодательства при пересечении грузов границы Российской Федерации в адрес Покупателя.<br/>10.6. Продавец гарантирует, что передаваемый Покупателю товар надлежащего качества, не является бывшим в употреблении, и соответствует санитарно-гигиеническим нормам, принятым в Российской Федерации.</p>
+            <p class="offer-text__point"><strong>11. Срок действия настоящего договора</strong><br/>11.1. Настоящий Договор вступает в силу с даты его публикации на Сайте http://www.skvot.com<br/>11.2. Совершая покупку в Интернет-магазине, Покупатель соглашается со всеми вышеперечисленными условиями в настоящем Договоре.<br/>11.3. Настоящий Договор, а также информация о Товаре, представленная на Сайте, являются публичной офертой в соответствии со ст.435 и ч.2 ст.437 ГК РФ.<br/>11.4. К отношениям между Покупателем и Продавцом применяются положения ГК РФ о розничной купле-продаже (§ 2 глава 30), а также Закон РФ «О защите прав потребителей" от 07.02.1992 № 2300–1 и иные правовые акты, принятые в соответствии с ними.<br/>11.5. Покупатель принимает условия настоящего Договора путем нажатия на Сайте соответствующего поля «Подтвердить заказ" на последнем этапе оформления Заказа на Сайте.<br/>11.6. К отношениям между Покупателем и Продавцом применяется право Российской Федерации.<br/>11.7. Признание судом недействительности какого-либо положения настоящего Договора не влечет за собой недействительность остальных положений.</p>
+            <p class="offer-text__point"><strong>12. Рассылки и информационные сообщения</strong><br/>12.1. При регистрации на Сайте Клиент дает согласие на получение от Продавца рассылок рекламно-информационного характера. Указанные рассылки содержат информацию о предстоящих акциях, розыгрышах и других мероприятиях Продавца.<br/>12.2. Настройка параметров рассылки (возможность отказа от рассылки и пр.) размещена в разделе «Личный кабинет», в пункте «Рассылки».<br/>12.3. Рассылки поступают в виде электронного письма на адрес и/или короткого сообщения (sms) на номер телефона, указанный Клиентом при регистрации. Рекламно-информационные материалы могут предоставляться в виде бумажно-полиграфической и сувенирной продукции, вкладываться в заказы клиентов и доставляться на указанный почтовый адрес в виде писем и посылок.</p>
+            <p class="offer-text__point">* Если иное не указано в информации о товаре (описании акции)</p>
+            <p class="offer-text__point"><strong>13. Интеллектуальная собственность</strong><br/>13.1. Вся текстовая информация и графические изображения, находящиеся на Сайте являются собственностью Продавца и/или его контрагентов.</p>
+            <p class="offer-text__point"><strong>14. Гарантии и ответственность</strong><br/>14.1. Продавец не несет ответственности за ущерб, причиненный Покупателю вследствие ненадлежащего использования Товаров, заказанных на Сайте.<br/>14.2. Продавец не несет ответственности за содержание и функционирование внешних сайтов.<br/>14.3. Продавец вправе переуступать либо каким-либо иным способом передавать свои права и обязанности, вытекающие из его отношений с Покупателем, третьим лицам.<br/>14.4. Покупатель обязуется не использовать заказанный Товар в предпринимательских целях.</p>
+            <p class="offer-text__point"><strong>15. Технология cookies</strong><br/>15.1. Интернет-магазин может использовать технологию «cookies». «Cookies» не передаются третьим лицам и не содержат конфиденциальную информацию. Файлы «cookies» могут быт использованы для рекламы товаров, специальных акций и скидок в интернет магазине.</p>
+          </div>
+        </main>
+        <div class="modal js-modal" data-modal="city">
+          <div class="modal__content">
+            <div class="modal__title modal__item">Где вы находитесь?</div>
+            <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
+            <div class="modal__title modal__item">Другой город?</div>
+            <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
+            <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
+          </div>
+        </div>
+        <div class="modal js-modal" data-modal="city-accept">
+          <div class="modal__content">
+            <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
+            <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
+            <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="registration">
+          <div class="modal__content">
+            <div class="registration">
+              <div class="registration__title">Регистрация</div>
+              <div class="registration__content">
+                <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
+                <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
+              </div>
+              <form class="registration__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Фамилия"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Имя"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Отчество"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Телефон"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <div class="select-wrap select-wrap--form">
+                      <select class="select-wrap__field">
+                        <option>Пол</option>
+                        <option>Мужской</option>
+                        <option>Женский</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label">Введите символы с картинки</div>
+                  <div class="form-double">
+                    <input class="input input--form" type="text" placeholder="Капча"/>
+                    <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
+                    <label class="checkbox__label" for="registration-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="login">
+          <div class="modal__content">
+            <div class="auth-form">
+              <div class="auth-form__title">Авторизация:</div>
+              <form class="auth-form__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                </div>
+                <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
+                    <label class="checkbox__label" for="auth-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Войти</button>
+                </div>
+              </form>
+              <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--medium js-modal" data-modal="oneclick">
+          <div class="modal__content">
+            <form class="form-one">
+              <div class="form-one__title">Быстрый заказ в 1 клик</div>
+              <div class="form-group">
+                <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
+              </div>
+              <div class="form-group">
+                <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
+                <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
+              </div>
+              <div class="form-group">
+                <button class="button" type="submit">Заказать</button>
+              </div>
             </form>
           </div>
-          <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
-            <div class="catalog-btn">
-              <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
-              <div class="catalog-btn__text">Весь каталог</div>
-            </div>
-          </div>
-          <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
-            <div class="information information--location">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">Москва</div>
-                <div class="information__describe">З магазина в городе</div>
-              </div>
-            </div>
-          </div>
-          <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
-            <div class="information">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">8 800 100-41-69</div>
-                <div class="information__describe">Бесплатно по России</div>
-              </div>
-            </div></a>
-          <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
-            <div class="cart-btn">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
-              </svg>
-              <div class="cart-btn__count">54</div>
-            </div>
-            <div class="cart-popup js-cart-popup">
-              <div class="cart-popup__header">
-                <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
-              </div>
-              <div class="cart-popup__main">
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-popup__footer">
-                <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
-            <div class="search-btn">
-              <svg class="icon search-btn__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
-              </svg>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="header__catalog container js-catalog">
-        <div class="catalog">
-          <div class="catalog__row row row--2">
-            <div class="catalog__category col-sm-4">
-              <!-- a(href="#").catalog__category-title Обувь-->
-              <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
-            </div>
-            <div class="col-sm-8">
-              <div class="catalog__section row" data-for-section="1">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+        <div class="modal modal--biggest modal--np js-modal" data-modal="product">
+          <div class="modal__content">
+            <div class="product-min">
+              <div class="product-min__item">
+                <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
+                <div class="product-min__content">
+                  <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
+                  <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
                 </div>
               </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="2">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+              <form class="product-min__item">
+                <div class="product-min__title">Наличие товара</div>
+                <div class="product-min__content product-min__content--bold">
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                <div class="form-group">
+                  <div class="product-size__title product-size__title--min">Выберите размер:</div>
+                  <div class="product-size__sizes">
+                    <div class="product-size__group"></div>
+                    <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
+                    <label class="product-size__label" for="product-size-s-2">s</label>
+                    <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-m-2">m</label>
+                    <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-l-2">l</label>
+                    <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-xl-2">xl</label>
+                  </div>
                 </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="3">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                <div class="form-group">
+                  <button class="button button--min" type="submit">Забрать в этом магазине</button>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
-                </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="4">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
+              </form>
+              <div class="product-min__item">
+                            <div class="gmap-wrap gmap-wrap--min">
+                              <div class="gmap-overlay"></div>
+                              <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
+                            </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="overlay"></div>
+        <div class="modal js-modal" data-modal="cart">
+          <div class="modal__content js-cart-modal"></div>
+        </div>
       </div>
-    </header>
-    <div class="page-head page-head--gray">
-      <div class="page-head__container">
-        <div class="page-head__title">Публичная оферта</div>
-        <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Публичная оферта</a></div>
-      </div>
-    </div>
-    <main class="main container">
-      <div class="offer-text">
-        <p>Настоящим Индивидуальный предприниматель Голубев Денис Алексеевич, далее «Продавец», выражает намерение заключить договор купли-продажи Товаров с Покупателями на условиях настоящей оферты (далее — «Договор»), размещенной на сайте http://www.skvot.com (далее — «Сайт»).</p>
-        <p>Безусловным и полным принятием (акцептом) условий настоящего Договора считается заказ Покупателем Товара в Интернет-Магазине (далее — «Акцепт Оферты»):</p>
-        <p class="offer-text__point"><strong>1. Термины и определения. «Продавец» — ИП Голубев Денис Алексеевич</strong><br/>«Покупатель» — совершеннолетний и дееспособный гражданин, имеющий намерение заказать или приобрести либо заказывающий, приобретающий или использующий товары исключительно для личных, семейных, домашних и иных нужд, не связанных с осуществлением предпринимательской деятельности.<br/>«Товар» — товары, представленные к продаже в Интернет-магазине.<br/>«Интернет-магазин» — Интернет-сайт, принадлежащий Продавцу, имеющий адрес в сети Интернет http://www.skvot.com На нем представлены товары, предлагаемые Продавцом Покупателям для оформления Заказов, а также условия оплаты и доставки этих Заказов Покупателям.<br/>«Сайт» — http://www.skvot.com<br/>«Заказ» — должным образом оформленный запрос Покупателя на доставку по указанному адресу перечня Товаров, выбранных на Сайте.<br/>«Пользовательский счет Покупателя» — персональный интернет — счет, на который Покупатель может перечислять денежные средства для последующей оплаты Товаров на Сайте.<br/>«Личный кабинет» — персональное пространство Покупателя на Сайте для осуществления Заказов и управления персональными данными. Доступ к Личному кабинету имеют зарегистрированные пользователи Cайта.<br/>«Служба работы с Клиентами» — подразделение Интернет-магазина, осуществляющее информационную поддержку и обслуживание Покупателя по всем вопросам, связанным с Заказом Товара в Интернет-магазине.</p>
-        <p class="offer-text__point"><strong>2. Общие положения</strong><br/>2.1. Настоящий Договор является публичной офертой и содержит все существенные условия организации купли-продажи дистанционным способом (т. е. через Интернет-магазин). Настоящий Договор регулирует взаимоотношения Продавца и Покупателя.<br/>2.2. Продавец сохраняет за собой право в одностороннем порядке вносить изменения в настоящий Договор с предварительной их публикацией на Сайте.<br/>2.3. Настоящий Договор имеет приоритет перед иными документами, опубликованными на Сайте.<br/>2.5. Интернет-магазин предназначен для организации дистанционного способа продажи товаров через сеть интернет.<br/>2.6. Осуществляя Заказ в Интернет-магазине, Покупатель принимает на себя обязательства по его оплате и приемке, а Продавец, в свою очередь, обязуется исполнить собственные обязательства по доставке и передаче в собственность Покупателя оплаченного Товара на условиях настоящего Договора.</p>
-        <p class="offer-text__point"><strong>3. Статус Покупателя</strong><br/>3.1. Покупателем является полностью дееспособный гражданин (ка), оформившие заказ в Интернет-магазине на условиях настоящего Договора.<br/>3.2. Покупатель несет ответственность за достоверность предоставленной при оформлении Заказа информации.<br/>3.3. Покупатель, осуществляя Заказ в Интернет-магазине принимает на себя обязательства по оплате Заказа/Товара и его приемке, а Продавец в свою очередь принимает обязательства по доставке и передаче в собственность Покупателя оплаченного последним Заказа/Товара.</p>
-        <p class="offer-text__point"><strong>4. Доступ к информации о Покупателе</strong><br/>4.1. Информация, предоставленная Покупателем является конфиденциальной.<br/>4.2. При оформлении Заявки на Сайте Клиент предоставляет следующую информацию и соглашается на её использование, обработку и хранение Продавцом: Фамилия, Имя, Отчество, адрес электронной почты, контактные телефоны, адрес доставки Товара.<br/>4.3. Клиент, указывая на сайте при регистрации свои контактные данные, понимает, что вносимые им данные не являются персональными данными, идентифицирующими Клиента на основании п.1 ст.8 Федерального Закона от 27.07.2006 N 152-ФЗ в ред. Федерального закона от 25.07.2011 N 261-ФЗ, т.е. предоставляются Продавцу в обезличенной форме, добровольно, и в объеме, необходимом и достаточном для исполнения Продавцом обязательств перед Клиентом.<br/>4.4. Продавец использует предоставленную информацию для выполнения своих обязательств перед Клиентом в соответствии и на основании Федерального Закона от 27.07.2006 N 152-ФЗ в ред. Федерального закона от 25.07.2011 N 261-ФЗ.<br/>4.5. Клиент соглашается на передачу Продавцом предоставленной информации агентам и третьим лицам, действующим на основании договора с Продавцом, для исполнения перед Клиентом обязательств, возникающих из настоящего соглашения и подаваемых через сайт заявок.<br/>4.6. Не считается нарушением обязательств разглашение информации в соответствии с обоснованными и применимыми требованиями закона.<br/>4.7. Клиент соглашается на передачу Продавцу своих данных в целях исполнения заключаемых договоров, в том числе настоящего Соглашения, и принимаемых Продавцом в соответствии с ними обязательств по продаже и доставке Клиенту Товара. Согласие Клиента выражается в указании им информации в соответствующих графах при оформлении Заявки.<br/>4.8. При доступе Покупателя к Сайту Продавец получает информацию об ip-адресе Покупателя. Продавец обязуется не использовать данную информацию для установления личности Покупателя.<br/>4.9. Продавец не несет ответственности за сведения, распространенные Покупателем при помощи Сайта в общедоступной форме.</p>
-        <p class="offer-text__point"><strong>5. Порядок оформления Заказа в Интернет-магазине</strong><br/>5.1. Покупатель самостоятельно оформляет заказ в Интернет-магазине.<br/>5.2. При оформлении заказа в Интернет-магазине, Покупатель обязан предоставить о себе правдивую информацию. В противном случае Продавец не несет ответственности за несвоевременную доставку.</p>
-        <p class="offer-text__point"><strong>6. Условия покупки/продажи Товара</strong><br/>6.1. Продавец обязуется передать в собственность Покупателю товар, а Покупатель обязуется оплатить и принять товар на условиях настоящего Договора.</p>
-        <p class="offer-text__point"><strong>7. Оплата Товара</strong><br/>7.1. Полная стоимость Заказа состоит из стоимости Товара в Интернет-магазине и стоимости доставки.<br/>7.2. Покупатель оплачивает заказ любым способом, выбранным в Интернет-магазине. Способы оплаты Товара указаны на Сайте в разделе «Способы оплаты».<br/>7.3. Стоимость Товара указывается на сайте http://www.skvot.com<br/>7.4. В случае неверного указания цены заказанного Покупателем Товара, Продавец при первой возможности информирует об этом Покупателя для подтверждения Заказа по исправленной цене либо аннулирования Заказа. При невозможности связаться с Покупателем данный Заказ считается аннулированным. Если Заказ был оплачен, Продавец возвращает Клиенту оплаченную за Заказ сумму в соответствии с условиями п.9.8.настоящего Договора.<br/>7.5. Цена Товара на сайте может быть изменена Продавцом в одностороннем порядке. При этом цена на заказанный покупателем Товар изменению не подлежит.<br/>7.6. Скидка по промо-коду, рассчитанная на сайте в процессе оформления заказа может быть в одностороннем порядке отменена Продавцом в случае, если ее применение признано Продавцом неправомерным.</p>
-        <p class="offer-text__point"><strong>8. Доставка заказа</strong><br/>8.1. Общий срок доставки Товара со склада, состоит из срока обработки заказа и срока доставки. Срок обработки Заказа и срок доставки указаны при выборе способа доставки во время оформления заказа.<br/>8.2. Доставка Заказов осуществляется по всей территории Российской Федерации любым выбранным Покупателем способом. Способы доставки указаны на Сайте в соответствующем разделе «Способы доставки».<br/>8.3. Продавец приложит все усилия для соблюдения сроков доставки, указанных на Сайте, тем не менее, задержки в доставке возможны ввиду непредвиденных обстоятельств, произошедших не по вине Продавца. Срок доставки может увеличиться на срок от 1 до 30 дней в связи с некорректной работой служб доставки.<br/>8.4. Риск случайной гибели или случайного повреждения Товара переходит к Покупателю с момента передачи ему Товара и проставления получателем Заказа подписи в документах, подтверждающих доставку. В случае недоставки Товара Продавец возмещает Покупателю стоимость предоплаченного Покупателем Заказа и доставки после получения подтверждения утраты Заказа от Службы доставки.<br/>8.5. Стоимость доставки каждого Заказа рассчитывается индивидуально, исходя из его веса, региона и способа доставки, а иногда и формы оплаты, и указывается на последнем этапе оформления Заказа на Сайте.<br/>8.6. При курьерской доставке Товар вручается Покупателю либо лицу, указанному в качестве Получателя. При отсутствии Покупателя либо указанного им Получателя в месте доставки, Товар вручается лицу, предъявившему документ, подтверждающий размещение либо оплату Заказа.<br/>8.7. Во избежание случаев мошенничества, а также для выполнения взятых на себя обязательств в пункте 8.6., при курьерской доставке предоплаченного Заказа лицо, осуществляющее доставку, вправе затребовать документ, удостоверяющий личность Получателя, а также указать тип и номер предоставленного Получателем документа на квитанции к Заказу. Продавец гарантирует конфиденциальность и защиту персональной информации Получателя (глава 4 настоящего Договора).<br/>8.8. При передаче Товара Покупатель должен проверить его внешний вид и упаковку, количество Товара в Заказе, комплектность, ассортимент.</p>
-        <p class="offer-text__point"><strong>9. Порядок возврата товара</strong><br/>9.1. Покупатель вправе отказаться от заказанного товара в любое время до его получения, а после получения — в течение 14 дней.<br/>9.2. Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид (упаковка, пломбы, ярлыки), потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара (товарный или кассовый чек). Для возврата товара также необходим документ, удостоверяющий личность.<br/>9.3. При возврате товара надлежащего качества, Продавец осуществляет возврат его стоимости не позднее чем через 10 дней с момента получения товара и письменного заявления Покупателя.<br/>9.4. Под Товаром ненадлежащего качества подразумевается Товар, который неисправен и не может обеспечить исполнение своих функциональных качеств. Полученный Товар должен соответствовать описанию на сайте. Отличие элементов дизайна или оформления от заявленных в описании на сайте не является неисправностью или нефункциональностью Товара.<br/>9.5. Внешний вид и комплектность Товара, а также комплектность всего Заказа должны быть проверены Покупателем/Получателем в момент доставки Товара (кроме доставки почтой). При курьерской доставке Товара, Покупатель/Получатель ставит свою подпись в квитанции о доставке, в графе: «Заказ принял, комплектность полная, услуги по доставке оказаны, претензий к количеству и внешнему виду товара не имею. С условиями возврата товара ознакомлен». После получения Заказа претензии к внешним дефектам Товара, его количеству, комплектности и товарному виду не принимаются.<br/>9.6. В связи с особенностями дистанционного способа продажи, замена Товара может быть выполнена только посредством возврата Товара ненадлежащего качества и оформления нового Заказа на аналогичный товар.<br/>9.7. Покупатель вправе отказаться от исполнения Договора, возвратить Товар ненадлежащего качества и потребовать возврата уплаченной за Товар денежной суммы.<br/>9.8. Требования о возврате уплаченной за Товар денежной суммы подлежат удовлетворению в течение 10 дней со дня предъявления соответствующего требования (ст. 22 Закона РФ «О защите прав потребителей»).<br/>9.9. В случае отказа Покупателя от Товара надлежащего качества, стоимость доставки Товара от Покупателя до Продавца Покупателю не возвращается.<br/>9.10. Покупатель вправе отказаться от предоплаченного Заказа до момента его получения. В этом случае денежные средства, внесенные Покупателем за Заказ автоматически возвращаются на «Пользовательский счет Покупателя», расположенный в разделе «Личный кабинет» на Cайте.</p>
-        <p class="offer-text__point"><strong>10. Ответственность сторон</strong><br/>10.1. В случае форс-мажорных обстоятельств, стороны освобождаются от исполнения настоящего Договора.<br/>10.2. Стороны прилагают максимальные усилия с целью устранения возникающих разногласий путем переговоров. В противном случае договор может быть расторгнут.<br/>10.3. Продавец не несет ответственности, не может выступать в качестве ответчика в суде и не возмещает убытки, возникшие у Покупателя из-за действия или бездействия третьих лиц.<br/>10.4. Продавец не несет ответственности в случае неправильного выбора Покупателем характеристик или модификации Товара, заказанного в Интернет-магазине.<br/>10.5. Продавец не несет ответственности по оплате госпошлин в случае вступления в силу таможенного законодательства при пересечении грузов границы Российской Федерации в адрес Покупателя.<br/>10.6. Продавец гарантирует, что передаваемый Покупателю товар надлежащего качества, не является бывшим в употреблении, и соответствует санитарно-гигиеническим нормам, принятым в Российской Федерации.</p>
-        <p class="offer-text__point"><strong>11. Срок действия настоящего договора</strong><br/>11.1. Настоящий Договор вступает в силу с даты его публикации на Сайте http://www.skvot.com<br/>11.2. Совершая покупку в Интернет-магазине, Покупатель соглашается со всеми вышеперечисленными условиями в настоящем Договоре.<br/>11.3. Настоящий Договор, а также информация о Товаре, представленная на Сайте, являются публичной офертой в соответствии со ст.435 и ч.2 ст.437 ГК РФ.<br/>11.4. К отношениям между Покупателем и Продавцом применяются положения ГК РФ о розничной купле-продаже (§ 2 глава 30), а также Закон РФ «О защите прав потребителей" от 07.02.1992 № 2300–1 и иные правовые акты, принятые в соответствии с ними.<br/>11.5. Покупатель принимает условия настоящего Договора путем нажатия на Сайте соответствующего поля «Подтвердить заказ" на последнем этапе оформления Заказа на Сайте.<br/>11.6. К отношениям между Покупателем и Продавцом применяется право Российской Федерации.<br/>11.7. Признание судом недействительности какого-либо положения настоящего Договора не влечет за собой недействительность остальных положений.</p>
-        <p class="offer-text__point"><strong>12. Рассылки и информационные сообщения</strong><br/>12.1. При регистрации на Сайте Клиент дает согласие на получение от Продавца рассылок рекламно-информационного характера. Указанные рассылки содержат информацию о предстоящих акциях, розыгрышах и других мероприятиях Продавца.<br/>12.2. Настройка параметров рассылки (возможность отказа от рассылки и пр.) размещена в разделе «Личный кабинет», в пункте «Рассылки».<br/>12.3. Рассылки поступают в виде электронного письма на адрес и/или короткого сообщения (sms) на номер телефона, указанный Клиентом при регистрации. Рекламно-информационные материалы могут предоставляться в виде бумажно-полиграфической и сувенирной продукции, вкладываться в заказы клиентов и доставляться на указанный почтовый адрес в виде писем и посылок.</p>
-        <p class="offer-text__point">* Если иное не указано в информации о товаре (описании акции)</p>
-        <p class="offer-text__point"><strong>13. Интеллектуальная собственность</strong><br/>13.1. Вся текстовая информация и графические изображения, находящиеся на Сайте являются собственностью Продавца и/или его контрагентов.</p>
-        <p class="offer-text__point"><strong>14. Гарантии и ответственность</strong><br/>14.1. Продавец не несет ответственности за ущерб, причиненный Покупателю вследствие ненадлежащего использования Товаров, заказанных на Сайте.<br/>14.2. Продавец не несет ответственности за содержание и функционирование внешних сайтов.<br/>14.3. Продавец вправе переуступать либо каким-либо иным способом передавать свои права и обязанности, вытекающие из его отношений с Покупателем, третьим лицам.<br/>14.4. Покупатель обязуется не использовать заказанный Товар в предпринимательских целях.</p>
-        <p class="offer-text__point"><strong>15. Технология cookies</strong><br/>15.1. Интернет-магазин может использовать технологию «cookies». «Cookies» не передаются третьим лицам и не содержат конфиденциальную информацию. Файлы «cookies» могут быт использованы для рекламы товаров, специальных акций и скидок в интернет магазине.</p>
-      </div>
-    </main>
-    <div class="modal js-modal" data-modal="city">
-      <div class="modal__content">
-        <div class="modal__title modal__item">Где вы находитесь?</div>
-        <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
-        <div class="modal__title modal__item">Другой город?</div>
-        <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
-        <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
-      </div>
-    </div>
-    <div class="modal js-modal" data-modal="city-accept">
-      <div class="modal__content">
-        <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
-        <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
-        <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
-      </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="registration">
-      <div class="modal__content">
-        <div class="registration">
-          <div class="registration__title">Регистрация</div>
-          <div class="registration__content">
-            <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
-            <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
-          </div>
-          <form class="registration__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Фамилия"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Имя"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Отчество"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Телефон"/>
-              </div>
-              <div class="form-inner-group">
-                <div class="select-wrap select-wrap--form">
-                  <select class="select-wrap__field">
-                    <option>Пол</option>
-                    <option>Мужской</option>
-                    <option>Женский</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-label">Введите символы с картинки</div>
-              <div class="form-double">
-                <input class="input input--form" type="text" placeholder="Капча"/>
-                <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
-                <label class="checkbox__label" for="registration-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+      <div class="subscription">
+        <div class="subscription__container container">
+          <form class="subscription-form">
+            <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
+            <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
+            <div class="subscription-form__form">
+              <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
+              <button type="submit">
+                <svg class="icon subscription-form__icon">
+                  <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
       </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="login">
-      <div class="modal__content">
-        <div class="auth-form">
-          <div class="auth-form__title">Авторизация:</div>
-          <form class="auth-form__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="col-md-4 col-sm-5 footer--about">
+            <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
+              <p>Федеральная сеть бордшопов, основанная 2003 году</p>
+              <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
+              <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
+            </div>
+          </div>
+          <div class="footer__menus col-md-4 col-sm-7 footer--menus">
+            <div class="footer__menu">
+              <div class="footer__menu-title">Помощь</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-title">Мы в соцсетях</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
+            <div class="footer__info">
+              <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
+                <div class="footer__info-text">
+                  <p>По будням с 9.00 до 20.00</p>
+                  <p>По субботам с 10.00 до 18.00</p>
+                </div>
               </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-            </div>
-            <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
-                <label class="checkbox__label" for="auth-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Войти</button>
-            </div>
-          </form>
-          <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--medium js-modal" data-modal="oneclick">
-      <div class="modal__content">
-        <form class="form-one">
-          <div class="form-one__title">Быстрый заказ в 1 клик</div>
-          <div class="form-group">
-            <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
-          </div>
-          <div class="form-group">
-            <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
-            <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
-          </div>
-          <div class="form-group">
-            <button class="button" type="submit">Заказать</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="modal modal--biggest modal--np js-modal" data-modal="product">
-      <div class="modal__content">
-        <div class="product-min">
-          <div class="product-min__item">
-            <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
-            <div class="product-min__content">
-              <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
-              <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
-            </div>
-          </div>
-          <form class="product-min__item">
-            <div class="product-min__title">Наличие товара</div>
-            <div class="product-min__content product-min__content--bold">
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-            </div>
-            <div class="form-group">
-              <div class="product-size__title product-size__title--min">Выберите размер:</div>
-              <div class="product-size__sizes">
-                <div class="product-size__group"></div>
-                <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
-                <label class="product-size__label" for="product-size-s-2">s</label>
-                <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-m-2">m</label>
-                <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-l-2">l</label>
-                <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-xl-2">xl</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--min" type="submit">Забрать в этом магазине</button>
-            </div>
-          </form>
-          <div class="product-min__item">
-                    <div class="gmap-wrap gmap-wrap--min">
-                      <div class="gmap-overlay"></div>
-                      <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
-                    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="modal js-modal" data-modal="cart">
-      <div class="modal__content js-cart-modal"></div>
-    </div>
-    <div class="subscription">
-      <div class="subscription__container container">
-        <form class="subscription-form">
-          <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
-          <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
-          <div class="subscription-form__form">
-            <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
-            <button type="submit">
-              <svg class="icon subscription-form__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="col-md-4 col-sm-5 footer--about">
-          <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
-            <p>Федеральная сеть бордшопов, основанная 2003 году</p>
-            <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
-            <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
-          </div>
-        </div>
-        <div class="footer__menus col-md-4 col-sm-7 footer--menus">
-          <div class="footer__menu">
-            <div class="footer__menu-title">Помощь</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
-          </div>
-          <div class="footer__menu">
-            <div class="footer__menu-title">Мы в соцсетях</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
-          </div>
-        </div>
-        <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
-          <div class="footer__info">
-            <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
-              <div class="footer__info-text">
-                <p>По будням с 9.00 до 20.00</p>
-                <p>По субботам с 10.00 до 18.00</p>
-              </div>
-            </div>
-            <div class="footer__info-payment">
-              <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
-              <div class="footer__info-text">
-                <p>Доставляем курьером, почтой, в постматы</p>
-                <p>и в пункты выдачи по России</p>
+              <div class="footer__info-payment">
+                <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
+                <div class="footer__info-text">
+                  <p>Доставляем курьером, почтой, в постматы</p>
+                  <p>и в пункты выдачи по России</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <svg class="icon up js-up">
-      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-    </svg>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/commons.js"></script>
-    <script src="js/app.js"></script>
+      </footer>
+      <svg class="icon up js-up">
+        <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
+      </svg>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/commons.js"></script>
+      <script src="js/app.js"></script>
+    </div>
   </body>
 </html>

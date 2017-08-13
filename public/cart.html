@@ -10,917 +10,921 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
   </head>
   <body data-page="cart">
-    <header class="header">
-      <div class="header__top">
-        <div class="container header__container header__container--top">
-          <div class="header__top-content">
-            <div class="header__menu">
-              <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
-            </div>
-            <div class="header__auth">
-              <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+    <div class="page">
+      <div class="page__content">
+        <header class="header">
+          <div class="header__top">
+            <div class="container header__container header__container--top">
+              <div class="header__top-content">
+                <div class="header__menu">
+                  <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
+                </div>
+                <div class="header__auth">
+                  <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="header__bottom">
+            <div class="container header__container">
+              <div class="header__item header__item--search-field col-sm-1 js-search">
+                <form class="search" id="search">
+                  <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
+                  <div class="search__overlay"></div>
+                </form>
+              </div>
+              <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
+                <div class="catalog-btn">
+                  <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
+                  <div class="catalog-btn__text">Весь каталог</div>
+                </div>
+              </div>
+              <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
+                <div class="information information--location">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">Москва</div>
+                    <div class="information__describe">З магазина в городе</div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
+                <div class="information">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">8 800 100-41-69</div>
+                    <div class="information__describe">Бесплатно по России</div>
+                  </div>
+                </div></a>
+              <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
+                <div class="cart-btn">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                  <div class="cart-btn__count">54</div>
+                </div>
+                <div class="cart-popup js-cart-popup">
+                  <div class="cart-popup__header">
+                    <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
+                  </div>
+                  <div class="cart-popup__main">
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-popup__footer">
+                    <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
+                <div class="search-btn">
+                  <svg class="icon search-btn__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__catalog container js-catalog">
+            <div class="catalog">
+              <div class="catalog__row row row--2">
+                <div class="catalog__category col-sm-4">
+                  <!-- a(href="#").catalog__category-title Обувь-->
+                  <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="catalog__section row" data-for-section="1">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="2">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="3">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="4">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page-head">
+          <div class="page-head__container">
+            <div class="page-head__title">Корзина</div>
+            <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Корзина</a></div>
+          </div>
         </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container header__container">
-          <div class="header__item header__item--search-field col-sm-1 js-search">
-            <form class="search" id="search">
-              <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
-              <div class="search__overlay"></div>
+        <main class="main container">
+          <div class="cart">
+            <div class="cart__items">
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                        <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
+                          <li>- Белинского 38, ул. Белинского, дом 38</li>
+                          <li>- м. Лесная, Полюстровский</li>
+                          <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
+                          <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
+                          <li>- Интернет магазин</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">6850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
+                      <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">16850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                        <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
+                          <li>- Белинского 38, ул. Белинского, дом 38</li>
+                          <li>- м. Лесная, Полюстровский</li>
+                          <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
+                          <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
+                          <li>- Интернет магазин</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">6850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
+                      <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">16850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                        <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
+                          <li>- Белинского 38, ул. Белинского, дом 38</li>
+                          <li>- м. Лесная, Полюстровский</li>
+                          <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
+                          <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
+                          <li>- Интернет магазин</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">6850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
+                      <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">16850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                        <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
+                          <li>- Белинского 38, ул. Белинского, дом 38</li>
+                          <li>- м. Лесная, Полюстровский</li>
+                          <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
+                          <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
+                          <li>- Интернет магазин</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">6850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
+                      <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item-wrap">
+                <div class="cart-item">
+                  <div class="cart-item__item cart-item__item--image">
+                    <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
+                  </div>
+                  <div class="cart-item__details">
+                    <div class="cart-item__item cart-item__item--content">
+                      <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
+                        <div class="cart-item__size">Размер: L</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--prices">
+                      <div class="cart-item__prices">
+                        <div class="cart-item__price-per-one">6850₽</div>
+                        <div class="cart-item__count">
+                          <div class="count">
+                            <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
+                            <svg class="icon count__icon count__control--down">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
+                            </svg>
+                            <div class="count__control count__control--number"></div>
+                            <svg class="icon count__icon count__control--up">
+                              <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="cart-item__price-total">16850₽</div>
+                      </div>
+                    </div>
+                    <div class="cart-item__item cart-item__item--action">
+                      <div class="cart-item__action">
+                        <div class="cart-item__action-text">Удалить</div>
+                        <svg class="icon cart-item__action-icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item cart-item--mobile">
+                  <div class="cart-item__item">
+                    <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__total row row--2">
+                <div class="col-lg-2 col-lg-offset-8 cart__total-total">Итого: <span>34565P</span></div>
+              </div>
+            </div>
+            <div class="cart__ordering">
+              <form class="cart-ordering">
+                <div class="cart-ordering__title">Оформление заказа:</div>
+                <div class="cart-ordering__content row row--2">
+                  <div class="col-md-6 no-padding">
+                    <div class="cart-ordering__registered js-cart-order">
+                      <div class="form-group">
+                        <div class="checkbox checkbox--big">
+                          <input class="checkbox__input cart-ordering__radio" type="radio" checked="true" name="user-type" value="user-type" id="registered-user"/>
+                          <label class="checkbox__label" for="registered-user">
+                            <div class="checkbox__box">
+                              <svg class="icon checkbox__icon">
+                                <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                              </svg>
+                            </div>
+                            <div class="checkbox__name">Я зарегистрированный пользователь</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="email" placeholder="Email адрес" name="reg-email"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="password" placeholder="Пароль" name="reg-password"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-info">Если вы зарегистрированны и не авторизуетесь, все скидки и бонусы, накопленные ранее не будут учтены в дальнейших заказах.</div>
+                      </div>
+                      <div class="form-group"><a class="form-link" href="#">Забыли пароль?</a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 no-padding">
+                    <div class="cart-ordering__not-registered js-cart-order">
+                      <div class="form-group">
+                        <div class="checkbox checkbox--big">
+                          <input class="checkbox__input cart-ordering__radio" type="radio" name="user-type" value="user-type" id="not-registered-user"/>
+                          <label class="checkbox__label" for="not-registered-user">
+                            <div class="checkbox__box">
+                              <svg class="icon checkbox__icon">
+                                <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                              </svg>
+                            </div>
+                            <div class="checkbox__name">Я новый пользователь</div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="email" placeholder="Email адрес" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="text" placeholder="Фамилия" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="text" placeholder="Имя" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="text" placeholder="Отчество" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="text" placeholder="Телефон" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="password" placeholder="Пароль" disabled="disabled"/>
+                        </div>
+                        <div class="form-inner-group">
+                          <input class="input input--form" type="password" placeholder="Подтверждение пароля" disabled="disabled"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-ordering__bottom">
+                  <div class="checkbox cart-ordering__confirm">
+                    <input class="checkbox__input" type="checkbox" name="cart-order-confirm" value="cart-order-confirm" id="cart-order-confirm"/>
+                    <label class="checkbox__label" for="cart-order-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Нажимая кнопку «Продолжить», я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных и соглашаюсь с офертой</div>
+                    </label>
+                  </div>
+                  <button class="button" type="submit">Продолжить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+        <div class="modal js-modal" data-modal="city">
+          <div class="modal__content">
+            <div class="modal__title modal__item">Где вы находитесь?</div>
+            <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
+            <div class="modal__title modal__item">Другой город?</div>
+            <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
+            <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
+          </div>
+        </div>
+        <div class="modal js-modal" data-modal="city-accept">
+          <div class="modal__content">
+            <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
+            <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
+            <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="registration">
+          <div class="modal__content">
+            <div class="registration">
+              <div class="registration__title">Регистрация</div>
+              <div class="registration__content">
+                <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
+                <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
+              </div>
+              <form class="registration__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Фамилия"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Имя"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Отчество"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Телефон"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <div class="select-wrap select-wrap--form">
+                      <select class="select-wrap__field">
+                        <option>Пол</option>
+                        <option>Мужской</option>
+                        <option>Женский</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label">Введите символы с картинки</div>
+                  <div class="form-double">
+                    <input class="input input--form" type="text" placeholder="Капча"/>
+                    <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
+                    <label class="checkbox__label" for="registration-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="login">
+          <div class="modal__content">
+            <div class="auth-form">
+              <div class="auth-form__title">Авторизация:</div>
+              <form class="auth-form__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                </div>
+                <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
+                    <label class="checkbox__label" for="auth-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Войти</button>
+                </div>
+              </form>
+              <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--medium js-modal" data-modal="oneclick">
+          <div class="modal__content">
+            <form class="form-one">
+              <div class="form-one__title">Быстрый заказ в 1 клик</div>
+              <div class="form-group">
+                <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
+              </div>
+              <div class="form-group">
+                <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
+                <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
+              </div>
+              <div class="form-group">
+                <button class="button" type="submit">Заказать</button>
+              </div>
             </form>
           </div>
-          <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
-            <div class="catalog-btn">
-              <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
-              <div class="catalog-btn__text">Весь каталог</div>
-            </div>
-          </div>
-          <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
-            <div class="information information--location">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">Москва</div>
-                <div class="information__describe">З магазина в городе</div>
-              </div>
-            </div>
-          </div>
-          <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
-            <div class="information">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">8 800 100-41-69</div>
-                <div class="information__describe">Бесплатно по России</div>
-              </div>
-            </div></a>
-          <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
-            <div class="cart-btn">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
-              </svg>
-              <div class="cart-btn__count">54</div>
-            </div>
-            <div class="cart-popup js-cart-popup">
-              <div class="cart-popup__header">
-                <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
-              </div>
-              <div class="cart-popup__main">
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-popup__footer">
-                <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
-            <div class="search-btn">
-              <svg class="icon search-btn__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
-              </svg>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="header__catalog container js-catalog">
-        <div class="catalog">
-          <div class="catalog__row row row--2">
-            <div class="catalog__category col-sm-4">
-              <!-- a(href="#").catalog__category-title Обувь-->
-              <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
-            </div>
-            <div class="col-sm-8">
-              <div class="catalog__section row" data-for-section="1">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+        <div class="modal modal--biggest modal--np js-modal" data-modal="product">
+          <div class="modal__content">
+            <div class="product-min">
+              <div class="product-min__item">
+                <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
+                <div class="product-min__content">
+                  <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
+                  <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
                 </div>
               </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="2">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+              <form class="product-min__item">
+                <div class="product-min__title">Наличие товара</div>
+                <div class="product-min__content product-min__content--bold">
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                <div class="form-group">
+                  <div class="product-size__title product-size__title--min">Выберите размер:</div>
+                  <div class="product-size__sizes">
+                    <div class="product-size__group"></div>
+                    <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
+                    <label class="product-size__label" for="product-size-s-2">s</label>
+                    <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-m-2">m</label>
+                    <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-l-2">l</label>
+                    <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-xl-2">xl</label>
+                  </div>
                 </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="3">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                <div class="form-group">
+                  <button class="button button--min" type="submit">Забрать в этом магазине</button>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
-                </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="4">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
+              </form>
+              <div class="product-min__item">
+                            <div class="gmap-wrap gmap-wrap--min">
+                              <div class="gmap-overlay"></div>
+                              <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
+                            </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <div class="page-head">
-      <div class="page-head__container">
-        <div class="page-head__title">Корзина</div>
-        <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Корзина</a></div>
-      </div>
-    </div>
-    <main class="main container">
-      <div class="cart">
-        <div class="cart__items">
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                    <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
-                      <li>- Белинского 38, ул. Белинского, дом 38</li>
-                      <li>- м. Лесная, Полюстровский</li>
-                      <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
-                      <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
-                      <li>- Интернет магазин</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">6850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
-                  <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">16850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                    <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
-                      <li>- Белинского 38, ул. Белинского, дом 38</li>
-                      <li>- м. Лесная, Полюстровский</li>
-                      <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
-                      <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
-                      <li>- Интернет магазин</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">6850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
-                  <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">16850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                    <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
-                      <li>- Белинского 38, ул. Белинского, дом 38</li>
-                      <li>- м. Лесная, Полюстровский</li>
-                      <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
-                      <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
-                      <li>- Интернет магазин</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">6850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
-                  <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">16850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                    <ul class="cart-item__addresses js-cart-item-addresses">Наличие:
-                      <li>- Белинского 38, ул. Белинского, дом 38</li>
-                      <li>- м. Лесная, Полюстровский</li>
-                      <li>- пр., д.80/84 пом.D33 3 этаж ТРЦ "Европолис"</li>
-                      <li>- м. Пионерская, Коломяжский проспект, д.17, к.2, литера А, помещение 364</li>
-                      <li>- Интернет магазин</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">6850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a>
-                  <div class="cart-item__button button button--inverse js-modal-trigger" data-modal="cart">Наличие в магазинах</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-item-wrap">
-            <div class="cart-item">
-              <div class="cart-item__item cart-item__item--image">
-                <div class="cart-item__image" style="background-image: url('img/cart-image-2.jpg');"></div>
-              </div>
-              <div class="cart-item__details">
-                <div class="cart-item__item cart-item__item--content">
-                  <div class="cart-item__content"><a class="cart-item__name js-cart-item-name" href="#">Куртка сноубордическая DAKINE 15К MENS ZONE JACKET ORANGE / GUNMETAL</a>
-                    <div class="cart-item__size">Размер: L</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--prices">
-                  <div class="cart-item__prices">
-                    <div class="cart-item__price-per-one">6850₽</div>
-                    <div class="cart-item__count">
-                      <div class="count">
-                        <input class="count__input" type="number" min="1" max="20" value="1" id="count"/>
-                        <svg class="icon count__icon count__control--down">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-minus"></use>
-                        </svg>
-                        <div class="count__control count__control--number"></div>
-                        <svg class="icon count__icon count__control--up">
-                          <use xlink:href="img/svg-sprites/sprite.svg#icon-plus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="cart-item__price-total">16850₽</div>
-                  </div>
-                </div>
-                <div class="cart-item__item cart-item__item--action">
-                  <div class="cart-item__action">
-                    <div class="cart-item__action-text">Удалить</div>
-                    <svg class="icon cart-item__action-icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-close"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item cart-item--mobile">
-              <div class="cart-item__item">
-                <div class="cart-item__content"><a class="cart-item__name js-cart-item-name-mobile" href="#"></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="cart__total row row--2">
-            <div class="col-lg-2 col-lg-offset-8 cart__total-total">Итого: <span>34565P</span></div>
-          </div>
+        <div class="overlay"></div>
+        <div class="modal js-modal" data-modal="cart">
+          <div class="modal__content js-cart-modal"></div>
         </div>
-        <div class="cart__ordering">
-          <form class="cart-ordering">
-            <div class="cart-ordering__title">Оформление заказа:</div>
-            <div class="cart-ordering__content row row--2">
-              <div class="col-md-6 no-padding">
-                <div class="cart-ordering__registered js-cart-order">
-                  <div class="form-group">
-                    <div class="checkbox checkbox--big">
-                      <input class="checkbox__input cart-ordering__radio" type="radio" checked="true" name="user-type" value="user-type" id="registered-user"/>
-                      <label class="checkbox__label" for="registered-user">
-                        <div class="checkbox__box">
-                          <svg class="icon checkbox__icon">
-                            <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                          </svg>
-                        </div>
-                        <div class="checkbox__name">Я зарегистрированный пользователь</div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="email" placeholder="Email адрес" name="reg-email"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="password" placeholder="Пароль" name="reg-password"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-info">Если вы зарегистрированны и не авторизуетесь, все скидки и бонусы, накопленные ранее не будут учтены в дальнейших заказах.</div>
-                  </div>
-                  <div class="form-group"><a class="form-link" href="#">Забыли пароль?</a></div>
-                </div>
-              </div>
-              <div class="col-md-6 no-padding">
-                <div class="cart-ordering__not-registered js-cart-order">
-                  <div class="form-group">
-                    <div class="checkbox checkbox--big">
-                      <input class="checkbox__input cart-ordering__radio" type="radio" name="user-type" value="user-type" id="not-registered-user"/>
-                      <label class="checkbox__label" for="not-registered-user">
-                        <div class="checkbox__box">
-                          <svg class="icon checkbox__icon">
-                            <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                          </svg>
-                        </div>
-                        <div class="checkbox__name">Я новый пользователь</div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="email" placeholder="Email адрес" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="text" placeholder="Фамилия" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="text" placeholder="Имя" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="text" placeholder="Отчество" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="text" placeholder="Телефон" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="password" placeholder="Пароль" disabled="disabled"/>
-                    </div>
-                    <div class="form-inner-group">
-                      <input class="input input--form" type="password" placeholder="Подтверждение пароля" disabled="disabled"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cart-ordering__bottom">
-              <div class="checkbox cart-ordering__confirm">
-                <input class="checkbox__input" type="checkbox" name="cart-order-confirm" value="cart-order-confirm" id="cart-order-confirm"/>
-                <label class="checkbox__label" for="cart-order-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Нажимая кнопку «Продолжить», я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных и соглашаюсь с офертой</div>
-                </label>
-              </div>
-              <button class="button" type="submit">Продолжить</button>
+      </div>
+      <div class="subscription">
+        <div class="subscription__container container">
+          <form class="subscription-form">
+            <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
+            <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
+            <div class="subscription-form__form">
+              <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
+              <button type="submit">
+                <svg class="icon subscription-form__icon">
+                  <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
       </div>
-    </main>
-    <div class="modal js-modal" data-modal="city">
-      <div class="modal__content">
-        <div class="modal__title modal__item">Где вы находитесь?</div>
-        <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
-        <div class="modal__title modal__item">Другой город?</div>
-        <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
-        <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
-      </div>
-    </div>
-    <div class="modal js-modal" data-modal="city-accept">
-      <div class="modal__content">
-        <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
-        <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
-        <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
-      </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="registration">
-      <div class="modal__content">
-        <div class="registration">
-          <div class="registration__title">Регистрация</div>
-          <div class="registration__content">
-            <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
-            <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="col-md-4 col-sm-5 footer--about">
+            <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
+              <p>Федеральная сеть бордшопов, основанная 2003 году</p>
+              <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
+              <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
+            </div>
           </div>
-          <form class="registration__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Фамилия"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Имя"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Отчество"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Телефон"/>
-              </div>
-              <div class="form-inner-group">
-                <div class="select-wrap select-wrap--form">
-                  <select class="select-wrap__field">
-                    <option>Пол</option>
-                    <option>Мужской</option>
-                    <option>Женский</option>
-                  </select>
+          <div class="footer__menus col-md-4 col-sm-7 footer--menus">
+            <div class="footer__menu">
+              <div class="footer__menu-title">Помощь</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-title">Мы в соцсетях</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
+            <div class="footer__info">
+              <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
+                <div class="footer__info-text">
+                  <p>По будням с 9.00 до 20.00</p>
+                  <p>По субботам с 10.00 до 18.00</p>
                 </div>
               </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-label">Введите символы с картинки</div>
-              <div class="form-double">
-                <input class="input input--form" type="text" placeholder="Капча"/>
-                <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
-                <label class="checkbox__label" for="registration-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="login">
-      <div class="modal__content">
-        <div class="auth-form">
-          <div class="auth-form__title">Авторизация:</div>
-          <form class="auth-form__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-            </div>
-            <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
-                <label class="checkbox__label" for="auth-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Войти</button>
-            </div>
-          </form>
-          <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--medium js-modal" data-modal="oneclick">
-      <div class="modal__content">
-        <form class="form-one">
-          <div class="form-one__title">Быстрый заказ в 1 клик</div>
-          <div class="form-group">
-            <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
-          </div>
-          <div class="form-group">
-            <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
-            <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
-          </div>
-          <div class="form-group">
-            <button class="button" type="submit">Заказать</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="modal modal--biggest modal--np js-modal" data-modal="product">
-      <div class="modal__content">
-        <div class="product-min">
-          <div class="product-min__item">
-            <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
-            <div class="product-min__content">
-              <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
-              <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
-            </div>
-          </div>
-          <form class="product-min__item">
-            <div class="product-min__title">Наличие товара</div>
-            <div class="product-min__content product-min__content--bold">
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-            </div>
-            <div class="form-group">
-              <div class="product-size__title product-size__title--min">Выберите размер:</div>
-              <div class="product-size__sizes">
-                <div class="product-size__group"></div>
-                <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
-                <label class="product-size__label" for="product-size-s-2">s</label>
-                <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-m-2">m</label>
-                <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-l-2">l</label>
-                <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-xl-2">xl</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--min" type="submit">Забрать в этом магазине</button>
-            </div>
-          </form>
-          <div class="product-min__item">
-                    <div class="gmap-wrap gmap-wrap--min">
-                      <div class="gmap-overlay"></div>
-                      <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
-                    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="modal js-modal" data-modal="cart">
-      <div class="modal__content js-cart-modal"></div>
-    </div>
-    <div class="subscription">
-      <div class="subscription__container container">
-        <form class="subscription-form">
-          <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
-          <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
-          <div class="subscription-form__form">
-            <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
-            <button type="submit">
-              <svg class="icon subscription-form__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="col-md-4 col-sm-5 footer--about">
-          <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
-            <p>Федеральная сеть бордшопов, основанная 2003 году</p>
-            <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
-            <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
-          </div>
-        </div>
-        <div class="footer__menus col-md-4 col-sm-7 footer--menus">
-          <div class="footer__menu">
-            <div class="footer__menu-title">Помощь</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
-          </div>
-          <div class="footer__menu">
-            <div class="footer__menu-title">Мы в соцсетях</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
-          </div>
-        </div>
-        <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
-          <div class="footer__info">
-            <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
-              <div class="footer__info-text">
-                <p>По будням с 9.00 до 20.00</p>
-                <p>По субботам с 10.00 до 18.00</p>
-              </div>
-            </div>
-            <div class="footer__info-payment">
-              <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
-              <div class="footer__info-text">
-                <p>Доставляем курьером, почтой, в постматы</p>
-                <p>и в пункты выдачи по России</p>
+              <div class="footer__info-payment">
+                <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
+                <div class="footer__info-text">
+                  <p>Доставляем курьером, почтой, в постматы</p>
+                  <p>и в пункты выдачи по России</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <svg class="icon up js-up">
-      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-    </svg>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/commons.js"></script>
-    <script src="js/app.js"></script>
+      </footer>
+      <svg class="icon up js-up">
+        <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
+      </svg>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/commons.js"></script>
+      <script src="js/app.js"></script>
+    </div>
   </body>
 </html>

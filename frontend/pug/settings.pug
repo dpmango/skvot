@@ -4,15 +4,17 @@ html(lang="en")
         title Skvot Project
         include common/head
     body(data-page="settings")
-        include ../commons/Header/header
-        include ../containers/PageHead/pageHeadSettings
-        main.main.container
-          include ../containers/Settings/settings
-        //- modals
-        include common/modals
-        include ../containers/Modals/cartItemMobile
+        .page
+          .page__content
+            include ../commons/Header/header
+            include ../containers/PageHead/pageHeadSettings
+            main.main.container
+              include ../containers/Settings/settings
+            //- modals
+            include common/modals
+            include ../containers/Modals/cartItemMobile
 
-        include ../commons/Subscription/subscription
-        include ../commons/Footer/footer
-        include ../components/UI/up/up
-        include common/scripts
+          include ../commons/Subscription/subscription
+          include ../commons/Footer/footer
+          include ../components/UI/up/up
+          include common/scripts

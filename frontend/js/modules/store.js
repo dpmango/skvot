@@ -7,7 +7,6 @@ export let store = {
   sliderArrowPrev: '.js-slick-prev',
   sliderArrowNext: '.js-slick-next',
   init () {
-    console.log(slick)
     var slick = $(this.slider).slick({
       slidesToShow: 1,
       arrows: false,

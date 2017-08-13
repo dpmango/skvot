@@ -10,567 +10,571 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
   </head>
   <body data-page="delivery">
-    <header class="header">
-      <div class="header__top">
-        <div class="container header__container header__container--top">
-          <div class="header__top-content">
-            <div class="header__menu">
-              <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
-            </div>
-            <div class="header__auth">
-              <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
-                <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+    <div class="page">
+      <div class="page__content">
+        <header class="header">
+          <div class="header__top">
+            <div class="container header__container header__container--top">
+              <div class="header__top-content">
+                <div class="header__menu">
+                  <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="delivery.html">Доставка и оплата</a><a class="menu__item" href="address.html">Наши магазины</a><a class="menu__item" href="blog-list.html">Блог</a><a class="menu__item" href="team.html">Команда</a><a class="menu__item" href="about.html">О сквоте</a><a class="menu__item" href="brands.html">Бренды</a></nav>
+                </div>
+                <div class="header__auth">
+                  <div class="auth"><a class="auth__element js-modal-trigger" href="#" data-modal="login">Войти</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="registration">Регистрация</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="oneclick">One click</a>
+                    <div class="auth__element auth__element--divider">/</div><a class="auth__element js-modal-trigger" href="#" data-modal="product">Product</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="header__bottom">
+            <div class="container header__container">
+              <div class="header__item header__item--search-field col-sm-1 js-search">
+                <form class="search" id="search">
+                  <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
+                  <div class="search__overlay"></div>
+                </form>
+              </div>
+              <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
+                <div class="catalog-btn">
+                  <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
+                  <div class="catalog-btn__text">Весь каталог</div>
+                </div>
+              </div>
+              <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
+                <div class="information information--location">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">Москва</div>
+                    <div class="information__describe">З магазина в городе</div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
+                <div class="information">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <div class="information__content">
+                    <div class="information__title">8 800 100-41-69</div>
+                    <div class="information__describe">Бесплатно по России</div>
+                  </div>
+                </div></a>
+              <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
+                <div class="cart-btn">
+                  <svg class="icon information__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                  <div class="cart-btn__count">54</div>
+                </div>
+                <div class="cart-popup js-cart-popup">
+                  <div class="cart-popup__header">
+                    <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
+                  </div>
+                  <div class="cart-popup__main">
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-popup-item">
+                      <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
+                      <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
+                        <div class="cart-popup-item__price">
+                          <div class="cart-popup-item__price-old">9854 ₽</div>
+                          <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
+                        </div>
+                        <ul class="cart-popup-item__description">
+                          <li>Цвет: Белый</li>
+                          <li>Размер: 178</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-popup__footer">
+                    <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
+                <div class="search-btn">
+                  <svg class="icon search-btn__icon">
+                    <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__catalog container js-catalog">
+            <div class="catalog">
+              <div class="catalog__row row row--2">
+                <div class="catalog__category col-sm-4">
+                  <!-- a(href="#").catalog__category-title Обувь-->
+                  <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="catalog__section row" data-for-section="1">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="2">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="3">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                    </div>
+                  </div>
+                  <!-- next section-->
+                  <div class="catalog__section row" data-for-section="4">
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                    <div class="catalog__category col-sm-6">
+                      <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="page-head page-head--darken" style="background-image: url('img/delivery.jpg');">
+          <div class="page-head__container">
+            <div class="page-head__title">Доставка и оплата</div>
+            <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Доставка и оплата</a></div>
+          </div>
         </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container header__container">
-          <div class="header__item header__item--search-field col-sm-1 js-search">
-            <form class="search" id="search">
-              <input class="search__input" type="text" placeholder="Введите слово для поиска" name="search"/>
-              <div class="search__overlay"></div>
+        <main class="main container">
+          <div class="delivery">
+            <div class="delivery__info">
+              Вы можете выбрать любой удобный Вам способ доставки и оплаты Вашего заказа. <br>
+              На этой странице приведена сводная информация о видах доставки и оплаты, более подробную информацию о доставке в конкретный город вы можете узнать, выбрав из списка ваш город на этой странице, или в процессе оформления заказа в корзине нашего магазина, где так же Вы найдете информацию о точной стоимости доставки Вашего заказа. Мы гарантируем, что доставка Вашего заказа будет стоить именно столько, сколько указано на нашем сайте.
+              
+              <div class="delivery__info-bottom">Не нашли свой населенный пункт? — Укажите область или край. Стоимость доставки уточнит оператор перед отправкой заказа.</div>
+            </div>
+            <form class="delivery__search">
+              <div class="form-group form-group-input-btn">
+                <input class="input input--form" type="text" placeholder="Введите ваш город"/>
+                <button class="button">Узнать</button>
+              </div>
+            </form>
+            <div class="delivery__navigation alphabet-navigation">
+                        <div class="letter-nav">
+                          <div class="letter-nav__item js-letter-nav" data-section="главные">главные</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="а">а</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="б">б</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="в">в</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="д">д</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="е">е</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="з">з</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="и">и</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="к">к</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="л">л</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="м">м</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="н">н</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="о">о</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="п">п</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="р">р</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="с">с</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="т">т</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="у">у</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="х">х</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="ч">ч</div>
+                          <div class="letter-nav__item js-letter-nav" data-section="я">я</div>
+                        </div>
+            </div>
+            <div class="alphabet delivery__content">
+                        <div class="letter-section js-letter-section letter-section--no-title letter-section--no-up" data-section="главные">
+                          <div class="letter-section__letter">главные</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Москва</a><a class="letter-section__item" href="#">Московская область</a><a class="letter-section__item" href="#">Санкт-Петербург</a><a class="letter-section__item" href="#">Ленинградская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="а">
+                          <div class="letter-section__letter">а</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Адыгея республика</a><a class="letter-section__item" href="#">Алтай республика</a><a class="letter-section__item" href="#">Алтайский край</a><a class="letter-section__item" href="#">Амурская область</a><a class="letter-section__item" href="#">Архангельская область</a><a class="letter-section__item" href="#">Астраханская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="б">
+                          <div class="letter-section__letter">б</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Белгородская область</a><a class="letter-section__item" href="#">Брянская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="в">
+                          <div class="letter-section__letter">в</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Владимирская область</a><a class="letter-section__item" href="#">Волгоградская область</a><a class="letter-section__item" href="#">Вологодская область</a><a class="letter-section__item" href="#">Воронежская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="д">
+                          <div class="letter-section__letter">д</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Дагестан республика</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="е">
+                          <div class="letter-section__letter">е</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Еврейская автономная область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="з">
+                          <div class="letter-section__letter">з</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Забайкальский край</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="и">
+                          <div class="letter-section__letter">и</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Ивановская область</a><a class="letter-section__item" href="#">Ингушетия республика</a><a class="letter-section__item" href="#">Иркутская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="к">
+                          <div class="letter-section__letter">к</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Калининградская область</a><a class="letter-section__item" href="#">Калмыкия республика</a><a class="letter-section__item" href="#">Калужская область</a><a class="letter-section__item" href="#">Камчатский край</a><a class="letter-section__item" href="#">Карачаево-Черкесская республика</a><a class="letter-section__item" href="#">Кемеровская область</a><a class="letter-section__item" href="#">Кировская область</a><a class="letter-section__item" href="#">Костромская область</a><a class="letter-section__item" href="#">Краснодарский край</a><a class="letter-section__item" href="#">Красноярский край</a><a class="letter-section__item" href="#">Курганская область</a><a class="letter-section__item" href="#">Курская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="л">
+                          <div class="letter-section__letter">л</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Липецкая область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="м">
+                          <div class="letter-section__letter">м</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Магаданская область</a><a class="letter-section__item" href="#">Мурманская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="н">
+                          <div class="letter-section__letter">н</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Нижегородская область</a><a class="letter-section__item" href="#">Новгородская область</a><a class="letter-section__item" href="#">Новосибирская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="о">
+                          <div class="letter-section__letter">о</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Омская область</a><a class="letter-section__item" href="#">Оренбургская область</a><a class="letter-section__item" href="#">Орловская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="п">
+                          <div class="letter-section__letter">п</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Пензенская область</a><a class="letter-section__item" href="#">Пермский край</a><a class="letter-section__item" href="#">Приморский край</a><a class="letter-section__item" href="#">Псковская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="р">
+                          <div class="letter-section__letter">р</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Республика Башкортостан</a><a class="letter-section__item" href="#">Республика Бурятия</a><a class="letter-section__item" href="#">Республика Кабардино-Балкарская</a><a class="letter-section__item" href="#">Республика Карелия</a><a class="letter-section__item" href="#">Республика Коми</a><a class="letter-section__item" href="#">Республика Крым</a><a class="letter-section__item" href="#">Республика Марий Эл</a><a class="letter-section__item" href="#">Республика Мордовия</a><a class="letter-section__item" href="#">Республика Саха (Якутия)</a><a class="letter-section__item" href="#">Республика Татарстан</a><a class="letter-section__item" href="#">Республика Удмуртская</a><a class="letter-section__item" href="#">Республика Хакасия</a><a class="letter-section__item" href="#">Ростовская область</a><a class="letter-section__item" href="#">Рязанская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="с">
+                          <div class="letter-section__letter">с</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Самарская область</a><a class="letter-section__item" href="#">Саратовская область</a><a class="letter-section__item" href="#">Сахалинская область</a><a class="letter-section__item" href="#">Свердловская область</a><a class="letter-section__item" href="#">Северная Осетия республика</a><a class="letter-section__item" href="#">Смоленская область</a><a class="letter-section__item" href="#">Ставропольский край</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="т">
+                          <div class="letter-section__letter">т</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Тамбовская область</a><a class="letter-section__item" href="#">Тверская область</a><a class="letter-section__item" href="#">Томская область</a><a class="letter-section__item" href="#">Тульская область</a><a class="letter-section__item" href="#">Тыва республика</a><a class="letter-section__item" href="#">Тюменская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="у">
+                          <div class="letter-section__letter">у</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Ульяновская область</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="х">
+                          <div class="letter-section__letter">х</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Хабаровский край</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="ч">
+                          <div class="letter-section__letter">ч</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Челябинская область</a><a class="letter-section__item" href="#">Чеченская республика</a><a class="letter-section__item" href="#">Чувашская республика</a><a class="letter-section__item" href="#">Чукотский автономный округ</a>
+                          </div>
+                        </div>
+                        <div class="letter-section js-letter-section letter-section--no-up" data-section="я">
+                          <div class="letter-section__letter">я</div>
+                          <div class="letter-section__list"><a class="letter-section__item" href="#">Ярославская область</a>
+                          </div>
+                        </div>
+            </div>
+          </div>
+        </main>
+        <div class="modal js-modal" data-modal="city">
+          <div class="modal__content">
+            <div class="modal__title modal__item">Где вы находитесь?</div>
+            <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
+            <div class="modal__title modal__item">Другой город?</div>
+            <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
+            <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
+          </div>
+        </div>
+        <div class="modal js-modal" data-modal="city-accept">
+          <div class="modal__content">
+            <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
+            <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
+            <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="registration">
+          <div class="modal__content">
+            <div class="registration">
+              <div class="registration__title">Регистрация</div>
+              <div class="registration__content">
+                <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
+                <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
+              </div>
+              <form class="registration__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Фамилия"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Имя"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Отчество"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="text" placeholder="Телефон"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <div class="select-wrap select-wrap--form">
+                      <select class="select-wrap__field">
+                        <option>Пол</option>
+                        <option>Мужской</option>
+                        <option>Женский</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-label">Введите символы с картинки</div>
+                  <div class="form-double">
+                    <input class="input input--form" type="text" placeholder="Капча"/>
+                    <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
+                    <label class="checkbox__label" for="registration-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--big js-modal" data-modal="login">
+          <div class="modal__content">
+            <div class="auth-form">
+              <div class="auth-form__title">Авторизация:</div>
+              <form class="auth-form__form">
+                <div class="form-group">
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="email" placeholder="Email адрес"/>
+                  </div>
+                  <div class="form-inner-group">
+                    <input class="input input--form" type="password" placeholder="Пароль"/>
+                  </div>
+                </div>
+                <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
+                    <label class="checkbox__label" for="auth-confirm">
+                      <div class="checkbox__box">
+                        <svg class="icon checkbox__icon">
+                          <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                      </div>
+                      <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="button button--bs-2" type="submit">Войти</button>
+                </div>
+              </form>
+              <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal--medium js-modal" data-modal="oneclick">
+          <div class="modal__content">
+            <form class="form-one">
+              <div class="form-one__title">Быстрый заказ в 1 клик</div>
+              <div class="form-group">
+                <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
+              </div>
+              <div class="form-group">
+                <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
+                <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
+              </div>
+              <div class="form-group">
+                <button class="button" type="submit">Заказать</button>
+              </div>
             </form>
           </div>
-          <div class="header__item header__item--clickable js-catalog-btn col-lg-2 col-sm-1 col-xs-2">
-            <div class="catalog-btn">
-              <div class="catalog-btn__hamburger js-catalog-btn-hamburger"><span></span><span></span><span></span></div>
-              <div class="catalog-btn__text">Весь каталог</div>
-            </div>
-          </div>
-          <div class="header__item col-lg-2 col-sm-3 col-xs-2 header__item--clickable js-modal-trigger" data-modal="city-accept">
-            <div class="information information--location">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-marker"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">Москва</div>
-                <div class="information__describe">З магазина в городе</div>
-              </div>
-            </div>
-          </div>
-          <div class="header__item col-lg-4 col-sm-5 col-xs-6"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a></div><a class="header__item header__item--phone header__item--clickable col-lg-2 col-sm-1" href="tel:+88001004169">
-            <div class="information">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-phone"></use>
-              </svg>
-              <div class="information__content">
-                <div class="information__title">8 800 100-41-69</div>
-                <div class="information__describe">Бесплатно по России</div>
-              </div>
-            </div></a>
-          <div class="header__item col-sm-1 header__item--cart js-cart-trigger col-xs-2">
-            <div class="cart-btn">
-              <svg class="icon information__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-shopping-cart"></use>
-              </svg>
-              <div class="cart-btn__count">54</div>
-            </div>
-            <div class="cart-popup js-cart-popup">
-              <div class="cart-popup__header">
-                <div class="cart-popup__title">Моя корзина (<span>18</span>)</div><a class="cart-popup__clean" href="#">Очистить корзину</a>
-              </div>
-              <div class="cart-popup__main">
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cart-popup-item">
-                  <div class="cart-popup-item__image" style="background-image: url('img/cart-popup-1.png');"></div>
-                  <div class="cart-popup-item__content"><a class="cart-popup-item__title" href="#">СКЕЙТБОРД В СБОРЕ DUSTERS SS17 LOCOS WONG CRUISER WHITE 31 IN</a>
-                    <div class="cart-popup-item__price">
-                      <div class="cart-popup-item__price-old">9854 ₽</div>
-                      <div class="cart-popup-item__price-new">6854 ₽</div><a class="cart-popup-item__delete" href="#">Удалить</a>
-                    </div>
-                    <ul class="cart-popup-item__description">
-                      <li>Цвет: Белый</li>
-                      <li>Размер: 178</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-popup__footer">
-                <div class="cart-popup__total">Всего: <span>4299 ₽</span></div><a class="button" href="#"><span>Оформить заказ</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="header__item header__item--clickable header__item--search col-sm-1 js-search-btn">
-            <div class="search-btn">
-              <svg class="icon search-btn__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-search"></use>
-              </svg>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="header__catalog container js-catalog">
-        <div class="catalog">
-          <div class="catalog__row row row--2">
-            <div class="catalog__category col-sm-4">
-              <!-- a(href="#").catalog__category-title Обувь-->
-              <div class="catalog__category-items"><a class="catalog__category-section" href="#" data-section-id="1">Обувь</a><a class="catalog__category-section" href="#" data-section-id="2">Одежда</a><a class="catalog__category-section" href="#" data-section-id="3">Багаж</a><a class="catalog__category-section" href="#" data-section-id="4">Скейтбординг</a><a class="catalog__category-section" href="#" data-section-id="5">Сноуборд и лыжи</a><a class="catalog__category-section" href="#" data-section-id="6">Самокаты</a><a class="catalog__category-section" href="#" data-section-id="7">Водный спорт</a><a class="catalog__category-section" href="#" data-section-id="8">Защита</a><a class="catalog__category-section" href="#" data-section-id="9">Аксессуары</a><a class="catalog__category-section" href="#" data-section-id="10">сквот.дисконт<span class="catalog__discount-tag">-70%</span></a></div>
-            </div>
-            <div class="col-sm-8">
-              <div class="catalog__section row" data-for-section="1">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Футболки и майки</a><a class="catalog__category-item" href="#">Джинсы и брюки</a><a class="catalog__category-item" href="#">Шорты</a><a class="catalog__category-item" href="#">Толстовки</a><a class="catalog__category-item" href="#">Куртки</a><a class="catalog__category-item" href="#">Жилетки</a><a class="catalog__category-item" href="#">Рубашки</a><a class="catalog__category-item" href="#">Свитера</a><a class="catalog__category-item" href="#">Кепки</a><a class="catalog__category-item" href="#">Перчатки и варежки</a><a class="catalog__category-item" href="#">Нижнее бельё</a><a class="catalog__category-item" href="#">Шапки и шарфы</a><a class="catalog__category-item" href="#">Балаклавы</a><a class="catalog__category-item" href="#">Термобельё и лайкра</a><a class="catalog__category-item" href="#">Платья и юбки</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">Рюкзаки</a><a class="catalog__category-item" href="#">Сумки</a><a class="catalog__category-item" href="#">Сумки на колесах</a><a class="catalog__category-item" href="#">Женские сумочки</a><a class="catalog__category-item" href="#">Сумки на пояс</a><a class="catalog__category-item" href="#">Косметички</a><a class="catalog__category-item" href="#">Пеналы</a><a class="catalog__category-item" href="#">Чехлы для масок</a><a class="catalog__category-item" href="#">Чехлы для сноубордов</a><a class="catalog__category-item" href="#">Чехлы для лыж</a></div>
+        <div class="modal modal--biggest modal--np js-modal" data-modal="product">
+          <div class="modal__content">
+            <div class="product-min">
+              <div class="product-min__item">
+                <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
+                <div class="product-min__content">
+                  <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
+                  <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
                 </div>
               </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="2">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+              <form class="product-min__item">
+                <div class="product-min__title">Наличие товара</div>
+                <div class="product-min__content product-min__content--bold">
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
+                  <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка второй категории</a></div>
+                <div class="form-group">
+                  <div class="product-size__title product-size__title--min">Выберите размер:</div>
+                  <div class="product-size__sizes">
+                    <div class="product-size__group"></div>
+                    <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
+                    <label class="product-size__label" for="product-size-s-2">s</label>
+                    <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-m-2">m</label>
+                    <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-l-2">l</label>
+                    <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
+                    <label class="product-size__label" for="product-size-xl-2">xl</label>
+                  </div>
                 </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="3">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
+                <div class="form-group">
+                  <button class="button button--min" type="submit">Забрать в этом магазине</button>
                 </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка третьей категории</a></div>
-                </div>
-              </div>
-              <!-- next section-->
-              <div class="catalog__section row" data-for-section="4">
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
-                <div class="catalog__category col-sm-6">
-                  <div class="catalog__category-items"><a class="catalog__category-item" href="#">ссылка четвертой категории</a></div>
-                </div>
+              </form>
+              <div class="product-min__item">
+                            <div class="gmap-wrap gmap-wrap--min">
+                              <div class="gmap-overlay"></div>
+                              <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
+                            </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="overlay"></div>
       </div>
-    </header>
-    <div class="page-head page-head--darken" style="background-image: url('img/delivery.jpg');">
-      <div class="page-head__container">
-        <div class="page-head__title">Доставка и оплата</div>
-        <div class="breadcrumbs"><a class="breadcrumbs__link" href="index.html">Главная</a><a class="breadcrumbs__link" href="#">Доставка и оплата</a></div>
-      </div>
-    </div>
-    <main class="main container">
-      <div class="delivery">
-        <div class="delivery__info">
-          Вы можете выбрать любой удобный Вам способ доставки и оплаты Вашего заказа. <br>
-          На этой странице приведена сводная информация о видах доставки и оплаты, более подробную информацию о доставке в конкретный город вы можете узнать, выбрав из списка ваш город на этой странице, или в процессе оформления заказа в корзине нашего магазина, где так же Вы найдете информацию о точной стоимости доставки Вашего заказа. Мы гарантируем, что доставка Вашего заказа будет стоить именно столько, сколько указано на нашем сайте.
-          
-          <div class="delivery__info-bottom">Не нашли свой населенный пункт? — Укажите область или край. Стоимость доставки уточнит оператор перед отправкой заказа.</div>
-        </div>
-        <form class="delivery__search">
-          <div class="form-group form-group-input-btn">
-            <input class="input input--form" type="text" placeholder="Введите ваш город"/>
-            <button class="button">Узнать</button>
-          </div>
-        </form>
-        <div class="delivery__navigation alphabet-navigation">
-                <div class="letter-nav">
-                  <div class="letter-nav__item js-letter-nav" data-section="главные">главные</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="а">а</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="б">б</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="в">в</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="д">д</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="е">е</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="з">з</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="и">и</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="к">к</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="л">л</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="м">м</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="н">н</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="о">о</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="п">п</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="р">р</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="с">с</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="т">т</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="у">у</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="х">х</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="ч">ч</div>
-                  <div class="letter-nav__item js-letter-nav" data-section="я">я</div>
-                </div>
-        </div>
-        <div class="alphabet delivery__content">
-                <div class="letter-section js-letter-section letter-section--no-title letter-section--no-up" data-section="главные">
-                  <div class="letter-section__letter">главные</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Москва</a><a class="letter-section__item" href="#">Московская область</a><a class="letter-section__item" href="#">Санкт-Петербург</a><a class="letter-section__item" href="#">Ленинградская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="а">
-                  <div class="letter-section__letter">а</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Адыгея республика</a><a class="letter-section__item" href="#">Алтай республика</a><a class="letter-section__item" href="#">Алтайский край</a><a class="letter-section__item" href="#">Амурская область</a><a class="letter-section__item" href="#">Архангельская область</a><a class="letter-section__item" href="#">Астраханская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="б">
-                  <div class="letter-section__letter">б</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Белгородская область</a><a class="letter-section__item" href="#">Брянская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="в">
-                  <div class="letter-section__letter">в</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Владимирская область</a><a class="letter-section__item" href="#">Волгоградская область</a><a class="letter-section__item" href="#">Вологодская область</a><a class="letter-section__item" href="#">Воронежская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="д">
-                  <div class="letter-section__letter">д</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Дагестан республика</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="е">
-                  <div class="letter-section__letter">е</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Еврейская автономная область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="з">
-                  <div class="letter-section__letter">з</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Забайкальский край</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="и">
-                  <div class="letter-section__letter">и</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Ивановская область</a><a class="letter-section__item" href="#">Ингушетия республика</a><a class="letter-section__item" href="#">Иркутская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="к">
-                  <div class="letter-section__letter">к</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Калининградская область</a><a class="letter-section__item" href="#">Калмыкия республика</a><a class="letter-section__item" href="#">Калужская область</a><a class="letter-section__item" href="#">Камчатский край</a><a class="letter-section__item" href="#">Карачаево-Черкесская республика</a><a class="letter-section__item" href="#">Кемеровская область</a><a class="letter-section__item" href="#">Кировская область</a><a class="letter-section__item" href="#">Костромская область</a><a class="letter-section__item" href="#">Краснодарский край</a><a class="letter-section__item" href="#">Красноярский край</a><a class="letter-section__item" href="#">Курганская область</a><a class="letter-section__item" href="#">Курская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="л">
-                  <div class="letter-section__letter">л</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Липецкая область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="м">
-                  <div class="letter-section__letter">м</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Магаданская область</a><a class="letter-section__item" href="#">Мурманская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="н">
-                  <div class="letter-section__letter">н</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Нижегородская область</a><a class="letter-section__item" href="#">Новгородская область</a><a class="letter-section__item" href="#">Новосибирская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="о">
-                  <div class="letter-section__letter">о</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Омская область</a><a class="letter-section__item" href="#">Оренбургская область</a><a class="letter-section__item" href="#">Орловская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="п">
-                  <div class="letter-section__letter">п</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Пензенская область</a><a class="letter-section__item" href="#">Пермский край</a><a class="letter-section__item" href="#">Приморский край</a><a class="letter-section__item" href="#">Псковская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="р">
-                  <div class="letter-section__letter">р</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Республика Башкортостан</a><a class="letter-section__item" href="#">Республика Бурятия</a><a class="letter-section__item" href="#">Республика Кабардино-Балкарская</a><a class="letter-section__item" href="#">Республика Карелия</a><a class="letter-section__item" href="#">Республика Коми</a><a class="letter-section__item" href="#">Республика Крым</a><a class="letter-section__item" href="#">Республика Марий Эл</a><a class="letter-section__item" href="#">Республика Мордовия</a><a class="letter-section__item" href="#">Республика Саха (Якутия)</a><a class="letter-section__item" href="#">Республика Татарстан</a><a class="letter-section__item" href="#">Республика Удмуртская</a><a class="letter-section__item" href="#">Республика Хакасия</a><a class="letter-section__item" href="#">Ростовская область</a><a class="letter-section__item" href="#">Рязанская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="с">
-                  <div class="letter-section__letter">с</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Самарская область</a><a class="letter-section__item" href="#">Саратовская область</a><a class="letter-section__item" href="#">Сахалинская область</a><a class="letter-section__item" href="#">Свердловская область</a><a class="letter-section__item" href="#">Северная Осетия республика</a><a class="letter-section__item" href="#">Смоленская область</a><a class="letter-section__item" href="#">Ставропольский край</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="т">
-                  <div class="letter-section__letter">т</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Тамбовская область</a><a class="letter-section__item" href="#">Тверская область</a><a class="letter-section__item" href="#">Томская область</a><a class="letter-section__item" href="#">Тульская область</a><a class="letter-section__item" href="#">Тыва республика</a><a class="letter-section__item" href="#">Тюменская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="у">
-                  <div class="letter-section__letter">у</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Ульяновская область</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="х">
-                  <div class="letter-section__letter">х</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Хабаровский край</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="ч">
-                  <div class="letter-section__letter">ч</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Челябинская область</a><a class="letter-section__item" href="#">Чеченская республика</a><a class="letter-section__item" href="#">Чувашская республика</a><a class="letter-section__item" href="#">Чукотский автономный округ</a>
-                  </div>
-                </div>
-                <div class="letter-section js-letter-section letter-section--no-up" data-section="я">
-                  <div class="letter-section__letter">я</div>
-                  <div class="letter-section__list"><a class="letter-section__item" href="#">Ярославская область</a>
-                  </div>
-                </div>
-        </div>
-      </div>
-    </main>
-    <div class="modal js-modal" data-modal="city">
-      <div class="modal__content">
-        <div class="modal__title modal__item">Где вы находитесь?</div>
-        <div class="modal__cities modal__item"><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a><a href="#">Москва</a></div>
-        <div class="modal__title modal__item">Другой город?</div>
-        <input class="modal__input modal__item" type="text" placeholder="Введите свой город"/>
-        <div class="modal__addition modal__item">Не нашли свой  населенный пункт? Выберите область или <a href="#">нажмите сюда</a></div>
-      </div>
-    </div>
-    <div class="modal js-modal" data-modal="city-accept">
-      <div class="modal__content">
-        <div class="modal__addition modal__item">Ваш город: <strong>Нижний Новгорд?</strong></div>
-        <div class="modal__item modal__buttons"><a class="button button--modal" href="#">Да</a><a class="button button--modal button--transparent js-modal-trigger" href="#" data-modal="city">Нет, выбрать другой город</a></div>
-        <div class="modal__addition modal__item">От выбранного города зависит наличие товара и способы доставки</div>
-      </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="registration">
-      <div class="modal__content">
-        <div class="registration">
-          <div class="registration__title">Регистрация</div>
-          <div class="registration__content">
-            <p>Регистрация на нашем сайте не накладывает на вас никаких обязательств. Даже незарегистрированный пользователь, может искать и просматривать информацию о товарах, читать обзоры и рецензии, и откладывать товары в корзину.</p>
-            <p>Регистрация на сайте позволяет в дальнейшем существенно экономить время, так как те данные, что вы впишите в свой профиль автоматически будут вписаны в форму заказа. Кроме того, вы всегда можете посмотреть историю своих заказов.</p>
-          </div>
-          <form class="registration__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Фамилия"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Имя"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Отчество"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="text" placeholder="Телефон"/>
-              </div>
-              <div class="form-inner-group">
-                <div class="select-wrap select-wrap--form">
-                  <select class="select-wrap__field">
-                    <option>Пол</option>
-                    <option>Мужской</option>
-                    <option>Женский</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Подтверждение пароля"/>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-label">Введите символы с картинки</div>
-              <div class="form-double">
-                <input class="input input--form" type="text" placeholder="Капча"/>
-                <div class="registration__capcha" style="background-image: url('img/captcha.jpg');"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="registration-confirm" value="registration-confirm" id="registration-confirm"/>
-                <label class="checkbox__label" for="registration-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (офертой) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Зарегистрироваться</button>
+      <div class="subscription">
+        <div class="subscription__container container">
+          <form class="subscription-form">
+            <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
+            <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
+            <div class="subscription-form__form">
+              <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
+              <button type="submit">
+                <svg class="icon subscription-form__icon">
+                  <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
       </div>
-    </div>
-    <div class="modal modal--big js-modal" data-modal="login">
-      <div class="modal__content">
-        <div class="auth-form">
-          <div class="auth-form__title">Авторизация:</div>
-          <form class="auth-form__form">
-            <div class="form-group">
-              <div class="form-inner-group">
-                <input class="input input--form" type="email" placeholder="Email адрес"/>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="col-md-4 col-sm-5 footer--about">
+            <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
+              <p>Федеральная сеть бордшопов, основанная 2003 году</p>
+              <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
+              <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
+            </div>
+          </div>
+          <div class="footer__menus col-md-4 col-sm-7 footer--menus">
+            <div class="footer__menu">
+              <div class="footer__menu-title">Помощь</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-title">Мы в соцсетях</div>
+              <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
+            <div class="footer__info">
+              <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
+                <div class="footer__info-text">
+                  <p>По будням с 9.00 до 20.00</p>
+                  <p>По субботам с 10.00 до 18.00</p>
+                </div>
               </div>
-              <div class="form-inner-group">
-                <input class="input input--form" type="password" placeholder="Пароль"/>
-              </div>
-            </div>
-            <div class="form-group"><a class="link" href="#">Забыли пароль?</a></div>
-            <div class="form-group">
-              <div class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="auth-confirm" value="auth-confirm" id="auth-confirm"/>
-                <label class="checkbox__label" for="auth-confirm">
-                  <div class="checkbox__box">
-                    <svg class="icon checkbox__icon">
-                      <use xlink:href="img/svg-sprites/sprite.svg#icon-checkbox"></use>
-                    </svg>
-                  </div>
-                  <div class="checkbox__name">Я соглашаюсь с правилами интернет-магазина (<a href="#" class="link">офертой</a>) и даю согласие на обработку персональных данных</div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--bs-2" type="submit">Войти</button>
-            </div>
-          </form>
-          <div class="auth-form__title">Нет аккаунта?</div><a class="link js-modal-trigger" href="#" data-modal="registration">Зарегистрироваться</a>
-        </div>
-      </div>
-    </div>
-    <div class="modal modal--medium js-modal" data-modal="oneclick">
-      <div class="modal__content">
-        <form class="form-one">
-          <div class="form-one__title">Быстрый заказ в 1 клик</div>
-          <div class="form-group">
-            <input class="input input--form" type="text" placeholder="Введите ваш номер телефона"/>
-          </div>
-          <div class="form-group">
-            <p>Наш оператор свяжеться с вами в течении 15 минут.</p>
-            <p>Заказы обрабатываются с 10-18 с понедеьника по суботу</p>
-          </div>
-          <div class="form-group">
-            <button class="button" type="submit">Заказать</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="modal modal--biggest modal--np js-modal" data-modal="product">
-      <div class="modal__content">
-        <div class="product-min">
-          <div class="product-min__item">
-            <div class="product-min__image" style="background-image: url(img/product-1.jpg);"></div>
-            <div class="product-min__content">
-              <p>В течении 1 часа после того, как вы нажмете кнопку "Забронировать в магазине" вам поступит СМС с подтверждением бронирования и номером заказа. Только после этого товар можно будет забирать в магазине.</p>
-              <p>ВНИМАНИЕ: бронирование товара производится в рабочие время магазина. Т.е. если вы отправите заявку ночью - подтверждение брони ждите в первый час работы магазина на следующий день. Товар будет забронирован в указанном магазине на 3 дня.</p>
-            </div>
-          </div>
-          <form class="product-min__item">
-            <div class="product-min__title">Наличие товара</div>
-            <div class="product-min__content product-min__content--bold">
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-              <p>Полюстравский проспект, д.80/84 пом.Д33 3 этаж ТРЦ "Европолис"</p>
-            </div>
-            <div class="form-group">
-              <div class="product-size__title product-size__title--min">Выберите размер:</div>
-              <div class="product-size__sizes">
-                <div class="product-size__group"></div>
-                <input class="product-size__size" id="product-size-s-2" type="radio" name="product-size" disabled="true"/>
-                <label class="product-size__label" for="product-size-s-2">s</label>
-                <input class="product-size__size" id="product-size-m-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-m-2">m</label>
-                <input class="product-size__size" id="product-size-l-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-l-2">l</label>
-                <input class="product-size__size" id="product-size-xl-2" type="radio" name="product-size"/>
-                <label class="product-size__label" for="product-size-xl-2">xl</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <button class="button button--min" type="submit">Забрать в этом магазине</button>
-            </div>
-          </form>
-          <div class="product-min__item">
-                    <div class="gmap-wrap gmap-wrap--min">
-                      <div class="gmap-overlay"></div>
-                      <div class="gmap-map" id="gmap" data-image="img/mapmarker.png" data-lat="55.793989" data-lng="37.490245" data-disabledui="true"></div>
-                    </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="subscription">
-      <div class="subscription__container container">
-        <form class="subscription-form">
-          <div class="subscription-form__title">Подпишитесь на наш дайджест</div>
-          <div class="subscription-form__subtitle">Подпишитесь на новостную рассылку Сквот и будьте всегда в курсе всех новостей, распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.</div>
-          <div class="subscription-form__form">
-            <input type="text" placeholder="Пожалуйста, введите Email" name="email"/>
-            <button type="submit">
-              <svg class="icon subscription-form__icon">
-                <use xlink:href="img/svg-sprites/sprite.svg#icon-letter"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__container container">
-        <div class="col-md-4 col-sm-5 footer--about">
-          <div class="footer__about"><a class="logo" href="#"><img class="logo__image" src="img/logo.png"/></a>
-            <p>Федеральная сеть бордшопов, основанная 2003 году</p>
-            <p>Москва • Санкт-Петербург • Екатеринбург • Новосибирск • Нижний Новгород • Пермь • Волгоград</p>
-            <nav class="footer__about-menu"><a class="footer__about-menu-item" href="#">История компании</a><a class="footer__about-menu-item" href="#">Реквизиты</a><a class="footer__about-menu-item" href="#">Догово-оферта</a></nav>
-          </div>
-        </div>
-        <div class="footer__menus col-md-4 col-sm-7 footer--menus">
-          <div class="footer__menu">
-            <div class="footer__menu-title">Помощь</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">Доставка и оплата</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Адреса магазинов</a><a class="footer__menu-item" href="#">Написать руководству</a></div>
-          </div>
-          <div class="footer__menu">
-            <div class="footer__menu-title">Мы в соцсетях</div>
-            <div class="footer__menu-items"><a class="footer__menu-item" href="#">ВКонтакте</a><a class="footer__menu-item" href="#">Instagam</a><a class="footer__menu-item" href="#">Facebook</a><a class="footer__menu-item" href="#">Видеоканал Vimeo</a></div>
-          </div>
-        </div>
-        <div class="col-md-offset-1 col-md-3 col-sm-12 footer--info">
-          <div class="footer__info">
-            <div class="footer__info-number"><a class="footer__info-phone" href="tel:+88001004169">8 800 100-41-69</a>
-              <div class="footer__info-text">
-                <p>По будням с 9.00 до 20.00</p>
-                <p>По субботам с 10.00 до 18.00</p>
-              </div>
-            </div>
-            <div class="footer__info-payment">
-              <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
-              <div class="footer__info-text">
-                <p>Доставляем курьером, почтой, в постматы</p>
-                <p>и в пункты выдачи по России</p>
+              <div class="footer__info-payment">
+                <div class="footer__payment"><img src="img/master-card.png"/><img src="img/visa.png" style="height: 20px;"/></div>
+                <div class="footer__info-text">
+                  <p>Доставляем курьером, почтой, в постматы</p>
+                  <p>и в пункты выдачи по России</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <svg class="icon up js-up">
-      <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
-    </svg>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/commons.js"></script>
-    <script src="js/app.js"></script>
+      </footer>
+      <svg class="icon up js-up">
+        <use xlink:href="img/svg-sprites/sprite.svg#icon-up-arrow"></use>
+      </svg>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTub9rBglx5xxTHyB1A8bvXU18U0WYPxY" type="text/javascript"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/commons.js"></script>
+      <script src="js/app.js"></script>
+    </div>
   </body>
 </html>
