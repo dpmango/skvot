@@ -3,32 +3,38 @@
 // Autotasker
 //------------------------------
 
-const path = require('path');
-const del = require('del');
-const gulp = require('gulp');
-const gulplog = require('gulplog');
-const combine = require('stream-combiner2').obj;
+const path        = require('path');
+const del         = require('del');
+const gulp        = require('gulp');
+const gulplog     = require('gulplog');
+const combine     = require('stream-combiner2').obj;
 // const throttle = require('lodash.throttle');
-const debug = require('gulp-debug');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const debug       = require('gulp-debug');
+const sourcemaps  = require('gulp-sourcemaps');
+const sass        = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-const gulpIf = require('gulp-if');
-const cssnano = require('gulp-cssnano');
-const rev = require('gulp-rev');
-const revReplace = require('gulp-rev-replace');
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
-const uglify = require('gulp-uglify');
+const gulpIf      = require('gulp-if');
+const cssnano     = require('gulp-cssnano');
+const rev         = require('gulp-rev');
+const revReplace  = require('gulp-rev-replace');
+const plumber     = require('gulp-plumber');
+const notify      = require('gulp-notify');
+const uglify      = require('gulp-uglify');
 const AssetsPlugin = require('assets-webpack-plugin');
-const webpack = require('webpack');
-const notifier = require('node-notifier');
-const svgstore = require('gulp-svgstore');
-const inject = require('gulp-inject');
-const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const pug = require('gulp-pug');
-const image = require('gulp-image');
+const webpack     = require('webpack');
+const notifier    = require('node-notifier');
+const svgstore    = require('gulp-svgstore');
+const inject      = require('gulp-inject');
+const rename      = require('gulp-rename');
+const postcss     = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const short       = require('postcss-short');
+const svginline   = require('postcss-inline-svg');
+const sorting     = require('postcss-sorting');
+const pseudoel    = require('postcss-pseudoelements');
+const flexbugs    = require('postcss-flexbugs-fixes');
+const pug         = require('gulp-pug');
+const image       = require('gulp-image');
 
 var isDevelopment = process.env.NODE_ENV === 'production' ? false : true;
 console.log(process.env.NODE_ENV);
@@ -73,20 +79,39 @@ gulp.task('svg-icons', function() {
 // ========================================================
 // STYLES TASKS
 // ========================================================
+// PostCSS Processors
+var processors = [
+  short(),
+  svginline(),
+  autoprefixer({
+    browsers: ['last 10 versions'],
+    remove: true, // remove outdated prefixes?
+  }),
+  sorting(),
+  pseudoel(),
+  flexbugs()
+];
+
 gulp.task('styles', function() {
   return gulp.src('frontend/scss/collector.scss')
     .pipe(rename('index.scss'))
+    .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+    .pipe(sass())
     .pipe(plumber({
       errorHandler: notify.onError(err => ({
         title: 'Styles',
         message: err.message
       }))
     }))
-    .pipe(gulpIf(isDevelopment, sourcemaps.init()))
-    .pipe(sass())
+    .pipe(postcss(processors))
+    .pipe(plumber({
+      errorHandler: notify.onError(err => ({
+        title: 'Styles',
+        message: err.message
+      }))
+    }))
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulpIf(!isDevelopment, combine(cssnano(), rev())))
-    .pipe(autoprefixer())
     .pipe(gulp.dest('public/styles'))
     .pipe(gulpIf(!isDevelopment, combine(rev.manifest('css.json'), gulp.dest('manifest'))));
 });
