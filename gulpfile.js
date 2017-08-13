@@ -149,8 +149,8 @@ gulp.task('babel', function() {
 });
 
 gulp.task('script:lib', function() {
-  return gulp.src('frontend/js/libs/*.*')
-    .pipe(gulp.dest('public/js/'));
+  return gulp.src('frontend/static/libs/*.*')
+    .pipe(gulp.dest('public/js/libs/'));
 });
 
 // =========================
@@ -193,7 +193,7 @@ gulp.task('default',
         gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
         gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
         gulp.watch('frontend/js/main.js', gulp.series('babel'));
-        gulp.watch('frontend/js/libs/*.*', gulp.series('script:lib'));
+        gulp.watch('frontend/static/libs/*.*', gulp.series('script:lib'));
       }
     )
   )
