@@ -1,14 +1,16 @@
 import GMaps from 'gmaps'
 
-export let address = {
-  map: '#address-map',
-  overlay: '.address__map-overlay',
+export let sgmap = {
+  map: '#gmap',
+  overlay: '.gmap-overlay',
   init () {
     var self = this;
     var image = $(self.map).data('image');
-    var lat = $(self.map).data('lat');
-    var lng = $(self.map).data('lng');
+    var lat = parseFloat($(self.map).data('lat'));
+    var lng = parseFloat($(self.map).data('lng'));
+    var ui = $(self.map).data('disabledui');
     var map = new GMaps({
+    disableDefaultUI: ui,
       el: self.map,
       lat: lat,
       lng: lng,

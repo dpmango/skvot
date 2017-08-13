@@ -1,14 +1,29 @@
+require('simple-scrollbar')
 import GMaps from 'gmaps'
 
-export let address = {
-  map: '#address-map',
-  overlay: '.address__map-overlay',
+export let dgmap = {
+  map: '#gmap',
+  overlay: '.gmap-overlay',
+
+  listItem: '.delivery-point__list-item',
+  listItemActiveClass: 'delivery-point__list-item--active',
+  aboutItem: '.delivery-point__about',
+  aboutContent: '.delivery-point__abouts',
+  aboutClose: '.delivery-point__about-close',
+
+  content: '.delivery-point__content',
+  contentActive: 'delivery-point__content--active',
+  blocksTrigger: '.delivery-point__content-btn',
+  blocksTriggerActive: 'delivery-point__content-btn--active',
+  blocks: '.delivery-point__blocks',
+  blocksActive: 'delivery-point__blocks--active',
   init () {
     var self = this;
     var image = $(self.map).data('image');
-    var lat = $(self.map).data('lat');
-    var lng = $(self.map).data('lng');
+    var lat = parseFloat($(self.map).data('lat'));
+    var lng = parseFloat($(self.map).data('lng'));
     var map = new GMaps({
+      disableDefaultUI: true,
       el: self.map,
       lat: lat,
       lng: lng,
@@ -114,17 +129,43 @@ export let address = {
       icon: image
     })
 
-    $(this.overlay).on('click', (e) => {
-        e.stopPropagation();
-        this.hideOverlay(this.overlay)
+    $(this.listItem).on('click', function() {
+        self.onSelectItem(self, this)
     });
+    $(this.blocksTrigger).on('click', function() {
+        self.onOpenBlocks(self, this);
+    });
+    $(this.aboutClose).on('click', function() {
+        self.cleanSelected(self);
+    });
+  },
+  onOpenBlocks(vm, trigger) {
+    $(trigger).toggleClass(vm.blocksTriggerActive);
+    $(vm.blocks).toggleClass(vm.blocksActive);
+    $(vm.content).toggleClass(vm.contentActive)
+  },
+  onSelectItem (vm, item) {
+    if($(item).hasClass(vm.listItemActiveClass)) {
+        return false
+    }
 
-    $(document).on('click', () => { this.showOverlay(this.overlay) });
+    var currentAbout = $(vm.aboutItem + ':visible');
+
+    var listId = $(item).data('id');
+
+    vm.cleanSelected(vm);
+    $(item).addClass(vm.listItemActiveClass);
+
+    // Open another
+    let $about = $(vm.aboutItem + '[data-id="' + listId + '"]');
+    $about.css({
+        opacity: 1,
+        transform: 'translateX(100%)'
+    })
+
   },
-  hideOverlay (overlay) {
-    $(overlay).hide();
-  },
-  showOverlay (overlay) {
-    $(overlay).show();
+  cleanSelected (vm) {
+      $(vm.aboutItem).attr('style', '');
+      $(vm.listItem).removeClass(vm.listItemActiveClass);
   }
 }

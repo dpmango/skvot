@@ -34,6 +34,7 @@ const sorting     = require('postcss-sorting');
 const pseudoel    = require('postcss-pseudoelements');
 const flexbugs    = require('postcss-flexbugs-fixes');
 const pug         = require('gulp-pug');
+const babel       = require('gulp-babel');
 const image       = require('gulp-image');
 
 var isDevelopment = process.env.NODE_ENV === 'production' ? false : true;
@@ -232,6 +233,23 @@ gulp.task('webpack', function(callback) {
 });
 
 // =========================
+// JAVASCRIPT (without webpack)
+// =========================
+gulp.task('babel', function() {
+  return gulp.src('./frontend/es6/*.js')
+    .pipe(babel({
+        presets: ['es2015']
+    }))
+    .pipe(plumber({
+      errorHandler: notify.onError(err => ({
+        title: 'Babel',
+        message: err.message
+      }))
+    }))
+    .pipe(gulp.dest('./public/js'))
+});
+
+// =========================
 // CLEAN TASK
 // =========================
 gulp.task('clean', function() {
@@ -241,7 +259,7 @@ gulp.task('clean', function() {
 // =========================
 // BUILD START
 // =========================
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'webpack'), 'pug', 'svg-icons', 'images', 'fonts'));
+gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'webpack'), 'babel', 'pug', 'svg-icons', 'images', 'fonts'));
 
 
 
@@ -270,6 +288,7 @@ gulp.task('default',
         gulp.watch('frontend/**/*.pug', gulp.series('pug'));
         gulp.watch('frontend/img/svg-icons/*.svg', gulp.series('svg-icons'));
         gulp.watch('frontend/fonts/*.*', gulp.series('fonts'));
+        gulp.watch('frontend/es6/*.js', gulp.series('babel'));
       }
     )
   )
