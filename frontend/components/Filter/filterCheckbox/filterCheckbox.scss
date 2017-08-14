@@ -1,13 +1,14 @@
 .filter-checkbox {
 
   &__box {
+    position: static;
     padding: 0;
     margin-top: 15px;
   }
   &__box:not(:nth-child(-n+6)) {
     display: none;
     opacity: 0;
-    transform: scale(0.9);
+    // transform: scale(0.9);
   }
   &__all {
     padding: 10px 0;
@@ -31,12 +32,12 @@
     .filter-checkbox__box {
       display: block;
       opacity: 1;
-      transform: scale(1);
+      // transform: scale(1);
     }
     .filter-checkbox__box:not(:nth-child(-n+12)) {
       display: none;
       opacity: 0;
-      transform: scale(0.9);
+      // transform: scale(0.9);
     }
   }
 }

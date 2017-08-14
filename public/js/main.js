@@ -574,9 +574,12 @@ $(document).ready(function () {
   function showGoodsNumber(element) {
     $('.filter-aside__number').remove();
     if ($(element).is(':checked')) {
-      var numberElement = "<div class='filter-aside__number'>Показать 67 товаров</div>";
+      var yPos = $(element).parent().offset().top - $(element).closest('.filter-aside__section').offset().top - 2;
+      var numberElement = $("<div class='filter-aside__number'>Показать 67 товаров</div>").css('top', yPos + 'px');
       $(element).parent().append(numberElement);
       setTimeout(function () {
+        var numberElementWidth = numberElement.width();
+        numberElement.css('right', '-' + numberElementWidth + 'px');
         $(element).parent().find('.filter-aside__number').addClass('visible');
       }, 100);
     }

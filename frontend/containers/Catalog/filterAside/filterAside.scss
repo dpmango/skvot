@@ -64,7 +64,7 @@
     opacity: 0;
     position: absolute;
     top: -1px;
-    right: -60px;
+    right: -80px;
     z-index: 10;
     background: $c-blue;
     border-radius: 4px;
@@ -76,7 +76,7 @@
     box-shadow: rgba($c-blue, .4) 0px 5px 20px;
     transform: translate3d(15px,0,0);
     pointer-events: none;
-    transition: all .25s ease;
+    transition: transform .25s ease, opacity .25s ease;
     &.visible{
       opacity: 1;
       transform: translate3d(0,0,0);
