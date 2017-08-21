@@ -128,13 +128,21 @@
 @media #{$tablet} {
   .catalog {
     padding: 15px;
+    .col-sm-8{
+      display: none;
+    }
   }
   .catalog__category {
     min-height: 0;
+    padding: 0 15px;
   }
-  .catalog__category-items {
-    display: none;
+  .catalog__category-section{
+    font-size: 14px;
+    &:before{
+      display: none;
+    }
   }
+
   .catalog__category:after {
     border: none;
   }
