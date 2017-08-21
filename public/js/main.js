@@ -843,8 +843,23 @@ $(document).ready(function () {
     focusOnSelect: true
   });
 
-  $('.product-preview__slider-slide').magnificPopup({
+  $('.product-preview__slider').magnificPopup({
+    delegate: '.product-preview__slider-slide',
     type: 'image',
+    tLoading: 'Загрузка #%curr%...',
+    mainClass: 'mfp-img-mobile mfp-no-margins mfp-with-zoom',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1]
+    },
+    image: {
+      verticalFit: true,
+      tError: '<a href="%url%"Ошибка',
+      titleSrc: function titleSrc(item) {
+        return false;
+      }
+    },
     removalDelay: 500, //delay removal by X to allow out-animation
     callbacks: {
       beforeOpen: function beforeOpen() {
