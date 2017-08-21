@@ -562,6 +562,9 @@ $(document).ready(function() {
   $('.filter-checkbox__box input').on('change', function(e){
     showGoodsNumber(this);
   })
+  $('.color__input').on('change', function(e){
+    showGoodsNumber(this);
+  })
 
   function openCheckboxes(element) {
       let checkboxes = $(element).closest('.filter-checkbox').find('.filter-checkbox__box:hidden').toArray();
