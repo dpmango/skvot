@@ -36,9 +36,9 @@ form.filter-aside
     .filter-aside__title 
       span Размер
       .filter-aside__sizes
-        span см
-        span.active euro
-        span us
+        span(data-size='sm') см
+        span(data-size='euro').active euro
+        span(data-size='us') us
     .filter-aside__content
       include ../../../components/Filter/filterCheckbox/filterCheckboxSizes
   .filter-aside__section

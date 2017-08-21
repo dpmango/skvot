@@ -1,5 +1,10 @@
 .filter-checkbox {
-
+  &[data-for]{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
   &__box {
     position: static;
     padding: 0;

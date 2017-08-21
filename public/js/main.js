@@ -596,6 +596,16 @@ $(document).ready(function () {
     $showAllButtons.css('display', 'block');
   };
 
+  // filter
+  $('.filter-aside__sizes span').on('click', function () {
+    var currentSize = $(this).data('size');
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $('.filter-checkbox').removeClass('active');
+    $('.filter-checkbox[data-for=' + currentSize + ']').addClass('active');
+  });
+
   // color.js
   $('.color').each(function (index, item) {
     var isLight = Boolean($(item).data('light'));
