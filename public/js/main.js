@@ -272,19 +272,19 @@ $(document).ready(function () {
   $('.js-modal-trigger').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    closeModals();
+    closeModals2();
     var modal = $(this).data('modal');
     $('.js-modal[data-modal="' + modal + '"]').addClass('modal--visible').find('.modal__content').scrollTop(0);
     $('body').css('overflow', 'hidden');
   });
   $('.js-modal').on('click', function () {
-    closeModals();
+    closeModals2();
   });
   $('.js-modal').children('.modal__content').on('click', function (e) {
     e.stopPropagation();
   });
 
-  function closeModals() {
+  function closeModals2() {
     $('.js-modal').removeClass('modal--visible');
     $('body').css('overflow', 'visible');
   }
@@ -882,12 +882,12 @@ $(document).ready(function () {
   mediaCheck({
     media: media.tablet,
     entry: function entry() {
-      $('.product__description-second').empty();
-      $('.product__description').html(descriptionContainer);
-    },
-    exit: function exit() {
       $('.product__description').empty();
       $('.product__description-second').html(descriptionContainer);
+    },
+    exit: function exit() {
+      $('.product__description-second').empty();
+      $('.product__description').html(descriptionContainer);
     },
     both: function both() {}
   });
@@ -989,7 +989,7 @@ $(document).ready(function () {
   $('.js-slider-preview').slick({
     slidesToShow: 6,
     infinite: true,
-    asNavFor: this.slider,
+    asNavFor: $('.js-slider'),
     focusOnSelect: true,
     responsive: [{
       breakpoint: 768,
@@ -1138,11 +1138,11 @@ $(document).ready(function () {
   });
 
   function hideOverlay(overlay) {
-    $(overlay).hide();
+    // $(overlay).hide();
   }
-  function showOverlay(overlay) {
-    $(overlay).show();
-  }
+  function showOverlay(overlay) {}
+  // $(overlay).show();
+
 
   // gmap.delivery.js
   if (page === "delivery-point") {
@@ -1248,12 +1248,16 @@ $(document).ready(function () {
         }]
       }]
     });
-    map.addMarker({
+    var marker = map.addMarker({
       position: {
         lat: lat,
         lng: lng
       },
       icon: image
+    });
+
+    marker.addListener('click', function () {
+      console.log('hello');
     });
 
     $('.delivery-point__list-item').on('click', function () {
@@ -1265,6 +1269,9 @@ $(document).ready(function () {
     $('.delivery-point__about-close').on('click', function () {
       cleanSelected();
     });
+
+    // show by Default
+    onOpenBlocks($('.delivery-point__content-btn'));
   }
 
   // svg

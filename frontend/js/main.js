@@ -271,7 +271,7 @@ $(document).ready(function() {
   $('.js-modal-trigger').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    closeModals();
+    closeModals2();
     let modal = $(this).data('modal');
     $('.js-modal[data-modal="' + modal + '"]' )
       .addClass('modal--visible')
@@ -279,10 +279,10 @@ $(document).ready(function() {
       .scrollTop(0);
     $('body').css('overflow', 'hidden');
   });
-  $('.js-modal').on('click', () => { closeModals() })
+  $('.js-modal').on('click', () => { closeModals2() })
   $('.js-modal').children('.modal__content').on('click', (e) => { e.stopPropagation()  })
 
-  function closeModals () {
+  function closeModals2() {
     $('.js-modal').removeClass('modal--visible');
     $('body').css('overflow', 'visible');
   }
@@ -894,12 +894,12 @@ $(document).ready(function() {
   mediaCheck({
     media: media.tablet,
     entry: () => {
-      $('.product__description-second').empty();
-      $('.product__description').html(descriptionContainer);
-    },
-    exit: () => {
       $('.product__description').empty();
       $('.product__description-second').html(descriptionContainer);
+    },
+    exit: () => {
+      $('.product__description-second').empty();
+      $('.product__description').html(descriptionContainer);
     },
     both: function() {
     }
@@ -1007,7 +1007,7 @@ $(document).ready(function() {
   $('.js-slider-preview').slick({
     slidesToShow: 6,
     infinite: true,
-    asNavFor: this.slider,
+    asNavFor: $('.js-slider'),
     focusOnSelect: true,
     responsive: [
       {
@@ -1185,10 +1185,10 @@ $(document).ready(function() {
   $(document).on('click', () => { showOverlay('.gmap-overlay') });
 
   function hideOverlay (overlay) {
-    $(overlay).hide();
+    // $(overlay).hide();
   }
   function showOverlay (overlay) {
-    $(overlay).show();
+    // $(overlay).show();
   }
 
 
@@ -1296,13 +1296,17 @@ $(document).ready(function() {
         }
     ]
     });
-    map.addMarker({
+    var marker = map.addMarker({
       position: {
         lat: lat,
         lng: lng
       },
       icon: image
     })
+
+    marker.addListener('click', function() {
+      console.log('hello')
+    });
 
     $('.delivery-point__list-item').on('click', function() {
         onSelectItem(this)
@@ -1313,6 +1317,9 @@ $(document).ready(function() {
     $('.delivery-point__about-close').on('click', function() {
         cleanSelected();
     });
+
+    // show by Default
+    onOpenBlocks($('.delivery-point__content-btn'));
 
     function onOpenBlocks(trigger) {
       $(trigger).toggleClass('delivery-point__content-btn--active');
