@@ -559,10 +559,10 @@ $(document).ready(function() {
     e.preventDefault();
     openCheckboxes(this);
   });
-  $('.filter-checkbox__box input').on('change', function(e){
+  $(document).on('change', '.filter-checkbox__box input', function(e){
     showGoodsNumber(this);
   })
-  $('.color__input').on('change', function(e){
+  $(document).on('change', '.color__input', function(e){
     showGoodsNumber(this);
   })
 
@@ -572,7 +572,6 @@ $(document).ready(function() {
       anime({
         targets: checkboxes,
         opacity: 1,
-        scale: 1,
         delay: function(el, i, l) {
           $(checkboxes[i]).css('display', 'flex')
           return i * 50;
@@ -705,7 +704,13 @@ $(document).ready(function() {
       $this.after('<div class="select-styled"></div>');
 
       var $styledSelect = $this.next('div.select-styled');
-      $styledSelect.text($this.children('option').eq(0).text());
+      var $styledSelectCurrent
+      if ( $this.children('option:selected') ){
+        $styledSelectCurrent = $this.children('option:selected').eq(0).text()
+      } else {
+        $styledSelectCurrent = $this.children('option').eq(0).text()
+      }
+      $styledSelect.text($styledSelectCurrent);
 
       var $list = $('<ul />', {
           'class': 'select-options'
@@ -954,9 +959,11 @@ $(document).ready(function() {
   $('.js-cart-item-addresses').on('click', function(e) {
     e.stopPropagation();
   });
-  $(document).on('click', () => {
-    closeModals();
-  });
+  if ( $('body[data-page="cart"]').length <= 0 ) {
+    $(document).on('click', () => {
+      closeModals();
+    });
+  }
   $('.cart-item__button').on('click', function(e) {
     let parent = $(this).closest('.cart-item-wrap').get(0);
     showModal(parent)

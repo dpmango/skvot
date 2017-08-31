@@ -45,4 +45,14 @@
       // transform: scale(0.9);
     }
   }
+  &--show-all{
+    .filter-checkbox__box:not(:nth-child(-n+6)) {
+      display: block;
+      opacity: 1;
+    }
+    .filter-checkbox__box:not(:nth-child(-n+12)){
+      display: block;
+      opacity: 1;
+    }
+  }
 }
