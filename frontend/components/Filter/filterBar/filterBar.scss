@@ -61,6 +61,7 @@
   .filter-bar {
     &__item {
       border-right: 0;
+      height: 65px;
       &:not(.filter-bar__item--views) {
         justify-content: center;
       }

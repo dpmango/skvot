@@ -106,14 +106,18 @@ $(document).ready(function () {
     arrows: false,
     autoplay: true,
     draggable: false,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    accessibility: false
   });
+  // set accessibility to false because the slide height is
+  // greater than the slider height and tab focus makes page jumbs
   var mainSlickContents = $('.js-main-slider-content').slick({
     dots: true,
     draggable: true,
     fade: true,
     arrows: false,
     asNavFor: '.js-main-slider',
+    accessibility: false,
     responsive: [{
       breakpoint: mediaBreakpoints.tablet,
       settings: {
@@ -127,11 +131,15 @@ $(document).ready(function () {
     }]
   });
 
-  $('.js-slick-prev').on('click', function () {
-    return mainSlickSlides.slick('slickPrev');
+  $('.js-slick-prev').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    mainSlickSlides.slick('slickPrev');
   });
-  $('.js-slick-next').on('click', function () {
-    return mainSlickSlides.slick('slickNext');
+  $('.js-slick-next').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    mainSlickSlides.slick('slickNext');
   });
 
   // ------------------------------
@@ -469,6 +477,19 @@ $(document).ready(function () {
     };
   }
 
+  var toggleFilterText = "";
+  $('.js-toggleFilter').on('click', function () {
+    if ($(this).text() == "Показать фильтры") {
+      // save state
+      toggleFilterText = $(this).text();
+      $(this).text($(this).data('collapsed-text'));
+    } else {
+      $(this).text(toggleFilterText);
+    }
+    $(this).toggleClass('active');
+
+    $('.filter-aside').slideToggle();
+  });
   // asideSection.js
 
   $('.filter-aside__close').on('click', _.debounce(function () {

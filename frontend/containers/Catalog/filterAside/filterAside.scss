@@ -82,6 +82,28 @@
       transform: translate3d(0,0,0);
     }
   }
+  &__tablet-btn{
+    display: none;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 25px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-color: #bbbbbb transparent transparent transparent;
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+      transition: 0.35s;
+    }
+  }
 }
 
 //------------------------------
@@ -90,5 +112,11 @@
 @media #{$tablet} {
   .filter-aside {
     display: none;
+    &.active{
+      display: block;
+    }
+    &__tablet-btn{
+      display: block;
+    }
   }
 }
